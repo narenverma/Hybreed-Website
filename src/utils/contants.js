@@ -47,6 +47,47 @@ export const scrollHeader = (element) => {
 
 
 
+export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
+
+    let getCloneWrapper = document.querySelectorAll(marqueeWrap);
+    getCloneWrapper.forEach((getCloneWrap) => {
+
+
+
+        getCloneWrap.querySelectorAll(marqueeList).forEach((item) => {
+            let cloneList = item.cloneNode(true)
+            // console.log(cloneList );
+
+            for(let i=0; i<loopVal; i++){
+                
+                getCloneWrap.append(cloneList) 
+            }
+
+
+            let getListOfSlide = getCloneWrap.querySelectorAll(marqueeList).length,
+                getFirstSlideW = getCloneWrap.offsetWidth;
+
+                // let  sumSize = 0;
+
+                // getCloneWrap.querySelectorAll(marqueeList).forEach((item) => {
+                //         // widthList.push(item.offsetWidth); 
+                //         sumSize += item.offsetWidth  
+                // })
+    
+
+            getCloneWrap.style.animationDuration =  getFirstSlideW / (getListOfSlide + 100)     + "s";
+            // getCloneWrap.style.animationDuration = (getListOfSlide * (getFirstSlideW / 100) - 10) + "s";
+
+            
+             
+
+        })
+    })
+}
+
+
+
+
 export const LoaderFunction = () => {
 
 
@@ -71,11 +112,14 @@ export const LoaderFunction = () => {
 
         }
 
-        setTimeout(()=>{
-        setPageLoader();
+        setTimeout(() => {
+            setPageLoader();
+
+            MarqueeDuplicateAndTime('.carousel-wrap ', " div", 2)
+            MarqueeDuplicateAndTime('.marquee-strip-list', " div", 4)
 
         }, 1000)
-         
+
 
 
         let prevWidth = window.innerWidth;
@@ -85,51 +129,85 @@ export const LoaderFunction = () => {
             }
         });
 
-  
-}
+
+    }
 
 
 
 
-const loaderTimer = ()=>{ 
+    const loaderTimer = () => {
 
-    const LoaderWrap = document.querySelector("#loader");
-    const loadingBar = document.querySelector("#bar");
-    const percentText = document.querySelector("#percent");
+        const LoaderWrap = document.querySelector("#loader");
+        const loadingBar = document.querySelector("#bar");
+        const percentText = document.querySelector("#percent");
 
-    let load = 0;
-    let timeOut = 90;
+        let load = 0;
+        let timeOut = 90;
 
-    let loadingVal = setInterval(() => {
-        load = load + Math.floor(Math.random() * 5 + 1);
-        if (load < 100) {
-            percentText.textContent = load + "%";
-            loadingBar.style.width = `${load}%`;
+        let loadingVal = setInterval(() => {
+            load = load + Math.floor(Math.random() * 5 + 1);
+            if (load < 100) {
+                percentText.textContent = load + "%";
+                loadingBar.style.width = `${load}%`;
 
-        } else {
-            loadingBar.style.width = `100%`;
-            percentText.textContent = "100%";
+            } else {
+                loadingBar.style.width = `100%`;
+                percentText.textContent = "100%";
 
-        }
+            }
 
 
-        if (load > 100) {
-            
-            // console.log("Tombola")
-             
-            onReady();
-            
-            clearInterval(loadingVal);
+            if (load > 100) {
 
-        }
-    }, timeOut);
-}
+                // console.log("Tombola")
+
+                onReady();
+
+                clearInterval(loadingVal);
+
+            }
+        }, timeOut);
+    }
 
     if (document.readyState !== "loading") {
         loaderTimer(); // Or setTimeout(onReady, 0); if you want it consistently async
-        
+
     } else {
         document.addEventListener("DOMContentLoaded", loaderTimer);
     }
 
+}
+
+ 
+export const headerScrollHide =()=>{
+
+    let didScroll;
+    let lastScrollT = 0;
+    let delta = 5;
+    let siteHeader = document.querySelector('header').offsetHeight;
+    
+    window.addEventListener('scroll', function(event) {
+        didScroll = true;
+    });
+    
+    setInterval(function() {
+        if (didScroll) {
+            hasScroll();
+            didScroll = false;
+        }
+    }, 250);
+    
+    function hasScroll() {
+        let scrollT = window.scrollY;
+        if (Math.abs(lastScrollT - scrollT) <= delta) return;
+        if (scrollT > lastScrollT && scrollT > siteHeader) {
+            document.querySelector('header').style.transform = 'translateY(-100%)';
+        } else {
+            if (scrollT + window.innerHeight < document.documentElement.scrollHeight) {
+                document.querySelector('header').style.transform = 'translateY(0%)';
+            }
+        }
+        lastScrollT = scrollT;
+    }
+    
 }

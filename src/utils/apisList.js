@@ -444,3 +444,31 @@ export const worksList = [
       itemDescription: "Elevating User Experience and Facilitating Meaningful Connections",
   },
 ];
+
+
+export const socialMediaList = [
+    {
+      socialLink: "/",
+      socialIcon: "insta-icon.svg",
+      socialAlt:"Instagram",
+      socialName: "Instagram",
+    },
+    {
+      socialLink: "/",
+      socialIcon: "linkedin-icon.svg",
+      socialAlt:"LinkedIn",
+      socialName: "LinkedIn",
+    },
+    {
+      socialLink: "/",
+      socialIcon: "x-icon.svg",
+      socialAlt:"X",
+      socialName: <><del>Twitter</del> X </>,
+    },
+    {
+      socialLink: "/",
+      socialIcon: "dribble-icon.svg",
+      socialAlt:"Dribbble",
+      socialName: "Dribbble",
+    },
+  ];

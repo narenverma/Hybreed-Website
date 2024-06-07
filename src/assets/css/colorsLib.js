@@ -38,6 +38,11 @@ color:var(--theme-primary-600);
 
 .theme-text-white{color:var(--theme-white);}
 
+.theme-text-black{color:var(--theme-black);}
+
+.theme-text-black-primary{color:var(--theme-black-primary);}
+.theme-text-black-secondary{color:var(--theme-black-secondary);}
+
 
 .theme-bg-black-primary,.curve-bg-black-primary:after{ background-color:var(--theme-black-primary);}
 .theme-bg-black-secondary,.curve-bg-black-secondary:after{ background-color:var(--theme-black-secondary);}

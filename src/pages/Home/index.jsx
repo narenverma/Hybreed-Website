@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, CardTop, CategoryBullets, CardBottom, MidHeadingCTA, } from "../../assets/css/globalStyle.js";
+import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, CardTop, CategoryBullets, CardBottom, MidHeadingCTA, CTAWithContentBar, } from "../../assets/css/globalStyle.js";
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
 import { gsap, ScrollTrigger } from "gsap/all";
@@ -52,42 +52,16 @@ export default function Home() {
         gsap.registerPlugin(ScrollTrigger);
 
 
-        // const tl = gsap.timeline({
-
-        //     scrollTrigger: {
-        //         trigger: ".para-reveal-wrap",
-        //         start: "top 20%",
-        //         end: ()=> "+=" + document.querySelector(".para-reveal-wrap").offsetHeight,
-        //         // pin: true,
-        //         scrub: 0.75,
-        //         markers: true,
-        //     }
-        // })
-
-        // window.addEventListener("DOMContentLoaded", () => {
-        //     ScrollTrigger.refresh();
-        //   });
-
-
-        // tl.to(".para-reveal-wrap",{
-
-        //     scrollTrigger: {
-        //         trigger: ".para-reveal-wrap",
-        //         start: "top 20%",
-        //         end:  "+=100%",
-        //         pin: true,
-        //         scrub: 0.75,
-        //     }
-        // }) 
+  
 
         document.querySelectorAll(".para-reveal-wrap").forEach((paraElWrap) => {
 
             let paraSpans = [...paraElWrap.querySelectorAll(".para-reveal-wrap p span")];
 
-            document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
+            // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
 
-                paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
-            })
+            //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
+            // })
 
             gsap.to(paraSpans, {
 
@@ -95,8 +69,8 @@ export default function Home() {
                 stagger: 0.1,
                 scrollTrigger: {
                     trigger: paraElWrap,
-                    start: "top " + window.innerHeight / 4,
-                    end: () => "+=" + paraElWrap.offsetHeight * 2.7,
+                    start: "top " + window.innerHeight / 2,
+                    end: () => "+=" + paraElWrap.offsetHeight ,
                     // pin: true,
                     scrub: 0.75,
                     // markers: true,
@@ -105,86 +79,7 @@ export default function Home() {
             }, 0.4);
 
         })
-
-        // gsap.to(".para-reveal-wrap",{
-        //         yPercent:-50, 
-        //         scrollTrigger: {
-        //             trigger: ".para-reveal-wrap",
-        //             start: "top 50%",
-        //             end:  "+=160%",
-        //             pin: true,
-        //             scrub: 0.75,
-        //         }
-        //     }) 
-
-
-        // paraSpans.forEach((spanEl) => {
-        //     gsap.from(spanEl, {
-
-        //         scrollTrigger: {
-        //             trigger: spanEl,
-        //             start: "top 50%",
-        //             end: () => "+=160%",
-        //             // pin: true,
-        //             scrub: 0.75,
-        //             // markers: true,
-        //         },
-
-        //         opacity: 1,
-        //         stagger: 0.1,
-
-        //     }, 0.4);
-
-        // })
-
-
-
-        // paraSpans.forEach((spanEl) => {
-
-        //     gsap.to(spanEl, {
-        //         scrollTrigger: {
-        //             trigger: spanEl,
-        //             // scroller: "[data-scroll-container]",
-        //             start: "top 50%",
-        //             end: "top 20%",
-        //             scrub: true,
-        //             markers: false,
-        //             // pin: true,
-
-        //         },
-        //         opacity: 1,
-        //         stagger: 0.1,
-        //     })
-
-        // })
-
-
-        // paraSpans.forEach((spanEl)=>{
-
-
-        // })
-
-        //   const  revealParas=()=>{
-        //         for(let i=0; i<paraSpans.length; i++) {
-        //             // console.log(paraSpans)
-        //             if(paraSpans[i].parentElement.getBoundingClientRect().top < window.innerHeight / 2){
-        //                 let {left,top} = paraSpans[i].getBoundingClientRect();
-        //                 top = top - (window.innerHeight * .5);
-        //                 let paraOpacity = 1 - ((top * 0.1)+(left * 0.001)) < 0.1 ? 0.1 : 1 - ((top * 0.1)+(left * 0.001)).toFixed(3);
-        //                 paraOpacity = paraOpacity > 1 ? 1 : paraOpacity.toFixed(3);
-
-        //                 paraSpans[i].style.opacity = paraOpacity;
-        //             }
-        //         }
-        //     }
-
-        //     window.addEventListener("scroll", ()=>{
-        //         revealParas()
-        //     })
-        //     revealParas();
-
-
-
+ 
 
         // Magnet Cta
 
@@ -224,30 +119,10 @@ export default function Home() {
         // Magnet Cta end
 
 
-        setTimeout(() => {
-
-            let getCloneWrapper = document.querySelectorAll('.carousel-wrap, .marquee-strip-list');
-            getCloneWrapper.forEach((getCloneWrap) => {
+        // setTimeout(() => {
 
 
-
-                getCloneWrap.querySelectorAll(" div").forEach((item) => {
-                    let cloneList = item.cloneNode(true)
-                    // console.log(cloneList );
-                    getCloneWrap.append(cloneList)
-                    getCloneWrap.append(cloneList)
-
-
-                    let getListOfSlide = getCloneWrap.querySelectorAll(" div").length,
-                        getFirstSlideW = getCloneWrap.querySelectorAll(" div")[0].offsetWidth;
-
-
-                    getCloneWrap.style.animationDuration = (getListOfSlide * (getFirstSlideW / 100) - 10) + "s";
-
-                })
-            })
-
-        }, 300)
+        // }, 500)
 
 
 
@@ -303,7 +178,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <HomeHeroSection className="next-section-curve curve-bg-yellow-cream hero-section"
+            <HomeHeroSection className="  hero-section"
                 data-scroll-section
             >
                 <div className='container'>
@@ -319,7 +194,7 @@ export default function Home() {
                                 Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
                                 <img src={require("../../assets/images/pill-image-hero.png")} alt='Pill thumbs' className="pill-thumbs-anim" />
                                 {" "}
-                                <span className="d-lg-inline d-none">team</span>
+                                <span className="d-lg-inline d-none"> team</span>
                             </h1>
                             <p className='text-lg-center mb-5 theme-fw-300'>
                                 Together, we can transform forward-thinking
@@ -336,7 +211,7 @@ export default function Home() {
                         </HomeHeroWrap>
                     </div>
                 </div>
-                <div className='  equal-padding-B'>
+                <div className='   '>
                     <GridFreeAnimCarousel>
                         <CarouselWrap className="carousel-wrap">
                             {carouselSlideList.map((item, index) => (
@@ -404,15 +279,15 @@ export default function Home() {
                 </div>
             </HomeHeroSection>
 
-            <AboutSection className='theme-bg-yellow-cream next-section-curve curve-bg-black-secondary overflow-visible'>
+            <AboutSection className='  next-section-curve curve-bg-black-secondary overflow-visible'>
                 <div className="container col-lg-7 mx-auto">
                     <div className='  equal-padding-B'>
                         <div className=''>
-                                <div className="para-reveal-wrapper"  >
+                            <div className="para-reveal-wrapper"  >
 
-                                    <ScrollAnimParaWrap className='para-reveal-wrap'>
-                                        <p>
-                                            <TextSplitSpans text="
+                                <ScrollAnimParaWrap className='para-reveal-wrap'>
+                                    <p>
+                                        <TextSplitSpans text="
                                         “Designing India's Tomorrow”
                                         encapsulates our commitment to crafting
                                         design solutions that transcend
@@ -420,9 +295,9 @@ export default function Home() {
                                         India's future.
                                         " />
 
-                                        </p>
-                                        <p>
-                                            <TextSplitSpans text="
+                                    </p>
+                                    <p>
+                                        <TextSplitSpans text="
                                     We're not just creating visuals; we're
                                         weaving narratives that contribute to
                                         the evolving tapestry of our nation.
@@ -430,17 +305,17 @@ export default function Home() {
                                         more vibrant, connected, and innovative
                                         India. 
                                         "/>
-                                        </p>
-                                        <p>
-                                            <TextSplitSpans text="
+                                    </p>
+                                    <p>
+                                        <TextSplitSpans text="
                                         We see ourselves as architects of
                                         change, harnessing the power of design
                                         to shape a brighter and more engaging
                                         tomorrow for India” 
                                         "/>
-                                        </p>
-                                    </ScrollAnimParaWrap>
-                                </div>
+                                    </p>
+                                </ScrollAnimParaWrap>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -476,7 +351,7 @@ export default function Home() {
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
                                             </CategoryBullets>
-                                            <video
+                                            {/* <video
                                                 loop={true}
                                                 autoPlay={true}
                                                 preload='true'
@@ -485,7 +360,7 @@ export default function Home() {
                                                 <source
                                                     src={require("../../assets/videos/design-system-demo.mp4")}
                                                     type='video/mp4'></source>
-                                            </video>
+                                            </video> */}
                                             <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
                                         </CardTop>
                                         <CardBottom>
@@ -538,7 +413,7 @@ export default function Home() {
                 <div className='container'>
                     <div className='  equal-padding-B'>
                         <MiddleContentWrap>
-                            <div className='row g-5 '>
+                            <div className='row g-lg-5 g-4 '>
                                 <div className='col-lg-8'>
                                     {/* <div className="para-reveal-wrapper"  >
 
@@ -577,7 +452,7 @@ export default function Home() {
             </MiddleContentSection>
 
             <ServicesSection
-                className='theme-bg-primary next-section-curve curve-bg-yellow-cream'
+                className='theme-bg-primary next-section-curve curve-bg-yellow-cream  '
                 data-scroll-section>
                 <div className='container'>
                     <div className='  equal-padding-B'>
@@ -590,6 +465,18 @@ export default function Home() {
                         </h2>
 
                         <IconHeadingListCardsWrapper />
+                        <CTAWithContentBar className='theme-bg-black-secondary mt-5 mx-lg-3'>
+                            <div className="row g-5 align-items-center">
+                                <div className="col-lg-8">
+                                    <h4 className="mb-2 theme-text-white">Are you interested in a quoted project?</h4>
+                                    <p className="theme-text-gray">If you have specific ideas, requirements, or questions about our services/ process, feel free to share them, and we can provide assistance or guidance accordingly!</p>
+                                </div>
+                                <div className="col-lg-4">
+                                    <CustomBtn className="text-lg-end"><Link to="/" className='light-btn'>Send inquiry</Link>  </CustomBtn>
+                                </div>
+                            </div>
+                        </CTAWithContentBar>
+
                     </div>
                 </div>
             </ServicesSection>
@@ -630,13 +517,21 @@ export default function Home() {
                             <PillMinHead className='text-center  '>
                                 <p>💬 Available for new projects</p>
                             </PillMinHead>
-                            <h2 className='section-head mb-5 text-center   '>
+                            <h2 className='section-head   text-lg-center   '>
                                 Interested in <br />
-                                working{" "}
-                                <MidHeadingCTA className="magnet-btn">
+                                working <span className='d-lg-none'>together? </span> {" "}
+                                <MidHeadingCTA className="magnet-btn d-lg-inline-block d-none">
                                     <Link to='/' > <strong className="magnet-btn-text">Let’s connect!!! </strong></Link>
-                                </MidHeadingCTA>{" "}
-                                together?
+                                </MidHeadingCTA>
+
+                                <CustomBtn className='text-center mt-5  d-lg-none'>
+                                    <Link to='/'   >
+                                        <span>Let’s connect!!!</span>
+                                    </Link>
+                                </CustomBtn>
+
+                                {" "}
+                                <span className="d-lg-inline d-none"> together?</span>
                             </h2>
                         </BeforeFooterCtaWrap>
                     </div>

@@ -42,11 +42,14 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 gap: 1rem;
-
+ 
 & *{color: var(--textColor)}
 
+ 
+ 
 @media screen and (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 1.51rem;
+    gap: .86rem;
 }
 
 `;
@@ -54,11 +57,20 @@ export const CardTop = styled.div`
  
 & img{
     margin-bottom: 1rem;
+    height: 3rem;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
 }
 & p{
     font-size:1rem;
     letter-spacing: -0.05931rem;
     line-height: 162%;
+    margin-bottom: 0;
+
+    &:not(:last-of-type){
+        margin-bottom: 1rem;       
+    }
 }
 `;
 export const CardBottom = styled.div`
@@ -74,5 +86,18 @@ export const CardBottom = styled.div`
     margin-bottom:0;
     line-height: 185.714%;
     letter-spacing:-0.05931rem;
+}
+`;
+
+
+export const TestimonialsCardSwiper = styled.div`
+
+& .swiper-cards .swiper-slide-shadow{
+    border-radius: 1.42288rem;
+    background-color: #0001;
+}
+
+& .swiper-cards .swiper-slide:not(.swiper-slide-visible){
+filter: blur(2px);
 }
 `;

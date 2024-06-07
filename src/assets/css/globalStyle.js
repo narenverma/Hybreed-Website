@@ -317,8 +317,8 @@ header{
   transition: 300ms ease-in-out;
 
   &.headerActive {
-    background-color: var(--theme-white);
-    box-shadow: 0px 1px 28px 0 #00000017;
+    ${'' /* background-color: var(--theme-white);  */}
+    ${'' /* box-shadow: 0px 1px 28px 0 #00000017; */}
   }
   
   & .container{
@@ -336,6 +336,10 @@ header{
     &.headerActive .social-links-circle-wrap{
       display: none!important;
     }
+    &.headerActive .container{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   }
 }
 
@@ -458,7 +462,7 @@ body:hover .cursor{
 
 .page-loader{
   width:100vw;
-  height: 100vh;
+  height: 100svh;
   position:fixed;
   top:0;
   left:0;
@@ -468,7 +472,7 @@ body:hover .cursor{
   align-items: start;
   justify-content: center;
   flex-wrap:wrap;
-  transition: 1000ms linear;
+  transition: 800ms ease-in-out;
   overflow: hidden;
 
 & video {
@@ -508,7 +512,7 @@ box-shadow: 0 0 0 .31rem  var(--theme-primary);
   width: 0%; 
   background: linear-gradient(90deg,  var(--theme-primary) calc(100% - 1rem) , #0000 1rem);
   transform-origin: left;
-  transition:   100ms linear  ; 
+  transition:   600ms linear  ; 
   display: flex;
   align-items: center;
   justify-content: end;
@@ -662,6 +666,10 @@ padding-bottom: var(--equal-paddings);
     aspect-ratio: 21 / 6 ;
 
 }
+
+.cursor{
+  display: none!important;
+}
  
 }
 
@@ -698,6 +706,7 @@ export const PillMinHead = styled.div`
 
   & p{
     font-size: 0.61588rem;
+    padding: 0.20rem 0.72rem;
   }
 }
 
@@ -710,7 +719,7 @@ export const UpperCaseHeader = styled.p`
     letter-spacing: -0.00875rem;
     line-height: 2rem;
     text-transform: uppercase;
-    text-align: center;
+     
 `
 
 export const CustomBtn = styled.div`
@@ -804,20 +813,19 @@ export const CustomBtn = styled.div`
 
 // used in footer
 export const LinkBtn = styled.div`
-& p {
-    font-size: 1.125rem;
-    margin: 0;
-  }
-& :is(a,button){
+
+ 
+& a{
 	display: inline-flex;
   align-items: center;
   white-space: nowrap;
   letter-spacing: -0.01125rem;
 	font-family: 'Inter-Tight-Medium';
   font-size: 1.75rem;
-  text-decoration: underline;
+  text-decoration: underline !important;
+  
 
-  & :is(a,button) {
+  & a {
     font-size: 1.75rem;
     text-decoration: underline;
   }
@@ -843,7 +851,7 @@ export const LinkBtn = styled.div`
 
 @media screen and (max-width: 768px){
 & :is(a,button){
-  font-size:1.2rem;
+  font-size: 1.55763rem;
 }
 }
 
@@ -976,11 +984,14 @@ export const ScrollAnimParaWrap = styled.div`
 		margin-bottom:4rem;
 	}
 
-  @media screen and (max-width: 768px) {
-    &{
-      font-size: 1.375rem; 
-      text-align: left;
-    }
+}
+@media screen and (max-width: 768px) {
+
+  top: ${window.innerHeight / 7 + 'px'};
+
+  & p{
+    font-size: 1.375rem; 
+    text-align: left;
   }
 }
 
@@ -1007,6 +1018,13 @@ export const CardTop = styled.div`
 width:100%;
 margin-bottom: 2rem;
 position: relative;
+clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+transition: 200ms ease-in-out;
+
+&:hover{
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+
 & video{
 
 }
@@ -1018,9 +1036,9 @@ position: relative;
   width:100%;
   height: 100%;
   object-fit: cover;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   z-index: 0;
-
+ scale: 1;
   transition: 400ms ease-in-out;
 }
 & video{
@@ -1034,7 +1052,9 @@ position: relative;
 opacity: 1;
 }
 &:hover img{
-opacity: 0;
+  scale: 1.1;
+/* opacity: 0; */
+border-radius: 0rem;
 }
 
 @media screen and (max-width:768px){
@@ -1147,7 +1167,7 @@ border-radius: 1.5rem;
 }
 
 @media screen and (max-width: 768px){
-  padding: 1.5rem ;
+  padding: 2.38rem  ;
 }
 
 `;
