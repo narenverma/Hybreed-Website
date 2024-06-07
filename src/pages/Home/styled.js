@@ -137,6 +137,7 @@ export const MiddleContentWrap = styled.div`
         @media screen and (max-width: 768px) {
             & p {
                 font-size: 1.4rem;
+                
             }
             
         }
@@ -145,6 +146,13 @@ export const MiddleContentWrap = styled.div`
 export const MiddleContentImage = styled.div`
 position: sticky;
 top: ${window.innerHeight / 5 + 'px'};
+
+@media screen and (max-width: 768px) {
+    & img{
+        width:100%;
+    }
+}
+
 `;
 
 export const ServicesSection = styled.section``;
@@ -156,7 +164,7 @@ export const BeforeFooterCtaWrap = styled.div`
         }
         @media screen and (max-width: 768px) {
             & h2 {
-                font-size: 2rem;
+                font-size: 3rem;
             }
             
         }
@@ -183,4 +191,3 @@ height: 19.125rem;
 export const AboutSection = styled.section``;
 
 
-  

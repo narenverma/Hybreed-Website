@@ -6,7 +6,7 @@ import Footer from "./components/FooterWrapper";
 import React, { useEffect } from "react";
 import Lenis from 'lenis'
 import { gsap, ScrollTrigger } from "gsap/all";
-import { scrollHeader } from "./utils/contants";
+import { headerScrollHide, scrollHeader } from "./utils/contants";
 
 
 
@@ -55,7 +55,7 @@ function App() {
 
 
    
-     
+    headerScrollHide();
 
 
 
@@ -84,12 +84,16 @@ function App() {
         <main>
 
           <Outlet />
+          {
+            window.innerWidth > 992 &&
+
           <FloatingBtn>
             <Link className="lets-talk-cta">
               <img src={require("../src/assets/images/lets-talk-circle-with-text.svg").default} alt="Let's Talk" className="img-one" />
               <img src={require("../src/assets/images/phone-black-icon.svg").default} alt="Phone" className="img-two" />
             </Link>
           </FloatingBtn>
+          }
         </main>
         <footer>
           <Footer />

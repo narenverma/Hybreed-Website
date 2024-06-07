@@ -30,6 +30,10 @@ margin-left: .8rem;
 display: inline-block;
 } */
 
+@media screen and (max-width: 768px) {
+    gap: 2.36rem;
+} 
+
 `;
 
 export const MarqueeStripRow = styled.div`
@@ -43,6 +47,11 @@ padding: 2.5rem 0;
 & ${MarqueeStripList} > div {
     color:var(--theme-black);
 }
+}
+
+@media screen and (max-width: 768px) {
+    padding: 1.40rem 0;
+
 }
 
 `;

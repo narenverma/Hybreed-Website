@@ -8,6 +8,8 @@ const MarqueeWrap = styled.div`
   overflow:hidden;
   position: relative;
   width: 100%;
+  rotate: -4.679deg;
+    transform-origin: 0% 100%;
   /* margin-top: 8rem; */
   
   &::before,
