@@ -368,8 +368,8 @@ body:hover .cursor{
 }
 .cursor {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   z-index: 9999;
   width: 1.5rem;
   height: 1.5rem;
@@ -377,6 +377,10 @@ body:hover .cursor{
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: none;
+}
+
+.cursor.active{
+  margin: -2.5rem 0 0 -2.5rem;
 }
 .cursor--hover .cursor-inner {
   transform: scale(0.5);
@@ -442,8 +446,7 @@ body:hover .cursor{
   transition: 0.4s linear;
 }
 .cursor.active p{
-  font-size: 18px;
-
+  font-size: 18px;  
 }
 .cursor-outer {
   display: block;
@@ -822,14 +825,9 @@ export const LinkBtn = styled.div`
   letter-spacing: -0.01125rem;
 	font-family: 'Inter-Tight-Medium';
   font-size: 1.75rem;
-  text-decoration: underline !important;
+  text-decoration: underline !important; 
+     
   
-
-  & a {
-    font-size: 1.75rem;
-    text-decoration: underline;
-  }
-	
   &.light-btn{
     background-color: var(--theme-white);
     color:var(--theme-black-primary);
@@ -847,6 +845,12 @@ export const LinkBtn = styled.div`
 		background-color: var(--theme-primary);
 		rotate: 45deg;
 	}
+
+  &.download-icon:after{
+    rotate: 180deg;
+  }
+
+
 }
 
 @media screen and (max-width: 768px){
@@ -1005,7 +1009,7 @@ export const VideoCardsWrap = styled.div`
   grid-template-rows: masonry;  */}
 
   gap: clamp(1.5rem, 5rem, 7.25rem);
-    columns:   33.875rem;
+    columns:   24.875rem;
 
 & >*{
   break-inside:avoid;
@@ -1050,10 +1054,11 @@ transition: 200ms ease-in-out;
 
 &:hover video{
 opacity: 1;
+border-radius: 0rem;
 }
 &:hover img{
   scale: 1.1;
-/* opacity: 0; */
+opacity: 0;
 border-radius: 0rem;
 }
 
@@ -1095,17 +1100,20 @@ margin-bottom:4rem;
 `;
 
 export const CategoryBullets = styled.div`
-position: absolute;
+/* position: absolute;
 top: 0;
-left: 0;
-padding: 1.5rem;
+left: 0; */
+/* z-index: 11; */
+/* padding: 1.5rem; */
 display: block;
-z-index: 11;
+margin-bottom: 1.5rem;
 & span{
   display: inline-block;
+  font-size: 0.875rem;
   padding: 0.25rem 1rem;
   border-radius: 3.3125rem;
-  background-color: var(--theme-black-secondary);
+  background-color: var(--theme-primary);
+  color: var(--theme-black-primary);
   
 }
 

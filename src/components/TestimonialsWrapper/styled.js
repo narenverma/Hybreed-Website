@@ -58,6 +58,7 @@ export const CardTop = styled.div`
 & img{
     margin-bottom: 1rem;
     height: 3rem;
+    max-width: 15rem;
     width: 100%;
     object-fit: contain;
     object-position: bottom;

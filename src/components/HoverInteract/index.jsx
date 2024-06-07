@@ -65,7 +65,7 @@ export const CustomCursorAnim=()=>{
 // Cursor hover code
 
 export  const HoverEnter = (cursorVal)=>{
-    document.querySelector('.cursor-move-inner .cursor-inner').innerHTML= `<div>${cursorVal}</div>`;
+    document.querySelector('.cursor-move-inner .cursor-inner').innerHTML= `<p>${cursorVal}</p>`;
     document.querySelector('.cursor  ').classList.add("active")
   }
   export  const HoverLeave = ()=>{

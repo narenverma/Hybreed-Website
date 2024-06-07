@@ -52,7 +52,7 @@ export default function Home() {
         gsap.registerPlugin(ScrollTrigger);
 
 
-  
+
 
         document.querySelectorAll(".para-reveal-wrap").forEach((paraElWrap) => {
 
@@ -70,7 +70,7 @@ export default function Home() {
                 scrollTrigger: {
                     trigger: paraElWrap,
                     start: "top " + window.innerHeight / 2,
-                    end: () => "+=" + paraElWrap.offsetHeight ,
+                    end: () => "+=" + paraElWrap.offsetHeight,
                     // pin: true,
                     scrub: 0.75,
                     // markers: true,
@@ -79,7 +79,7 @@ export default function Home() {
             }, 0.4);
 
         })
- 
+
 
         // Magnet Cta
 
@@ -164,11 +164,12 @@ export default function Home() {
                 <video
                     loop={true}
                     autoPlay={true}
-                    preload='true'
+                    preload={"true"}
                     muted={true}
-                    src={require("../../assets/videos/banner-animation.mp4")}>
+                    playsInline={true}
+                    src={"http://hybclient.com/hybreed-cdn-assets/videos/banner-animation.mp4"}>
                     <source
-                        src={require("../../assets/videos/banner-animation.mp4")}
+                        src={"http://hybclient.com/hybreed-cdn-assets/videos/banner-animation.mp4"}
                         type='video/mp4'></source>
                 </video>
 
@@ -288,6 +289,17 @@ export default function Home() {
                                 <ScrollAnimParaWrap className='para-reveal-wrap'>
                                     <p>
                                         <TextSplitSpans text="
+                                    We work with people that challenge us creatively. Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed.
+                                        "/>
+                                    </p>
+                                    <p>
+                                        <TextSplitSpans text={
+                                    "This is what we call the HYBREED PARTNERSHIP."
+                                        }/>
+                                    </p>
+
+                                    {/* <p>
+                                        <TextSplitSpans text="
                                         “Designing India's Tomorrow”
                                         encapsulates our commitment to crafting
                                         design solutions that transcend
@@ -313,7 +325,7 @@ export default function Home() {
                                         to shape a brighter and more engaging
                                         tomorrow for India” 
                                         "/>
-                                    </p>
+                                    </p> */}
                                 </ScrollAnimParaWrap>
                             </div>
                         </div>
@@ -343,27 +355,30 @@ export default function Home() {
                                 {worksList.map((item, index) => (
                                     <CardItems key={index}>
                                         <CardTop
-                                        // onMouseEnter={() =>
-                                        //     HoverEnter("View <br> work")
-                                        // }
-                                        // onMouseLeave={() => HoverLeave()}
+                                        onMouseEnter={() =>
+                                            HoverEnter("Coming <br> Soon!")
+                                        }
+                                        onMouseLeave={() => HoverLeave()}
                                         >
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
                                             </CategoryBullets>
-                                            {/* <video
+                                            <video
                                                 loop={true}
                                                 autoPlay={true}
                                                 preload='true'
                                                 muted={true}
-                                                src={require("../../assets/videos/design-system-demo.mp4")}>
+                                                src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}>
                                                 <source
-                                                    src={require("../../assets/videos/design-system-demo.mp4")}
+                                                    src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}
                                                     type='video/mp4'></source>
-                                            </video> */}
+                                            </video>
                                             <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
                                         </CardTop>
                                         <CardBottom>
+                                            <CategoryBullets>
+                                                <span>{item.itemCategory}</span>
+                                            </CategoryBullets>
                                             <h6>
                                                 {item.itemTitle} &mdash;{" "}
                                                 <span>
@@ -472,7 +487,7 @@ export default function Home() {
                                     <p className="theme-text-gray">If you have specific ideas, requirements, or questions about our services/ process, feel free to share them, and we can provide assistance or guidance accordingly!</p>
                                 </div>
                                 <div className="col-lg-4">
-                                    <CustomBtn className="text-lg-end"><Link to="/" className='light-btn'>Send inquiry</Link>  </CustomBtn>
+                                    <CustomBtn className="text-lg-end"><Link to="https://hybreed.co/contact" className='light-btn'>Send inquiry</Link>  </CustomBtn>
                                 </div>
                             </div>
                         </CTAWithContentBar>
@@ -514,14 +529,14 @@ export default function Home() {
                 <div className='container'>
                     <div className=' equal-padding-B'>
                         <BeforeFooterCtaWrap>
-                            <PillMinHead className='text-center  '>
+                            <PillMinHead className='text-lg-center  '>
                                 <p>💬 Available for new projects</p>
                             </PillMinHead>
                             <h2 className='section-head   text-lg-center   '>
                                 Interested in <br />
                                 working <span className='d-lg-none'>together? </span> {" "}
                                 <MidHeadingCTA className="magnet-btn d-lg-inline-block d-none">
-                                    <Link to='/' > <strong className="magnet-btn-text">Let’s connect!!! </strong></Link>
+                                    <Link to='https://hybreed.co/contact' > <strong className="magnet-btn-text">Let’s connect!!! </strong></Link>
                                 </MidHeadingCTA>
 
                                 <CustomBtn className='text-center mt-5  d-lg-none'>

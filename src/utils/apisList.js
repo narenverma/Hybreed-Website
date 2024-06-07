@@ -448,25 +448,25 @@ export const worksList = [
 
 export const socialMediaList = [
     {
-      socialLink: "/",
+      socialLink: "https://www.instagram.com/wearehybreed",
       socialIcon: "insta-icon.svg",
       socialAlt:"Instagram",
       socialName: "Instagram",
     },
     {
-      socialLink: "/",
+      socialLink: "https://in.linkedin.com/company/wearehybreed",
       socialIcon: "linkedin-icon.svg",
       socialAlt:"LinkedIn",
       socialName: "LinkedIn",
     },
     {
-      socialLink: "/",
+      socialLink: "https://x.com/wearehybreed",
       socialIcon: "x-icon.svg",
       socialAlt:"X",
       socialName: <><del>Twitter</del> X </>,
     },
     {
-      socialLink: "/",
+      socialLink: "https://dribbble.com/hybreed",
       socialIcon: "dribble-icon.svg",
       socialAlt:"Dribbble",
       socialName: "Dribbble",
