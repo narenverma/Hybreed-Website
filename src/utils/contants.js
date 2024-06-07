@@ -58,7 +58,7 @@ export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
             let cloneList = item.cloneNode(true)
             // console.log(cloneList );
 
-            for(let i=0; i<loopVal; i++){
+            for(let i=0; i<=loopVal; i++){
                 
                 getCloneWrap.append(cloneList) 
             }
@@ -115,6 +115,7 @@ export const LoaderFunction = () => {
         setTimeout(() => {
             setPageLoader();
 
+            
             MarqueeDuplicateAndTime('.carousel-wrap ', " div", 2)
             MarqueeDuplicateAndTime('.marquee-strip-list', " div", 4)
 
@@ -170,10 +171,12 @@ export const LoaderFunction = () => {
     }
 
     if (document.readyState !== "loading") {
-        loaderTimer(); // Or setTimeout(onReady, 0); if you want it consistently async
+        loaderTimer();  
+        // document.querySelector(".page-loader video").addEventListener("ready", loaderTimer);
 
     } else {
         document.addEventListener("DOMContentLoaded", loaderTimer);
+        // document.querySelector(".page-loader video").addEventListener("ready", loaderTimer);
     }
 
 }

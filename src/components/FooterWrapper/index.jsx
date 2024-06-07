@@ -7,48 +7,48 @@ import { socialMediaList } from '../../utils/apisList'
 
 function FooterWrapper() {
 
-  const weatherApi = {
-    key: "63c8c99de9d77e601a860cc8a52c66ec",
-    base: "https://api.openweathermap.org/data/2.5/",
-  }
+  // const weatherApi = {
+  //   key: "63c8c99de9d77e601a860cc8a52c66ec",
+  //   base: "https://api.openweathermap.org/data/2.5/",
+  // }
 
-  let [getLatitude, setGetLatitude] = useState();
-  let [getLongitude, setGetLongitude] = useState();
+  // let [getLatitude, setGetLatitude] = useState();
+  // let [getLongitude, setGetLongitude] = useState();
 
   useEffect(() => {
 
 
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, error);
-    } else {
-      console.log("Geolocation not supported");
-    }
-    function error() {
-      console.log("Unable to retrieve your location");
-    }
-    function success(position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(success, error);
+  //   } else {
+  //     console.log("Geolocation not supported");
+  //   }
+  //   function error() {
+  //     console.log("Unable to retrieve your location");
+  //   }
+  //   function success(position) {
+  //     const latitude = position.coords.latitude;
+  //     const longitude = position.coords.longitude;
+  //     console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
-      // setGetLatitude(latitude);
-      // setGetLongitude(longitude);
+  //     // setGetLatitude(latitude);
+  //     // setGetLongitude(longitude);
         
 
-    const getWeather = () => {
-      fetch(`${weatherApi.base}weather?lat=${latitude}&lon=${longitude}&appid=${weatherApi.key}`)
-        .then((res) => res.json())
-        .then((result) => {
-          console.log(result);
-        })
-    }
+  //   const getWeather = () => {
+  //     fetch(`${weatherApi.base}weather?lat=${latitude}&lon=${longitude}&appid=${weatherApi.key}`)
+  //       .then((res) => res.json())
+  //       .then((result) => {
+  //         console.log(result);
+  //       })
+  //   }
 
-    setTimeout(() => {
+  //   setTimeout(() => {
 
-      getWeather()
-    }, 1000)
-  }
+  //     getWeather()
+  //   }, 1000)
+  // }
 
   }, [])
 
@@ -99,7 +99,7 @@ function FooterWrapper() {
               socialMediaList.map((item, index) => (
                 <div key={index}> 
               <IconBtn icon={require(`../../assets/images/${item.socialIcon}`)} > 
-                <Link>{item.socialName}</Link>
+                <Link to={item.socialLink}>{item.socialName}</Link>
               </IconBtn>
                 </div>
               ))
@@ -108,7 +108,10 @@ function FooterWrapper() {
           </div>
 
           <div className="col-xl-3 col-lg-4 pt-lg-0 pt-4">
-            <p className=' theme-text-white text-lg-end text-start' >{weather}</p>
+          <LinkBtn className=' theme-text-white text-lg-end text-start'>
+              <Link className='theme-text-white download-icon' to="/" download={true}>Company Deck</Link>
+            </LinkBtn>
+            {/* <p className=' theme-text-white text-lg-end text-start' >{weather}</p> */}
           </div>
         </div>
       </FooterWrap>

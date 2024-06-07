@@ -66,7 +66,7 @@ export default function IconHeadingListCardsWrapper() {
 
     ];
 
-    const TabNames = ["Desig", "Engineering", "Branding Assets"];
+    const TabNames = ["Design", "Engineering", "Branding Assets"];
     const pagination = {
         el: ".swiper-bullets-tab",
         clickable: true,

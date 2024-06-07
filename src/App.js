@@ -69,7 +69,7 @@ function App() {
       <GlobalColorsStyle />
 
       <div className="cursor">
-        <div className="cursor-move-inner" hidden={true}>
+        <div className="cursor-move-inner"  >
           <div className="cursor-inner"></div>
         </div>
         <div className="cursor-move-outer">
@@ -88,7 +88,7 @@ function App() {
             window.innerWidth > 992 &&
 
           <FloatingBtn>
-            <Link className="lets-talk-cta">
+            <Link className="lets-talk-cta" to="https://hybreed.co/contact">
               <img src={require("../src/assets/images/lets-talk-circle-with-text.svg").default} alt="Let's Talk" className="img-one" />
               <img src={require("../src/assets/images/phone-black-icon.svg").default} alt="Phone" className="img-two" />
             </Link>

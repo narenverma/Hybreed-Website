@@ -80,7 +80,7 @@ document.body.classList.remove("overflow-hidden");
             </div>
 
             <div className='col-lg-4 col-6   d-lg-flex justify-content-end d-none'>
-              <CustomBorderBtn className="text-end" btntype={'btn'}><Link className='light-btn' to='/'>Contact us</Link></CustomBorderBtn>
+              <CustomBorderBtn className="text-end" btntype={'btn'}><Link className='light-btn' to='https://hybreed.co/contact'>Contact us</Link></CustomBorderBtn>
             </div>
             <div className="col-6 d-lg-none text-end">
               <button type="button" className="bg-transparent border-0 menu-open-btn" onClick={() => {
