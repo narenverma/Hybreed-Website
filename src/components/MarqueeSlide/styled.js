@@ -16,8 +16,30 @@ animation : infinite-RTL 10s linear infinite;
 
 &  >div{
     color: var(--theme-white);
+    position: relative;
+    z-index: 10;
+
+ & img {
+    position: absolute;
+top: 50%;
+left: 50%; 
+translate: -50% -50%;
+height: 180%;
+z-index: -1;
+display: inline-block;
+transform-origin: bottom ;
+transform: perspective(1000px) rotateX(40deg);
+opacity: 0;
+transition: all 300ms ease-in-out;
 }
 
+&:hover img{
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: .8;
+    
+}
+
+}
 /* &  >div:after {
 content: "";
 width: 2rem;

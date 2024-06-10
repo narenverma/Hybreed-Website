@@ -12,3 +12,9 @@
 7. On scroll hide header menu
 
 08-06-2024 : Some Changes and fixes!
+
+10-06-2024 : UI Changes and Animation 
+1. Fix the Marquee void issue
+2. Update FAQ content and adjust the alignment
+3. Add Marquee Designs images hover effect
+4. Set client logos in one line 

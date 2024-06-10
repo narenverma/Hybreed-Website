@@ -103,6 +103,10 @@ export const LogosWrap = styled.div`
 export const LogoItem = styled.div`
         text-align: center;
 
+        & .swiper-wrapper{
+            align-items: center;
+        }
+
         & .swiper-slide:not(.swiper-slide-active){
             opacity:0!important;
             transition: 300ms ease-in-out  ;
@@ -172,13 +176,13 @@ export const BeforeFooterCtaWrap = styled.div`
 
 export const ProductsImgTile = styled.div`
     position: fixed;
-    width: 16.5rem;
-height: 19.125rem;
+    width: 10.5rem;
+    aspect-ratio: 3 / 4 ;
     left: 0;
     top: 0;
     transform: translate(-50%,-100%);
     z-index:111;
-   
+   pointer-events: none;
 
     & img{
         object-fit: cover;

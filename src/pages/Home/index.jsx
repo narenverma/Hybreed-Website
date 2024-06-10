@@ -225,6 +225,17 @@ export default function Home() {
                                 </SlideItems>
 
                             ))}
+                            {carouselSlideList.map((item, index) => (
+
+                                <SlideItems key={index}>
+                                    <img
+                                        src={require("../../assets/images/our-work-images/" +
+                                            item.itemImg)}
+                                        alt={item.itemTitle}
+                                    />
+                                </SlideItems>
+
+                            ))}
                         </CarouselWrap>
                     </GridFreeAnimCarousel>
                 </div>
@@ -237,7 +248,7 @@ export default function Home() {
                                 <strong>70+</strong> companies in{" "}
                                 <strong>India, Middle East & Singapore!</strong>
                             </p>
-                            <LogosWrap className='row row-cols-lg-5 row-cols-2 justify-content-center '>
+                            <LogosWrap className='row row-cols-lg-5 row-cols-2 align-items-center justify-content-center '>
                                 {clientLogosList.map((item, index) => (
                                     <div className='col ' key={index}>
                                         <LogoItem>
@@ -415,9 +426,9 @@ export default function Home() {
                 </div>
 
 
-                <ProductsImgTile className="products-img-tile" style={{ left: position.x, top: position.y }}>
+                {/* <ProductsImgTile className="products-img-tile" style={{ left: position.x, top: position.y }}>
                     <img src={require("../../assets/images/gmi-website-design-image.png")} alt="Thumbnails" />
-                </ProductsImgTile>
+                </ProductsImgTile> */}
 
             </MarqueeStripSection>
 
@@ -514,7 +525,7 @@ export default function Home() {
 
             <FAQsSection
                 data-scroll-section
-                className='theme-bg-black-secondary next-section-curve curve-bg-primary'>
+                className='theme-bg-black-secondary next-section-curve curve-bg-primary overflow-visible'>
                 <div className='container'>
                     <div className=' equal-padding-B'>
                         <FAQsWrapper />
