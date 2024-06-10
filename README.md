@@ -10,3 +10,5 @@
 5. Update testimonials content
 6. Update Featured cards hover effect
 7. On scroll hide header menu
+
+08-06-2024 : Some Changes and fixes!

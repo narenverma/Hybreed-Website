@@ -99,10 +99,12 @@ export const LoaderFunction = () => {
 
 
         const setPageLoader = () => {
+            document.body.classList.remove("overflow-hidden")
+            window.scrollTo(0, 0);
 
             getThumbsLoader.style.position = "absolute";
-            getThumbsLoader.style.top = getPillThumbs.getBoundingClientRect().top + "px";
-            getThumbsLoader.style.left = getPillThumbs.getBoundingClientRect().left + "px";
+            getThumbsLoader.style.top = getPillThumbs.getBoundingClientRect().top + window.scrollY + "px";
+            getThumbsLoader.style.left = getPillThumbs.getBoundingClientRect().left   + "px";
             getThumbsLoader.style.height = getPillThumbs.offsetHeight + "px";
             getThumbsLoader.style.width = getPillThumbs.offsetWidth + "px";
             getThumbsLoader.style.borderRadius = "4rem";
