@@ -95,7 +95,7 @@ function App() {
           </FloatingBtn>
           }
         </main>
-        <footer>
+        <footer className="overflow-hidden">
           <Footer />
         </footer>
       </div>

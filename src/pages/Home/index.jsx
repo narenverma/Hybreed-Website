@@ -167,9 +167,9 @@ export default function Home() {
                     preload={"true"}
                     muted={true}
                     playsInline={true}
-                    src={"http://hybclient.com/hybreed-cdn-assets/videos/banner-animation.mp4"}>
+                    src={require("../../assets/videos/banner-animation.mp4")}>
                     <source
-                        src={"http://hybclient.com/hybreed-cdn-assets/videos/banner-animation.mp4"}
+                        src={require("../../assets/videos/banner-animation.mp4")}
                         type='video/mp4'></source>
                 </video>
 
@@ -187,8 +187,7 @@ export default function Home() {
                         <HomeHeroWrap>
                             <PillMinHead className='text-lg-center'>
                                 <p>
-                                    👋 We are Creative agency based twin city of
-                                    Mumbai
+                                    👋 WE ARE CREATIVE AGENCY BASED IN TWIN CITY OF MUMBAI
                                 </p>
                             </PillMinHead>
                             <h1 className='hero-head text-lg-center mb-4'>
@@ -363,16 +362,16 @@ export default function Home() {
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
                                             </CategoryBullets>
-                                            <video
+                                            {/* <video 
                                                 loop={true}
                                                 autoPlay={true}
-                                                preload='true'
+                                                preload='true' 
                                                 muted={true}
                                                 src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}>
                                                 <source
                                                     src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}
                                                     type='video/mp4'></source>
-                                            </video>
+                                            </video> */}
                                             <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
                                         </CardTop>
                                         <CardBottom>

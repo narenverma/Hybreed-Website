@@ -368,19 +368,15 @@ body:hover .cursor{
 }
 .cursor {
   position: fixed;
-  top: 0%;
-  left: 0%;
-  z-index: 9999;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: -12px 0 0 -12px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: none;
-}
-
-.cursor.active{
-  margin: -2.5rem 0 0 -2.5rem;
 }
 .cursor--hover .cursor-inner {
   transform: scale(0.5);
@@ -416,8 +412,8 @@ body:hover .cursor{
   will-change: height, width;
 }
 .cursor.active .cursor-move-outer, .cursor.active .cursor-move-inner {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 100px;
+  height: 100px;
   top: -50%;
   left: -50%;
 }
@@ -426,7 +422,7 @@ body:hover .cursor{
   display: block;
   width: 100%;
   height: 100%;
-  background-color: var(--theme-black);
+  background-color: #0000;
   border-radius: 50%;
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: .1s linear .2s ;
@@ -446,7 +442,8 @@ body:hover .cursor{
   transition: 0.4s linear;
 }
 .cursor.active p{
-  font-size: 18px;  
+  font-size: 18px;
+
 }
 .cursor-outer {
   display: block;
@@ -1058,7 +1055,7 @@ border-radius: 0rem;
 }
 &:hover img{
   scale: 1.1;
-opacity: 0;
+opacity: 1;
 border-radius: 0rem;
 }
 
@@ -1118,7 +1115,8 @@ margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 768px){
-  padding: .9rem ;
+  ${'' /* padding: .9rem ; */}
+  margin-bottom: 1rem;
   & span{
     padding: 0.15rem 0.6rem;
     font-size: 0.52788rem;
