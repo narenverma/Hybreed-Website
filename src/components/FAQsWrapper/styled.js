@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const FAQsSection = styled.section``;
-export const FAQsWrapper = styled.section``;
-export const FAQsWrap = styled.section`
+export const FAQsWrapper = styled.div``;
+export const FAQsWrap = styled.div`
 
 & .accordion-button:not(.collapsed), & .accordion-button{
 background-color: #0000!important;
@@ -46,10 +46,23 @@ box-shadow: none  !important;
     letter-spacing: normal;
     margin-bottom: 0;
 
-    &:not(:last-of-type){
-        margin-bottom: 1rem;
+    
  }
+ & p:not(:last-of-type), & :is(ul, ol){
+        margin-bottom: 1.4rem;
  }
+ &   p ~ :is(ul, ol) {
+    margin-top: 1.4rem; 
+ } 
+ &  h6 ~ :is( p){
+    margin-top: 1rem; 
+ } 
+
+ & a{
+    color:var(--theme-primary)!important;
+    text-decoration: underline;
+ }
+
 }
 
 @media screen and (max-width:768px){

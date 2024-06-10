@@ -157,112 +157,47 @@ export const clientLogosList = [
             logoImg: "et-logo.svg",
             logoTitle: "ET",
         },
-      ]
-  },
-  {
-    logosList: [
-        
         {
-            logoImg: "make-stories-logo.svg",
-            logoTitle: "Make Stories",
+            logoImg: "impelsys-logo.svg",
+            logoTitle: "Impelsys",
         },
         {
-            logoImg: "turbohire-logo.svg",
-            logoTitle: "TurboHire",
+            logoImg: "swipe-pages-logo.svg",
+            logoTitle: "Swipe Pages",
         },
         {
-            logoImg: "mercer-logo.svg",
-            logoTitle: "Mercer",
+            logoImg: "wiz-kids-carnival-logo.svg",
+            logoTitle: "WizKidsCarnival",
         },
         {
-            logoImg: "et-logo.svg",
-            logoTitle: "ET",
+            logoImg: "gptw-logo.svg",
+            logoTitle: "GPTW",
         },
         {
-            logoImg: "focusu-logo.svg",
-            logoTitle: "FocusU",
-        },
-      ]
-  },
-  {
-    logosList: [
-        
-        {
-            logoImg: "turbohire-logo.svg",
-            logoTitle: "TurboHire",
-        },
-        {
-            logoImg: "mercer-logo.svg",
-            logoTitle: "Mercer",
-        },
-        {
-            logoImg: "et-logo.svg",
-            logoTitle: "ET",
-        },
-        {
-            logoImg: "focusu-logo.svg",
-            logoTitle: "FocusU",
-        },
-        {
-            logoImg: "make-stories-logo.svg",
-            logoTitle: "Make Stories",
-        },
-      ]
-  },
-  {
-    logosList: [
-        
-        {
-            logoImg: "mercer-logo.svg",
-            logoTitle: "Mercer",
-        },
-        {
-            logoImg: "et-logo.svg",
-            logoTitle: "ET",
-        },
-        {
-            logoImg: "focusu-logo.svg",
-            logoTitle: "FocusU",
-        },
-        {
-            logoImg: "make-stories-logo.svg",
-            logoTitle: "Make Stories",
-        },
-        {
-            logoImg: "turbohire-logo.svg",
-            logoTitle: "TurboHire",
-        },
-      ]
-  },
-  {
-    logosList: [
-
-        {
-            logoImg: "et-logo.svg",
-            logoTitle: "ET",
-        },
-        {
-            logoImg: "focusu-logo.svg",
-            logoTitle: "FocusU",
-        },
-        {
-            logoImg: "make-stories-logo.svg",
-            logoTitle: "Make Stories",
-        },
-        {
-            logoImg: "turbohire-logo.svg",
-            logoTitle: "TurboHire",
-        },
-                
-        {
-            logoImg: "mercer-logo.svg",
-            logoTitle: "Mercer",
+            logoImg: "gmi-logo.svg",
+            logoTitle: "GMI",
         },
       ]
   },
   {
       logosList: [
         {
+            logoImg: "make-stories-logo.svg",
+            logoTitle: "Make Stories",
+        },
+        {
+            logoImg: "turbohire-logo.svg",
+            logoTitle: "TurboHire",
+        },
+        {
+            logoImg: "mercer-logo.svg",
+            logoTitle: "Mercer",
+        },
+        {
+            logoImg: "et-logo.svg",
+            logoTitle: "ET",
+        },
+        {
             logoImg: "impelsys-logo.svg",
             logoTitle: "Impelsys",
         },
@@ -282,10 +217,30 @@ export const clientLogosList = [
             logoImg: "gmi-logo.svg",
             logoTitle: "GMI",
         },
-      ],
+        {
+            logoImg: "focusu-logo.svg",
+            logoTitle: "FocusU",
+        },
+      ]
   },
   {
-    logosList: [
+      logosList: [
+        {
+            logoImg: "turbohire-logo.svg",
+            logoTitle: "TurboHire",
+        },
+        {
+            logoImg: "mercer-logo.svg",
+            logoTitle: "Mercer",
+        },
+        {
+            logoImg: "et-logo.svg",
+            logoTitle: "ET",
+        },
+        {
+            logoImg: "impelsys-logo.svg",
+            logoTitle: "Impelsys",
+        },
         {
             logoImg: "swipe-pages-logo.svg",
             logoTitle: "Swipe Pages",
@@ -303,13 +258,33 @@ export const clientLogosList = [
             logoTitle: "GMI",
         },
         {
-            logoImg: "impelsys-logo.svg",
-            logoTitle: "Impelsys",
+            logoImg: "focusu-logo.svg",
+            logoTitle: "FocusU",
         },
-      ],
+        {
+            logoImg: "make-stories-logo.svg",
+            logoTitle: "Make Stories",
+        },
+      ]
   },
   {
-    logosList: [
+      logosList: [
+        {
+            logoImg: "mercer-logo.svg",
+            logoTitle: "Mercer",
+        },
+        {
+            logoImg: "et-logo.svg",
+            logoTitle: "ET",
+        },
+        {
+            logoImg: "impelsys-logo.svg",
+            logoTitle: "Impelsys",
+        },
+        {
+            logoImg: "swipe-pages-logo.svg",
+            logoTitle: "Swipe Pages",
+        },
         {
             logoImg: "wiz-kids-carnival-logo.svg",
             logoTitle: "WizKidsCarnival",
@@ -323,47 +298,24 @@ export const clientLogosList = [
             logoTitle: "GMI",
         },
         {
-            logoImg: "impelsys-logo.svg",
-            logoTitle: "Impelsys",
+            logoImg: "focusu-logo.svg",
+            logoTitle: "FocusU",
         },
         {
-            logoImg: "swipe-pages-logo.svg",
-            logoTitle: "Swipe Pages",
+            logoImg: "make-stories-logo.svg",
+            logoTitle: "Make Stories",
         },
-      ],
+        {
+            logoImg: "turbohire-logo.svg",
+            logoTitle: "TurboHire",
+        },
+      ]
   },
   {
-    logosList: [
-
+      logosList: [
         {
-            logoImg: "gptw-logo.svg",
-            logoTitle: "GPTW",
-        },
-        {
-            logoImg: "gmi-logo.svg",
-            logoTitle: "GMI",
-        },
-        {
-            logoImg: "impelsys-logo.svg",
-            logoTitle: "Impelsys",
-        },
-        {
-            logoImg: "swipe-pages-logo.svg",
-            logoTitle: "Swipe Pages",
-        },
-        {
-            logoImg: "wiz-kids-carnival-logo.svg",
-            logoTitle: "WizKidsCarnival",
-        },
-      ],
-  },
-  {
-
-    logosList: [
-
-        {
-            logoImg: "gmi-logo.svg",
-            logoTitle: "GMI",
+            logoImg: "et-logo.svg",
+            logoTitle: "ET",
         },
         {
             logoImg: "impelsys-logo.svg",
@@ -381,67 +333,88 @@ export const clientLogosList = [
             logoImg: "gptw-logo.svg",
             logoTitle: "GPTW",
         },
-      ],
+        {
+            logoImg: "gmi-logo.svg",
+            logoTitle: "GMI",
+        },
+        {
+            logoImg: "focusu-logo.svg",
+            logoTitle: "FocusU",
+        },
+        {
+            logoImg: "make-stories-logo.svg",
+            logoTitle: "Make Stories",
+        },
+        {
+            logoImg: "turbohire-logo.svg",
+            logoTitle: "TurboHire",
+        },
+        {
+            logoImg: "mercer-logo.svg",
+            logoTitle: "Mercer",
+        },
+      ]
   },
+   
 ];
 
 
 export const worksList = [
   {
       itemCategory: "Website",
-      itemImg: "solvecube-banner-image.png",
+      itemImg: "gmi-featured-banner.png",
       itemVideo: "",
-      itemTitle: "ETYL (2016-19)",
-      itemDescription: "Powerful Program Website with Over 15,000 Registrations.",
+      itemTitle: "Great Manager Institute (2023-Present)",
+      itemDescription: "Elevating User Experience and Facilitating Meaningful Connections",
   },
   {
       itemCategory: "Website",
-      itemImg: "gptw-banner-image.png",
-      itemVideo: "",
-      itemTitle: "GPTW (2019-Present)",
-      itemDescription: "Propelling GPTW'S mission in India through Strategic Support.",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "make-stories-banner-image.png",
-      itemVideo: "",
-      itemTitle: "MakeStories (2020-Present)",
-      itemDescription: "Reimagined the editor for Web Stories.",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "impelsys-banner-image.png",
-      itemVideo: "",
-      itemTitle: "Impelsys (2021)",
-      itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "mercer-isca-banner-image.png",
-      itemVideo: "",
-      itemTitle: "Mercer(2020)",
-      itemDescription: "Knowledge Platform for Chartered Accountancy Job Redesign",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "turbohire-banner-image.png",
-      itemVideo: "",
-      itemTitle: "TurboHire (2022-Present)",
-      itemDescription: "Enhanced the Usability of AI-powered Recruitment Platform.",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "focusu-banner-image.png",
+      itemImg: "focus-featured-banner.png",
       itemVideo: "",
       itemTitle: "FocusU (2023-Present)",
       itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
   },
   {
       itemCategory: "Website",
-      itemImg: "gmi-banner-image.png",
+      itemImg: "th-featured-banner.png",
       itemVideo: "",
-      itemTitle: "Great Manager Institute (2023)",
+      itemTitle: "TurboHire (2022-Present)",
+      itemDescription: "Present Enhanced the Usability of AI-powered Recruitment Platform",
+  },
+  {
+      itemCategory: "Website",
+      itemImg: "equizen-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "Equizen (2024 - Present)",
       itemDescription: "Elevating User Experience and Facilitating Meaningful Connections",
+  },
+  {
+      itemCategory: "Website",
+      itemImg: "impelsys-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "Impelsys (2021)",
+      itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
+  },
+  {
+      itemCategory: "Website",
+      itemImg: "makestories-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "MakeStories (2020-Present)",
+      itemDescription: "Reimagined the editor for Web Stories.",
+  },
+  {
+      itemCategory: "Website",
+      itemImg: "gptw-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "GPTW (2019-Present)",
+      itemDescription: "Propelling GPTW'S mission in India through Strategic Support.",
+  },
+  {
+      itemCategory: "Website",
+      itemImg: "mercer-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "Mercer(2020)",
+      itemDescription: "Knowledge Platform for Chartered Accountancy Job Redesign",
   },
 ];
 

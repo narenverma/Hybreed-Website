@@ -58,10 +58,10 @@ export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
             let cloneList = item.cloneNode(true)
             // console.log(cloneList );
 
-            for(let i=0; i<=loopVal; i++){
+            // for(let i=0; i<=loopVal; i++){
                 
-                getCloneWrap.append(cloneList) 
-            }
+            //     getCloneWrap.append(cloneList) 
+            // }
 
 
             let getListOfSlide = getCloneWrap.querySelectorAll(marqueeList).length,
@@ -118,8 +118,8 @@ export const LoaderFunction = () => {
             setPageLoader();
 
             
-            MarqueeDuplicateAndTime('.carousel-wrap ', " div", 2)
-            MarqueeDuplicateAndTime('.marquee-strip-list', " div", 4)
+            MarqueeDuplicateAndTime('.carousel-wrap ', " div", 0)
+            MarqueeDuplicateAndTime('.marquee-strip-list', " div", 0)
 
         }, 1000)
 
