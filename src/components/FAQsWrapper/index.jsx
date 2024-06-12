@@ -108,7 +108,7 @@ export default function FAQsWrapper() {
         {
             faqHeading: "How can I contact you?",
             faqContent: <>
-                <p>You can fill up the form <a href="https://hybreed.co/contact">here</a> or schedule a call with Ajit RG <a href="tel:+ 919221915405">here</a>.</p>
+                <p>You can fill up the form <a href="https://hybreed.co/contact">here</a> or schedule a call with Ajit RG <a href="tel:+919833572299">here</a>.</p>
             </>
         },
     ]
@@ -136,6 +136,23 @@ export default function FAQsWrapper() {
 
                                     <div className="accordion-item" key={index}>
                                         <h6 className="accordion-header" id={"heading" + (index + 1)}>
+                                            <button className={"accordion-button   collapsed"} type="button" data-bs-toggle="collapse" data-bs-target={"#panelsStayOpen-collapse" + (index + 1)} aria-expanded={ "false"} aria-controls={"panelsStayOpen-collapse" + (index + 1)}>
+                                                {item.faqHeading}
+                                            </button>
+                                        </h6>
+                                        <div id={"panelsStayOpen-collapse" + (index + 1)} className={"accordion-collapse collapse "} aria-labelledby={"heading" + (index + 1)} data-bs-parent="#themeAccordion">
+                                            <div className="accordion-body">
+                                                {item.faqContent}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                            {/* {
+                                faqsList.map((item, index) => (
+
+                                    <div className="accordion-item" key={index}>
+                                        <h6 className="accordion-header" id={"heading" + (index + 1)}>
                                             <button className={"accordion-button " + ((index + 1) === 1 ? "" : " collapsed")} type="button" data-bs-toggle="collapse" data-bs-target={"#panelsStayOpen-collapse" + (index + 1)} aria-expanded={(index + 1) === 1 ? "true" : "false"} aria-controls={"panelsStayOpen-collapse" + (index + 1)}>
                                                 {item.faqHeading}
                                             </button>
@@ -147,7 +164,7 @@ export default function FAQsWrapper() {
                                         </div>
                                     </div>
                                 ))
-                            }
+                            } */}
 
                         </div>
 

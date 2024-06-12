@@ -18,9 +18,10 @@ export const HeaderLogo = styled.div`
 export const NavigationWrap= styled.div`
 & .menu-open-btn , 
 & .menu-close-btn {
-    background-color: var(--theme-white);
+    background-color: var(--theme-primary);
     border-radius: 50%;
-    padding: 1px;
+    border: 0px;
+     
     
     & img{
     height:2rem;

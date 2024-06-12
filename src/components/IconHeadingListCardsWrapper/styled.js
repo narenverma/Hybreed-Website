@@ -41,7 +41,7 @@ background-color: #FFFEF5;
     & :is( svg, h5){
         margin-bottom:  .44rem;
     }
-    & p{font-size: 0.98231rem;}
+    /* & p{font-size: 0.98231rem;} */
 }
 
 `;
@@ -64,6 +64,10 @@ export const IconCardsSwiper = styled.div`
 
     & .swiper-slide:not(:last-child) > div{
         width:calc(100% -  1rem); 
+    }
+
+    & .swiper-slide{
+        height: auto;
     }
 }
 
