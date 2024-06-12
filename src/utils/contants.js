@@ -59,7 +59,7 @@ export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
             // console.log(cloneList );
 
             // for(let i=0; i<=loopVal; i++){
-                
+
             //     getCloneWrap.append(cloneList) 
             // }
 
@@ -67,19 +67,19 @@ export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
             let getListOfSlide = getCloneWrap.querySelectorAll(marqueeList).length,
                 getFirstSlideW = getCloneWrap.offsetWidth;
 
-                // let  sumSize = 0;
+            // let  sumSize = 0;
 
-                // getCloneWrap.querySelectorAll(marqueeList).forEach((item) => {
-                //         // widthList.push(item.offsetWidth); 
-                //         sumSize += item.offsetWidth  
-                // })
-    
+            // getCloneWrap.querySelectorAll(marqueeList).forEach((item) => {
+            //         // widthList.push(item.offsetWidth); 
+            //         sumSize += item.offsetWidth  
+            // })
 
-            getCloneWrap.style.animationDuration =  getFirstSlideW / (getListOfSlide + 100)     + "s";
+
+            getCloneWrap.style.animationDuration = getFirstSlideW / (getListOfSlide + 100) + "s";
             // getCloneWrap.style.animationDuration = (getListOfSlide * (getFirstSlideW / 100) - 10) + "s";
 
-            
-             
+
+
 
         })
     })
@@ -104,7 +104,7 @@ export const LoaderFunction = () => {
 
             getThumbsLoader.style.position = "absolute";
             getThumbsLoader.style.top = getPillThumbs.getBoundingClientRect().top + window.scrollY + "px";
-            getThumbsLoader.style.left = getPillThumbs.getBoundingClientRect().left   + "px";
+            getThumbsLoader.style.left = getPillThumbs.getBoundingClientRect().left + "px";
             getThumbsLoader.style.height = getPillThumbs.offsetHeight + "px";
             getThumbsLoader.style.width = getPillThumbs.offsetWidth + "px";
             getThumbsLoader.style.borderRadius = "4rem";
@@ -117,7 +117,7 @@ export const LoaderFunction = () => {
         setTimeout(() => {
             setPageLoader();
 
-            
+
             MarqueeDuplicateAndTime('.carousel-wrap ', " div", 0)
             MarqueeDuplicateAndTime('.marquee-strip-list', " div", 0)
 
@@ -173,35 +173,40 @@ export const LoaderFunction = () => {
     }
 
     if (document.readyState !== "loading") {
-        loaderTimer();  
+
+        setTimeout(() => {
+            loaderTimer();
+        }, 1000)
         // document.querySelector(".page-loader video").addEventListener("ready", loaderTimer);
 
     } else {
-        document.addEventListener("DOMContentLoaded", loaderTimer);
+        setTimeout(() => {
+            document.addEventListener("DOMContentLoaded", loaderTimer);
+        }, 1000)
         // document.querySelector(".page-loader video").addEventListener("ready", loaderTimer);
     }
 
 }
 
- 
-export const headerScrollHide =()=>{
+
+export const headerScrollHide = () => {
 
     let didScroll;
     let lastScrollT = 0;
     let delta = 5;
     let siteHeader = document.querySelector('header').offsetHeight;
-    
-    window.addEventListener('scroll', function(event) {
+
+    window.addEventListener('scroll', function (event) {
         didScroll = true;
     });
-    
-    setInterval(function() {
+
+    setInterval(function () {
         if (didScroll) {
             hasScroll();
             didScroll = false;
         }
     }, 250);
-    
+
     function hasScroll() {
         let scrollT = window.scrollY;
         if (Math.abs(lastScrollT - scrollT) <= delta) return;
@@ -214,5 +219,5 @@ export const headerScrollHide =()=>{
         }
         lastScrollT = scrollT;
     }
-    
+
 }

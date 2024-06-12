@@ -18,3 +18,15 @@
 2. Update FAQ content and adjust the alignment
 3. Add Marquee Designs images hover effect
 4. Set client logos in one line 
+
+11-06-2024 : Lots of changes 
+1. Fix The video loading issue
+2. Hero Marquee set on one line and Small in size
+3. Replace and rename the 28 hero marquee images
+4. Replace Umama Illustration
+5. Update Featured cards tags and Font size Changes
+6. Update Cta Link
+7. Small the cta in mobile
+8. Equal the size of the Services Cards
+9. Collapsed All faqs questions
+10. Fix some mobile issues

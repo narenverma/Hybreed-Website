@@ -162,15 +162,13 @@ export default function Home() {
         <>
             <div className="page-loader">
                 <video
-                    loop={true}
-                    autoPlay={true}
-                    preload={"true"}
-                    muted={true}
-                    playsInline={true}
-                    src={require("../../assets/videos/banner-animation.mp4")}>
+                    loop muted  webkit-playsinline={"true"} playsInline autoPlay
+                    preload={'auto'}
+                type={'video/webm'}
+                    src={require("../../assets/videos/banner-animation-v2.4.webm")}>
                     <source
-                        src={require("../../assets/videos/banner-animation.mp4")}
-                        type='video/mp4'></source>
+                        src={require("../../assets/videos/banner-animation-v2.4.webm")}
+                        type='video/webm'></source>
                 </video>
 
 
@@ -179,7 +177,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <HomeHeroSection className="  hero-section"
+            <HomeHeroSection className="  hero-section next-section-curve curve-bg-black-secondary"
                 data-scroll-section
             >
                 <div className='container'>
@@ -202,8 +200,8 @@ export default function Home() {
                                 robust technology & our scalable design
                                 approach.
                             </p>
-                            <CustomBtn className='text-center'>
-                                <Link to='/'>Let's Talk</Link>{" "}
+                            <CustomBtn className='text-lg-center'>
+                                <Link to='https://hybreed.co/contact'>Let's Talk</Link>{" "}
                             </CustomBtn>
 
                             <BgElemOne><img src={require("../../assets/images/blur-yellow-circle-element-illus.svg").default} alt='BG Elems' /></BgElemOne>
@@ -218,8 +216,7 @@ export default function Home() {
 
                                 <SlideItems key={index}>
                                     <img
-                                        src={require("../../assets/images/our-work-images/" +
-                                            item.itemImg)}
+                                        src={require("../../assets/images/our-work-images-v2/" + item.itemImg)}
                                         alt={item.itemTitle}
                                     />
                                 </SlideItems>
@@ -229,8 +226,7 @@ export default function Home() {
 
                                 <SlideItems key={index}>
                                     <img
-                                        src={require("../../assets/images/our-work-images/" +
-                                            item.itemImg)}
+                                        src={require("../../assets/images/our-work-images-v2/" + item.itemImg)}
                                         alt={item.itemTitle}
                                     />
                                 </SlideItems>
@@ -286,26 +282,56 @@ export default function Home() {
                         </ClientsLogoWrap>
                     </div>
 
+                    <div className="container col-lg-7 mx-auto  ">
+                        <div className='  equal-padding-B'>
+                            <div className=''>
+                                <div className="para-reveal-wrapper"  >
+
+                                    <ScrollAnimParaWrap className='para-reveal-wrap'>
+                                        <p>
+                                            <TextSplitSpans text={
+                                                "We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed."
+                                            } />
+                                        </p>
+                                        <p>
+                                            <TextSplitSpans text={
+                                                "This is what we call the HYBREED PARTNERSHIP."
+                                            } />
+                                        </p>
+
+
+                                    </ScrollAnimParaWrap>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className='bottom-image-wrap text-center'
+                        style={{ transform: "translateY(5px)" }}>
+                        <img src={require("../../assets/images/hybreed-family-banner.svg").default} alt='Hybreed Family' className="w-100" />
+                    </div>
+
 
                 </div>
             </HomeHeroSection>
 
-            <AboutSection className='  next-section-curve curve-bg-black-secondary overflow-visible'>
-                <div className="container col-lg-7 mx-auto">
-                    <div className='  equal-padding-B'>
+            {/*<AboutSection className='  next-section-curve curve-bg-black-secondary overflow-visible'>
+                <div className="container col-lg-7 mx-auto px-lg-5">
+                     <div className='  equal-padding-B'>
                         <div className=''>
                             <div className="para-reveal-wrapper"  >
 
                                 <ScrollAnimParaWrap className='para-reveal-wrap'>
                                     <p>
-                                        <TextSplitSpans text="
-                                    We work with people that challenge us creatively. Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed.
-                                        "/>
+                                        <TextSplitSpans text={
+                                    "We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed."
+                                        }/>
                                     </p>
                                     <p>
                                         <TextSplitSpans text={
-                                    "This is what we call the HYBREED PARTNERSHIP."
-                                        }/>
+                                            "This is what we call the HYBREED PARTNERSHIP."
+                                        } />
                                     </p>
 
                                     {/* <p>
@@ -335,18 +361,14 @@ export default function Home() {
                                         to shape a brighter and more engaging
                                         tomorrow for India” 
                                         "/>
-                                    </p> */}
+                                    </p> 
                                 </ScrollAnimParaWrap>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        className='bottom-image-wrap text-center'
-                        style={{ transform: "translateY(10px)" }}>
-                        <img src={require("../../assets/images/group-of-people-image.svg").default} alt='Group of People images' className="w-100" />
-                    </div>
+                    </div> 
+                    
                 </div>
-            </AboutSection>
+            </AboutSection>*/}
 
             <FeaturedWorkSection
                 className='theme-bg-black-secondary '
@@ -365,10 +387,10 @@ export default function Home() {
                                 {worksList.map((item, index) => (
                                     <CardItems key={index}>
                                         <CardTop
-                                        onMouseEnter={() =>
-                                            HoverEnter("Coming <br> Soon!")
-                                        }
-                                        onMouseLeave={() => HoverLeave()}
+                                            onMouseEnter={() =>
+                                                HoverEnter("Coming <br> Soon!")
+                                            }
+                                            onMouseLeave={() => HoverLeave()}
                                         >
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
@@ -401,7 +423,7 @@ export default function Home() {
                             </VideoCardsWrap>
 
                             <CustomBtn className='text-center mt-5 '>
-                                <Link to='/' className='light-btn ' >
+                                <Link to='https://hybreed.co/contact' className='light-btn ' >
                                     See more work
                                 </Link>{" "}
                             </CustomBtn>
@@ -549,8 +571,8 @@ export default function Home() {
                                     <Link to='https://hybreed.co/contact' > <strong className="magnet-btn-text">Let’s connect!!! </strong></Link>
                                 </MidHeadingCTA>
 
-                                <CustomBtn className='text-center mt-5  d-lg-none'>
-                                    <Link to='/'   >
+                                <CustomBtn className='text-lg-center mt-5  d-lg-none'>
+                                    <Link to='https://hybreed.co/contact'   >
                                         <span>Let’s connect!!!</span>
                                     </Link>
                                 </CustomBtn>

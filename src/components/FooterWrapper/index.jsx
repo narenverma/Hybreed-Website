@@ -72,13 +72,13 @@ function FooterWrapper() {
           <div>
             <p className="theme-text-gray">Start a conversation</p>
             <LinkBtn>
-              <Link className='theme-text-white  ' to="mailto:arg@hybreed.co"> arg@hybreed.co</Link>
+              <Link className='theme-text-white  ' to="mailto:arg@hybreed.co">arg@hybreed.co</Link>
             </LinkBtn>
           </div>
           <div>
             <p className="theme-text-gray">Call us</p>
             <LinkBtn>
-              <Link className='theme-text-white' to="tel:+919221915405">+ 919221915405</Link>
+              <Link className='theme-text-white' to="tel:+919833572299">+ 91 9833 57 2299</Link>
             </LinkBtn>
           </div>
         </FooterLinkWrap>

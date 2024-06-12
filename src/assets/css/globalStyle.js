@@ -804,10 +804,10 @@ export const CustomBtn = styled.div`
 
 }
 @media screen and (max-width: 768px){
-& :is(a,button){
+/* & :is(a,button){
   display: flex;
   justify-content: space-between;
-}
+} */
 }
 `;
 
@@ -1111,7 +1111,7 @@ margin-bottom: 1.5rem;
   border-radius: 3.3125rem;
   background-color: var(--theme-primary);
   color: var(--theme-black-primary);
-  
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 768px){
@@ -1135,7 +1135,7 @@ export const CardBottom = styled.div`
 }
 @media screen and (max-width: 768px){
   & h6{
-    font-size: 0.82956rem;
+    /* font-size: 0.82956rem; */
     line-height: 145.455%;
   }  
 }

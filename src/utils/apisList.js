@@ -1,67 +1,115 @@
 export const carouselSlideList = [
   {
-      itemImg: "alme-mater-image.png",
+      itemImg: "focusu-work-banner.png",
+      itemTitle: "FocusU",
+  },
+  {
+      itemImg: "turbohire-work-banner.png",
+      itemTitle: "Turbohire",
+  },
+  {
+      itemImg: "lifecrafting-work-banner.png",
+      itemTitle: "LifeCrafting",
+  },
+  {
+      itemImg: "equizen-work-banner.png",
+      itemTitle: "Equizen",
+  },
+  {
+      itemImg: "gmi-work-banner.png",
+      itemTitle: "GMI",
+  },
+  {
+      itemImg: "makestories-work-banner.png",
+      itemTitle: "Make Stories",
+  },
+  {
+      itemImg: "impelsys-blog-work-banner.png",
+      itemTitle: "Impelsys",
+  },
+  {
+      itemImg: "cardiai-work-banner.png",
+      itemTitle: "Cardi Ai",
+  },
+  {
+      itemImg: "story-work-banner.png",
       itemTitle: "Our Works",
   },
   {
-      itemImg: "dribbble-1-image.png",
+      itemImg: "impelsys-navigation-work-banner.png",
+      itemTitle: "Impelsys",
+  },
+  {
+      itemImg: "wkc-work-banner.png",
+      itemTitle: "WKC",
+  }, 
+  {
+      itemImg: "4pcapital-work-banner.png",
+      itemTitle: "4PCapital",
+  },
+  {
+      itemImg: "concept-app-work-banner.png",
       itemTitle: "Our Works",
   },
   {
-      itemImg: "dribbble-shot-1-image.png",
-      itemTitle: "Our Works",
+      itemImg: "swiperpages-work-banner.png",
+      itemTitle: "Swiper Pages",
   },
   {
-      itemImg: "dribble-2-image.png",
-      itemTitle: "Our Works",
+      itemImg: "ktv-work-banner.png",
+      itemTitle: "KTV",
   },
   {
-      itemImg: "dribble-3-image.png",
-      itemTitle: "Our Works",
+      itemImg: "tutor-work-banner.png",
+      itemTitle: "Tutor",
   },
   {
-      itemImg: "equizen-dribbble-2-image.png",
-      itemTitle: "Our Works",
+      itemImg: "skincare-concept-app-work-banner.png",
+      itemTitle: "Skincare Concept App",
   },
   {
-      itemImg: "forall-gptw-image.png",
-      itemTitle: "Our Works",
+      itemImg: "makemail-work-banner.png",
+      itemTitle: "Make Mail",
   },
   {
-      itemImg: "ktv-image.png",
-      itemTitle: "Our Works",
+      itemImg: "lissen-io-work-banner.png",
+      itemTitle: "Lissen.io",
   },
   {
-      itemImg: "lissen-io-1-image.png",
-      itemTitle: "Our Works",
+      itemImg: "bento-lifecrafting-work-banner.png",
+      itemTitle: "LifeCrafting",
   },
   {
-      itemImg: "lissen-service-pages-image.png",
-      itemTitle: "Our Works",
+      itemImg: "alme-mater-work-banner.png",
+      itemTitle: "Alme Mater",
   },
   {
-      itemImg: "make-1-image.png",
-      itemTitle: "Our Works",
+      itemImg: "tbdc-work-banner.png",
+      itemTitle: "TBDC",
   },
   {
-      itemImg: "make-1-shadow-dark-red-image.png",
-      itemTitle: "Our Works",
+      itemImg: "wkc-dribble-work-banner.png",
+      itemTitle: "WKC",
   },
   {
-      itemImg: "mercer-isca-image.png",
-      itemTitle: "Our Works",
+      itemImg: "login-concept-page-work-banner.png",
+      itemTitle: "Our Work",
   },
   {
-      itemImg: "portfolio-mockup-image.png",
-      itemTitle: "Our Works",
+      itemImg: "sidebar-navigation-work-banner.png",
+      itemTitle: "Our Work",
   },
   {
-      itemImg: "tbdc-contact-page-1-image.png",
-      itemTitle: "Our Works",
+      itemImg: "nft-app-concept-work-banner.png",
+      itemTitle: "Our Work",
   },
   {
-      itemImg: "tbdc-program-page-image.png",
-      itemTitle: "Our Works",
+      itemImg: "dribble-mercer-work-banner.png",
+      itemTitle: "Mercer Isca",
+  },
+  {
+      itemImg: "forall-gptw-work-banner.png",
+      itemTitle: "GPTW",
   },
 ];
 
@@ -375,32 +423,11 @@ export const worksList = [
       itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
   },
   {
-      itemCategory: "Website",
+      itemCategory: "Platform",
       itemImg: "th-featured-banner.png",
       itemVideo: "",
       itemTitle: "TurboHire (2022-Present)",
       itemDescription: "Present Enhanced the Usability of AI-powered Recruitment Platform",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "equizen-featured-banner.png",
-      itemVideo: "",
-      itemTitle: "Equizen (2024 - Present)",
-      itemDescription: "Elevating User Experience and Facilitating Meaningful Connections",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "impelsys-featured-banner.png",
-      itemVideo: "",
-      itemTitle: "Impelsys (2021)",
-      itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
-  },
-  {
-      itemCategory: "Website",
-      itemImg: "makestories-featured-banner.png",
-      itemVideo: "",
-      itemTitle: "MakeStories (2020-Present)",
-      itemDescription: "Reimagined the editor for Web Stories.",
   },
   {
       itemCategory: "Website",
@@ -411,6 +438,27 @@ export const worksList = [
   },
   {
       itemCategory: "Website",
+      itemImg: "equizen-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "Equizen (2024 - Present)",
+      itemDescription: "Elevating User Experience and Facilitating Meaningful Connections",
+  },
+  {
+      itemCategory: "Web App",
+      itemImg: "makestories-featured-banner.png",
+      itemVideo: "",
+      itemTitle: "MakeStories (2020-Present)",
+      itemDescription: "Reimagined the editor for Web Stories.",
+  },
+  {
+    itemCategory: "Website",
+    itemImg: "impelsys-featured-banner.png",
+    itemVideo: "",
+    itemTitle: "Impelsys (2021)",
+    itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
+},
+  {
+      itemCategory: "Platform",
       itemImg: "mercer-featured-banner.png",
       itemVideo: "",
       itemTitle: "Mercer(2020)",

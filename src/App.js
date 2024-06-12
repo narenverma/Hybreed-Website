@@ -18,9 +18,9 @@ function App() {
 
 
   useEffect(() => {
-    document.title = 'Hybreed.co | Coolest Agency in Mumbai';
-    const link = document.querySelector("link[rel='icon']");
-    link.href = "/hybreed-header.svg";
+    document.title = 'Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai';
+    // const link = document.querySelector("link[rel='icon']");
+    // link.href = "/hybreed-header.svg";
 
 
     // Smooth Scroll start

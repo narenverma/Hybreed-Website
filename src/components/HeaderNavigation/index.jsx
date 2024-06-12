@@ -73,9 +73,12 @@ document.body.classList.remove("overflow-hidden");
               </IconWrap>
             </div>
 
+
             <div className='col-lg-4 col-6 d-flex justify-content-lg-center justify-content-start order-lg-0 order-first '>
               <HeaderLogo className='text-center'>
+              <Link to={'https://web.hybreed.co'}>
                 <img src={require("../../assets/images/hybreed-header.svg").default} alt={'hybreed'} />
+              </Link>
               </HeaderLogo>
             </div>
 
@@ -83,7 +86,7 @@ document.body.classList.remove("overflow-hidden");
               <CustomBorderBtn className="text-end" btntype={'btn'}><Link className='light-btn' to='https://hybreed.co/contact'>Contact us</Link></CustomBorderBtn>
             </div>
             <div className="col-6 d-lg-none text-end">
-              <button type="button" className="bg-transparent border-0 menu-open-btn" onClick={() => {
+              <button type="button" className=" menu-open-btn" onClick={() => {
                 checkOpen();
                 openMenuAnim();
               }}>
@@ -97,7 +100,7 @@ document.body.classList.remove("overflow-hidden");
             className={"d-lg-none" + (openCloseMenu ? "" : " open-mobile-menu")}
           // hidden={openCloseMenu ? true : false }
           >
-            <button type="button" className="bg-transparent border-0 menu-close-btn"
+            <button type="button" className=" menu-close-btn"
               onClick={() => {
                 checkClose();
                 closeMenuAnim();
@@ -131,7 +134,7 @@ document.body.classList.remove("overflow-hidden");
               <div>
                 <p className="theme-text-gray mb-2">Call us</p>
                 <LinkBtn>
-                  <Link className='theme-text-white' to="tel:+919221915405">+ 919221915405</Link>
+                  <Link className='theme-text-white' to="tel:+919833572299">+ 91 9833 57 2299</Link>
                 </LinkBtn>
               </div>
             </FooterLinkWrap>
