@@ -30,3 +30,12 @@
 8. Equal the size of the Services Cards
 9. Collapsed All faqs questions
 10. Fix some mobile issues
+
+12-06-2024 : Some Changes
+1. Fixing the IPhone issues
+2. Update the logos Animation
+3. Add Content
+4. Trying to fix Marquee carousel little jerk issue
+5. Fix Featured card Hover animation
+6. Update Images of the Featured cards
+7. Some Changes

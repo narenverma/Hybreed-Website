@@ -109,10 +109,10 @@ function FooterWrapper() {
 
           <div className="col-xl-3 col-lg-4 pt-lg-0 pt-4">
           <LinkBtn className=' theme-text-white text-lg-end text-start'>
-              <Link className='theme-text-white download-icon' to="/" download={"true"}>Company Deck</Link>
-              <div>
+              <Link className='theme-text-white download-icon' to="https://docsend.com/view/gh7hah5npy6gny5m" target={'_blank'} download={"true"}>Company Deck</Link>
+              {/* <div>
           <strong><sub className='theme-text-gray'>File Size 3Mb.</sub></strong>
-              </div>
+              </div> */}
             </LinkBtn>
             {/* <p className=' theme-text-white text-lg-end text-start' >{weather}</p> */}
           </div>

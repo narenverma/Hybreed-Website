@@ -136,7 +136,7 @@ export default function Index({ data }) {
   // })
 
   let repeatItems = []
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 6; i++) {
     repeatItems.push(i)
   }
 

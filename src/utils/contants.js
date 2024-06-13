@@ -120,6 +120,7 @@ export const LoaderFunction = () => {
 
             MarqueeDuplicateAndTime('.carousel-wrap ', " div", 0)
             MarqueeDuplicateAndTime('.marquee-strip-list', " div", 0)
+            MarqueeDuplicateAndTime('footer .slide-track', " div", 0)
 
         }, 1000)
 

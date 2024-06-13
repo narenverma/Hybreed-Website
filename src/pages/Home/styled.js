@@ -112,13 +112,45 @@ export const ClientsLogoWrap = styled.div``;
 export const LogosWrap = styled.div`
         gap: 4.2rem 0;
 
+        & > .col{ 
+
+                & .swiper-slide.swiper-slide-active img{
+                opacity: 1!important;
+                translate: 0 0%  ;
+                }
+            }
+
+        & > .col:nth-child(odd){
+                
+                & .swiper-slide-next img{
+                    translate: 0 100%  ;
+                }
+                & .swiper-slide-prev img{
+                    translate: 0 -100%  ;
+                } 
+            }
+            & > .col:nth-child(even){
+                & .swiper-slide-next img{
+                    translate: 0 -100%  ;
+                }
+                & .swiper-slide-prev img{
+                    translate: 0 100%  ;
+                } 
+            }
+
         @media screen and (max-width: 992px) {
             & > .col{
                 display:none;
+
+                & .swiper-slide.swiper-slide-active img{
+                opacity: 1!important;
+                translate: 0 0%  ;
+                }
             }
             & > .col:nth-child(1), & > .col:nth-child(2){
                 display:block;
             }
+            
         }
 
     `;
@@ -142,20 +174,10 @@ export const LogoItem = styled.div`
 
         & .swiper-slide:not(.swiper-slide-active){
             opacity:0!important;
-            transition: 300ms ease-in-out  ;
+            transition: 100ms ease-in-out  ;
             
         }
-        & .swiper-slide.swiper-slide-active{
-            opacity: 1!important;
-            /* scale: 1; */
-            /* translate: 0 0% !important; */
-        }
-        /* & .swiper-slide-next{
-            translate: 0 50% !important;
-        }
-        & .swiper-slide-prev{
-            translate: 0 -50% !important;
-        }  */
+        
         
     @media screen and (max-width: 768px){
         & .swiper-slide{

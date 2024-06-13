@@ -34,14 +34,14 @@ const MarqueeWrap = styled.div`
   }
   
   @keyframes marqueeAnimation {
-    0% { transform: translateX(calc(-418px * 7)); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
   }
 
   .slide-track {
     animation: marqueeAnimation 35s linear infinite;
     display: flex;
-    width: calc(418px * 14);
+    width: max-content;
     gap: 1rem;
   }
   
@@ -58,57 +58,23 @@ const MarqueeWrap = styled.div`
 `
 
 export const MarqueeSlideV2 = ({ children, marqueeWidth }) => {
+
+  let repeatItems = []
+  for (let i = 1; i <= 20; i++) {
+    repeatItems.push(i)
+  }
+
   return (
     <MarqueeWrap>
         <div className="slide-track">
-            <div className="slide">
+        {
+          repeatItems.map((item,index) => (
+            <div className="slide" key={index}>
               <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
               <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
             </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
-            <div className="slide">
-              <img src={require("../../assets/images/hybreed-white-text-logo.svg").default} alt={'hybreed'} />
-              <img src={require("../../assets/images/hybreed-footer-marquee-dot.svg").default} alt={'hybreed'} />
-            </div>
+            ))
+             }
         </div>
     </MarqueeWrap>
   );

@@ -439,7 +439,7 @@ body:hover .cursor{
 .cursor p{
   margin:0;
   font-size: 0;
-  transition: 0.4s linear;
+  transition: 0.2s ease-in;
 }
 .cursor.active p{
   font-size: 18px;
@@ -1020,11 +1020,9 @@ width:100%;
 margin-bottom: 2rem;
 position: relative;
 clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
-transition: 200ms ease-in-out;
+transition: 200ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
 
-&:hover{
-  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-}
+
 
 & video{
 
@@ -1068,6 +1066,16 @@ border-radius: 0rem;
 export const CardItems = styled.div`
 position: relative;
 width:100%;
+
+
+&:hover ${CardTop}{ 
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+&:hover img{
+  scale: 1.1;
+border-radius: 0rem;
+}
 
 & *{
   color: var(--theme-white);
