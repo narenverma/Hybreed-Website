@@ -117,7 +117,7 @@ document.body.classList.remove("overflow-hidden");
                 socialMediaList.map((item, index) => (
                   <div key={index}>
                     <IconBtn icon={require(`../../assets/images/${item.socialIcon}`)} >
-                      <Link >{item.socialName}</Link>
+                      <Link to={item.socialLink}>{item.socialName}</Link>
                     </IconBtn>
                   </div>
                 ))

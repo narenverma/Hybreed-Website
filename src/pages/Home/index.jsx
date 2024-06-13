@@ -259,7 +259,7 @@ export default function Home() {
                                                     delay: 2500,
                                                     disableOnInteraction: false,
                                                 }}
-                                                modules={[Autoplay, EffectFade]}
+                                                modules={[Autoplay, EffectFade]} 
                                             >
                                                 {
 
@@ -385,13 +385,13 @@ export default function Home() {
 
                             <VideoCardsWrap>
                                 {worksList.map((item, index) => (
-                                    <CardItems key={index}>
-                                        <CardTop
-                                            onMouseEnter={() =>
+                                    <CardItems key={index}
+                                    onMouseEnter={() =>
                                                 HoverEnter("Coming <br> Soon!")
                                             }
                                             onMouseLeave={() => HoverLeave()}
-                                        >
+                                    >
+                                        <CardTop >
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
                                             </CategoryBullets>
@@ -479,13 +479,7 @@ export default function Home() {
                                         </ScrollAnimParaWrap>
                                     </div> */}
                                     <p>
-                                        Starting as an enthusiastic who wanted
-                                        to make something truly great for other
-                                        people, we are now designing an user
-                                        experience that involves a process based
-                                        holistic approach to create value for
-                                        you, your customers, and your partners.
-                                    </p>
+                                    We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful. Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
                                 </div>
                                 <div className='col-lg-4'>
                                     <MiddleContentImage>

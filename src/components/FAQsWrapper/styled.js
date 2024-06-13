@@ -67,7 +67,8 @@ box-shadow: none  !important;
 
 @media screen and (max-width:768px){
     & .accordion-button{
-    padding: .81rem .81rem 0.5rem .81rem !important
+    padding: .81rem .81rem 0.5rem .81rem !important;
+    font-size: 1.125rem;
 }
 & .accordion-button.collapsed{padding: .81rem !important;}
 & .accordion-body{
