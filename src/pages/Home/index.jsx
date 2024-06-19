@@ -309,7 +309,7 @@ export default function Home() {
                     <div
                         className='bottom-image-wrap text-center'
                         style={{ transform: "translateY(5px)" }}>
-                        <img src={require("../../assets/images/hybreed-family-banner.svg").default} alt='Hybreed Family' className="w-100" />
+                        <img src={require("../../assets/images/hybreed-family-image.svg").default} alt='Hybreed Family' className="w-100" />
                     </div>
 
 
@@ -483,7 +483,7 @@ export default function Home() {
                                 </div>
                                 <div className='col-lg-4'>
                                     <MiddleContentImage>
-                                        <img src={require("../../assets/images/heyo-image.svg").default} alt='Heyo' />
+                                        <img src={require("../../assets/images/hybreed-working.svg").default} alt='Hybreed' />
                                     </MiddleContentImage>
                                 </div>
                             </div>

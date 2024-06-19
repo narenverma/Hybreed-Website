@@ -39,3 +39,6 @@
 5. Fix Featured card Hover animation
 6. Update Images of the Featured cards
 7. Some Changes
+
+19-06-2024 : Update Illustrations
+1. Update 2 main Illustrations
