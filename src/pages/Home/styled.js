@@ -68,7 +68,7 @@ height: 20.25rem;
 width: 26rem;
 overflow: hidden;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0 1px #0000001c;
+    box-shadow: 0 0 0 1px #0000000a;
 
         & img {
             width: 100%;
@@ -202,7 +202,7 @@ export const MarqueeStripSection = styled.section``;
 export const MiddleContentSection = styled.section``;
 export const MiddleContentWrap = styled.div`
         & p {
-            font-size: 2.5rem;
+            font-size: 2.35rem;
             line-height: 120%;
             font-family: "Inter-Medium";
         }
