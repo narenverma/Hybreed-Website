@@ -309,7 +309,7 @@ export default function Home() {
                     <div
                         className='bottom-image-wrap text-center'
                         style={{ transform: "translateY(5px)" }}>
-                        <img src={require("../../assets/images/hybreed-family-image.svg").default} alt='Hybreed Family' className="w-100" />
+                        <img src={require("../../assets/images/hybreed-family-group-image.svg").default} alt='Hybreed Family' className="w-100" />
                     </div>
 
 
@@ -479,7 +479,8 @@ export default function Home() {
                                         </ScrollAnimParaWrap>
                                     </div> */}
                                     <p>
-                                    We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful. Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
+                                    We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
+                                    <p> Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
                                 </div>
                                 <div className='col-lg-4'>
                                     <MiddleContentImage>
