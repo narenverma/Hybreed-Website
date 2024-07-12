@@ -52,3 +52,4 @@
 1. Add new loading screen 
 2. Responsive the loader
 3. Fixing the Issues
+4. Create the Desktop UI of the Case Study Page 
