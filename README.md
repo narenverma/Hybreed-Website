@@ -46,3 +46,9 @@
 25-06-2024 : Some Changes 
 1. Update menu Hover Effect
 2. Content spacing and cosmetic changes
+
+
+12-07-2024 : Add New Loading Screen
+1. Add new loading screen 
+2. Responsive the loader
+3. Fixing the Issues
