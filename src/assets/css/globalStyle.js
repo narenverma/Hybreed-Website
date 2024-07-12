@@ -226,7 +226,7 @@ hyphens: auto; */
 }
 
 li, p, span, b, strong {
-color: var(--theme-neutral-700);
+color: var(--theme-black-secondary);
 }
 
  
@@ -277,6 +277,7 @@ ${'' /* .hero-head .word, */}
     transform-origin: 0% 100%;
     opacity: 0;
     transition: 700ms ease-out calc(var(--word-index) / 3 * 0.1s);
+    color: currentColor;
 }
 
 .hero-head.show-head .word,

@@ -99,7 +99,7 @@ function FooterWrapper() {
               socialMediaList.map((item, index) => (
                 <div key={index}> 
               <IconBtn icon={require(`../../assets/images/${item.socialIcon}`)} > 
-                <Link to={item.socialLink}>{item.socialName}</Link>
+                <Link to={item.socialLink} target="_blank">{item.socialName}</Link>
               </IconBtn>
                 </div>
               ))

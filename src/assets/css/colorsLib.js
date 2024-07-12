@@ -19,6 +19,9 @@ export const GlobalColorsStyle = createGlobalStyle`
 
 --theme-yellow-cream: #FFFEF5;
 
+--focusu-cs-primary: #FEF7F3;
+--focusu-cs-secondary: #FEB185;
+
 }
 
 

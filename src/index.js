@@ -3,38 +3,34 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'; 
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import FocusUCaseStudy from './pages/CaseStudy/FocusUCaseStudy';
 import Home from './pages/Home';
 
 const router = createBrowserRouter([
- 
+
   {
-    path:"/",
+    path: "/",
     element: <App />,
-    children:[
+    children: [
       {
-        path:"",
+        path: "",
         element: <Home />
       },
-      // {
-      //   path: '/thank-you',
-      //   element: <ThankYou />,
-      //   noindex: false,
-      // },
-      // {
-      //   path: '/launch-collaborators',
-      //   element: <LaunchCollaborators />
-      // }
+      {
+        path: "/focusu",
+        element: <FocusUCaseStudy />, 
+      },
     ]
   },
-  
+
 ])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <RouterProvider router={router}/>
+    <RouterProvider router={router} />
     {/* <App /> */}
   </React.StrictMode>
 );

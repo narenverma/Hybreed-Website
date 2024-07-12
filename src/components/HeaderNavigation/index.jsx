@@ -64,7 +64,7 @@ document.body.classList.remove("overflow-hidden");
                   socialMediaList.map((item, index) => (
 
                     <CustomBorderBtn btntype={'icon'} key={index}>
-                      <Link to={item.socialLink}>
+                      <Link to={item.socialLink} target="_blank">
                         <img src={require("../../assets/images/" + item.socialIcon)} alt={item.socialAlt} />
                       </Link>
                     </CustomBorderBtn>
@@ -117,7 +117,7 @@ document.body.classList.remove("overflow-hidden");
                 socialMediaList.map((item, index) => (
                   <div key={index}>
                     <IconBtn icon={require(`../../assets/images/${item.socialIcon}`)} >
-                      <Link to={item.socialLink}>{item.socialName}</Link>
+                      <Link to={item.socialLink}   target="_blank" >{item.socialName}</Link>
                     </IconBtn>
                   </div>
                 ))
