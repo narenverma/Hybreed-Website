@@ -3,7 +3,7 @@ import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, 
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
 import { gsap, ScrollTrigger } from "gsap/all";
-import { LoaderFunction, SectionTopSpace, TextSplitSpans } from "../../utils/contants.js";
+import { LoaderAnimation,   LoaderFunction, SectionTopSpace, TextSplitSpans } from "../../utils/contants.js";
 import { HoverEnter, HoverLeave, CustomCursorAnim, } from "../../components/HoverInteract";
 
 import MarqueeSlide from "../../components/MarqueeSlide";
@@ -12,7 +12,7 @@ import TestimonialsWrapper from "../../components/TestimonialsWrapper";
 import { TestimonialsSection } from "../../components/TestimonialsWrapper/styled.js";
 import FAQsWrapper from "../../components/FAQsWrapper";
 import { FAQsSection } from "../../components/FAQsWrapper/styled.js";
-import { marqueeList, carouselSlideList, clientLogosList, worksList } from "../../utils/apisList.js";
+import { marqueeList, carouselSlideList, clientLogosList, worksList, loaderSlider } from "../../utils/apisList.js";
 
 import { HomeHeroSection, HomeHeroWrap, GridFreeAnimCarousel, CarouselWrap, SlideItems, ClientsLogoWrap, LogosWrap, LogoItem, FeaturedWorkSection, FeaturedWorkWrap, MarqueeStripSection, MiddleContentSection, MiddleContentWrap, MiddleContentImage, ServicesSection, BeforeFooterCtaSection, BeforeFooterCtaWrap, ProductsImgTile, BgElemOne, BgElemTwo, AboutSection } from "./styled.js";
 
@@ -21,6 +21,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { Autoplay, EffectFade } from "swiper/modules";
+import LoadingAnimation from "../../components/LoadingAnimation/index.jsx";
 
 
 
@@ -127,10 +128,11 @@ export default function Home() {
 
 
         LoaderFunction();
+ 
+        LoaderAnimation();
 
 
-
-
+ 
 
     }, []);
 
@@ -160,7 +162,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="page-loader">
+            {/* <div className="page-loader">
                 <video
                     loop muted  webkit-playsinline={"true"} playsInline autoPlay
                     preload={'auto'}
@@ -176,31 +178,42 @@ export default function Home() {
                     <div id="bar"><span id="percent"></span></div>
                 </div>
 
-            </div>
+            </div> */}
+
+            <LoadingAnimation />
+
+
             <HomeHeroSection className="  hero-section next-section-curve curve-bg-black-secondary"
                 data-scroll-section
             >
                 <div className='container'>
                     <div className='equal-padding-T equal-padding-B'>
                         <HomeHeroWrap>
-                            <PillMinHead className='text-lg-center'>
+                            <PillMinHead className='text-lg-center hero-pill-text'>
                                 <p>
                                     👋 WE ARE CREATIVE AGENCY BASED IN TWIN CITY OF MUMBAI
                                 </p>
                             </PillMinHead>
                             <h1 className='hero-head text-lg-center mb-4'>
                                 Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
-                                <img src={require("../../assets/images/pill-image-hero.png")} alt='Pill thumbs' className="pill-thumbs-anim" />
+                                <span  className="pill-thumbs-anim" ></span>
+
                                 {" "}
                                 <span className="d-lg-inline d-none"> team</span>
                             </h1>
-                            <p className='text-lg-center mb-5 theme-fw-300'>
+                            {/* <h1 className='hero-head text-lg-center mb-4'>
+                                Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
+                                <img src={require("../../assets/images/pill-image-hero.png")} alt='Pill thumbs' className="pill-thumbs-anim" />
+                                {" "}
+                                <span className="d-lg-inline d-none"> team</span>
+                            </h1> */}
+                            <p className='text-lg-center mb-5 theme-fw-300 hero-para'>
                                 Together, we can transform forward-thinking
                                 ideas into futuristic <br /> solutions with our
                                 robust technology & our scalable design
                                 approach.
                             </p>
-                            <CustomBtn className='text-lg-center'>
+                            <CustomBtn className='text-lg-center hero-cta'>
                                 <Link to='https://hybreed.co/contact'>Let's Talk</Link>{" "}
                             </CustomBtn>
 
@@ -209,7 +222,7 @@ export default function Home() {
                         </HomeHeroWrap>
                     </div>
                 </div>
-                <div className='   '>
+                <div className=' grid-free-anim-carousel'>
                     <GridFreeAnimCarousel>
                         <CarouselWrap className="carousel-wrap">
                             {carouselSlideList.map((item, index) => (
@@ -259,7 +272,7 @@ export default function Home() {
                                                     delay: 2500,
                                                     disableOnInteraction: false,
                                                 }}
-                                                modules={[Autoplay, EffectFade]} 
+                                                modules={[Autoplay, EffectFade]}
                                             >
                                                 {
 
@@ -386,12 +399,12 @@ export default function Home() {
                             <VideoCardsWrap>
                                 {worksList.map((item, index) => (
                                     <CardItems key={index}
-                                    onMouseEnter={() =>
-                                                HoverEnter("Coming <br> Soon!")
-                                            }
-                                            onMouseLeave={() => HoverLeave()}
+                                        onMouseEnter={() =>
+                                            HoverEnter("Coming <br> Soon!")
+                                        }
+                                        onMouseLeave={() => HoverLeave()}
                                     >
-                                        <CardTop >
+                                        <CardTop className="scroll-anim-card"> 
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
                                             </CategoryBullets>
@@ -479,7 +492,7 @@ export default function Home() {
                                         </ScrollAnimParaWrap>
                                     </div> */}
                                     <p>
-                                    We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
+                                        We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
                                     <p> Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
                                 </div>
                                 <div className='col-lg-4'>

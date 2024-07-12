@@ -3,6 +3,12 @@ import { css, styled } from "styled-components";
 export const HomeHeroSection = styled.section``;
 export const HomeHeroWrap = styled.div`
 position: relative;
+.hero-head > span{
+    opacity: 0;
+}
+
+
+
 `;
 const positionAbsolute = css`
 position:absolute;
@@ -30,6 +36,7 @@ animation: moveLeftRight 10s ease-in-out infinite;
         translate: 0 -40%;
     }
 }
+ 
 
 `;
 

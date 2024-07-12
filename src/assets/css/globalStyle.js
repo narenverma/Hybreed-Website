@@ -271,7 +271,7 @@ padding-bottom: var(--equal-paddings);
 
 
 
-.hero-head .word,
+${'' /* .hero-head .word, */}
 .section-head .word {
     transform: translateY(16px);
     transform-origin: 0% 100%;
@@ -343,6 +343,16 @@ header{
   }
 }
 
+.pill-thumbs-anim{
+  display: inline-block;
+    height: auto !important;
+    width: 231px;
+    margin-bottom: -1rem;
+    aspect-ratio: 22 / 9;
+    ${'' /* background-color: #fff; */}
+    border-radius: 10rem;
+ 
+}
 
 
 .para-reveal-wrap p span{
@@ -660,6 +670,7 @@ padding-bottom: var(--equal-paddings);
 }
 
 .pill-thumbs-anim{
+  display: inline-block;
   height: auto !important;
     width: 100%;
     margin: 1rem 0;
@@ -776,7 +787,8 @@ export const CustomBtn = styled.div`
 		border-radius: 100%;
 		background-color: var(--theme-primary);
 		rotate: 45deg;
-    transition: background-position 200ms ease-in   ;
+    /* transition: background-position 200ms ease-in   ; */
+    transition: background-position 0ms ease-in   ;
     clip-path: circle(50% at 50% 50%);
 	}
   &:hover:after{
@@ -1027,13 +1039,17 @@ export const CardTop = styled.div`
 width:100%;
 margin-bottom: 2rem;
 position: relative;
-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0 50%, 100% 0%, 100% 50%, 0% 100%);
 transition: 200ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+filter: blur(20px) grayscale(1);
+opacity: 0;
 
 
-
-& video{
-
+&.scroll-anim-card.active-card{
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  filter: blur(0px) grayscale(0);
+opacity: 1;
+  transition: 400ms ease-in-out;
 }
 
 & :is(img,video){
@@ -1229,6 +1245,7 @@ bottom: 3rem;
   justify-content: center;
   width: 7.39988rem;
 height: 7.39988rem;
+scale:0;
 
   & img{
     position: absolute;

@@ -12,10 +12,21 @@ export default function OnScrollContentAnimation() {
     Splitting({ target: target, by: 'words', whitespace: true });
 
   })
+  // document.querySelectorAll(".pre-loader h4 ").forEach((textItem) => {
+
+  //   const target = textItem 
+  //   const results = Splitting({ target: target, by: "chars" });
+  // })
 
 
+  // scrollAnimate(".hero-head", "show-head", '0% 0%  0% 0%')
+  scrollAnimate(".section-head", "show-head")
+  scrollAnimate(".scroll-anim-card", "active-card", '0% 0%  -40% 0%')
 
-  function scrollAnimate(actionElem, classAct, posVal) {
+
+}
+
+export const scrollAnimate = (actionElem, classAct, posVal)=> {
     if (posVal === undefined) {
       posVal = '0% 0% -10% 0%'
     }
@@ -35,8 +46,3 @@ export default function OnScrollContentAnimation() {
     const hiddenElements = document.querySelectorAll(actionElem);
     hiddenElements.forEach((el) => observer.observe(el));
   }
-  scrollAnimate(".hero-head", "show-head", '0% 0%  0% 0%')
-  scrollAnimate(".section-head", "show-head")
-
-
-}

@@ -493,3 +493,66 @@ export const socialMediaList = [
         socialName: "Dribbble",
     },
 ];
+
+export const loaderSlider = [
+    {
+        itemImg: "loader-image-01.png", 
+    },
+    {
+        itemImg: "loader-image-02.png", 
+    },
+    {
+        itemImg: "loader-image-03.png", 
+    },
+    {
+        itemImg: "loader-image-04.png", 
+    },
+    {
+        itemImg: "loader-image-05.png", 
+    },
+    {
+        itemImg: "loader-image-06.png", 
+    },
+    {
+        itemImg: "loader-image-07.png", 
+    },
+    {
+        itemImg: "loader-image-08.png", 
+    },
+    {
+        itemImg: "loader-image-09.png", 
+    },
+    {
+        itemImg: "loader-image-10.png", 
+    },
+    {
+        itemImg: "loader-image-11.png", 
+    },
+    {
+        itemImg: "loader-image-12.png", 
+    },
+    {
+        itemImg: "loader-image-13.png", 
+    },
+    {
+        itemImg: "loader-image-14.png", 
+    },
+    {
+        itemImg: "loader-image-15.png", 
+    },
+    {
+        itemImg: "loader-image-16.png", 
+    },
+    {
+        itemImg: "loader-image-17.png", 
+    },
+    {
+        itemImg: "loader-image-18.png", 
+    },
+    {
+        itemImg: "loader-image-19.png", 
+    },
+    {
+        itemImg: "loader-image-20.png", 
+    }, 
+]
