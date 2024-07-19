@@ -410,6 +410,7 @@ export const clientLogosList = [
 export const worksList = [
     {
         itemCategory: "Website",
+        itemLink:"",
         itemImg: "gmi-featured-banner.png",
         itemVideo: "",
         itemTitle: "Great Manager Institute (2023-Present)",
@@ -417,6 +418,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
+        itemLink:"/case-studies/focusu-engage",
         itemImg: "focusu-featured-banner.png",
         itemVideo: "",
         itemTitle: "FocusU (2023-Present)",
@@ -424,6 +426,7 @@ export const worksList = [
     },
     {
         itemCategory: "Platform",
+        itemLink:"",
         itemImg: "turbohire-featured-banner.png",
         itemVideo: "",
         itemTitle: "TurboHire (2022-Present)",
@@ -431,6 +434,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
+        itemLink:"",
         itemImg: "gptw-featured-banner.png",
         itemVideo: "",
         itemTitle: "GPTW (2019-Present)",
@@ -438,6 +442,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
+        itemLink:"",
         itemImg: "equizen-featured-banner.png",
         itemVideo: "",
         itemTitle: "Equizen (2024 - Present)",
@@ -445,6 +450,7 @@ export const worksList = [
     },
     {
         itemCategory: "Web App",
+        itemLink:"",
         itemImg: "makestories-featured-banner.png",
         itemVideo: "",
         itemTitle: "MakeStories (2020-Present)",
@@ -452,6 +458,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
+        itemLink:"",
         itemImg: "impelsys-featured-banner.png",
         itemVideo: "",
         itemTitle: "Impelsys (2021)",
@@ -459,6 +466,7 @@ export const worksList = [
     },
     {
         itemCategory: "Platform",
+        itemLink:"",
         itemImg: "mercer-featured-banner.png",
         itemVideo: "",
         itemTitle: "Mercer (2020)",

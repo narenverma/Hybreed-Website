@@ -85,12 +85,12 @@ function FooterWrapper() {
       </FooterWrap>
       <FooterWrap className='flex-column'>
         <UpperCaseHeader className='text-lg-center'>
-          WE'RE NOT SUPER ACTIVE, BUT STILL WORTH A LOOK!😊
+          WE'RE NOT SUPER ACTIVE, BUT STILL WORTH A LOOK! 😊
         </UpperCaseHeader>
         <div className='row gy-4 justify-content-between '>
 
           <div className="col-xl-3 col-lg-4 order-lg-0 order-last">
-            <p className=' theme-text-white text-start  '>©2024 Hybreed Technologies, T&C</p>
+            <p className=' theme-text-white text-start  '>©2024 Hybreed Technologies </p>
           </div>
 
           <div className='col-xl-6 col-lg-4 order-lg-0 order-first'>

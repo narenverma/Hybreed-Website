@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import FocusUCaseStudy from './pages/CaseStudy/FocusUCaseStudy';
 import Home from './pages/Home';
+import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
 
@@ -18,8 +19,16 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/focusu",
-        element: <FocusUCaseStudy />, 
+        path: "/case-studies",
+        element: <Navigate to="/"  />,  
+      },
+      {
+        path: "/case-studies/focusu-engage",
+        element: <FocusUCaseStudy />,  
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,  
       },
     ]
   },

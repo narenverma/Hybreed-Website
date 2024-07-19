@@ -210,7 +210,7 @@ export const MiddleContentSection = styled.section``;
 export const MiddleContentWrap = styled.div`
         & p {
             font-size: 2.35rem;
-            line-height: 120%;
+            line-height: 150%;
             font-family: "Inter-Medium";
         }
         @media screen and (max-width: 768px) {
@@ -223,8 +223,8 @@ export const MiddleContentWrap = styled.div`
     `;
 
 export const MiddleContentImage = styled.div`
-position: sticky;
-top: ${window.innerHeight / 5 + 'px'};
+/* position: sticky;
+top: ${"window.innerHeight" / 5 + 'px'}; */
 
 @media screen and (max-width: 768px) {
     & img{

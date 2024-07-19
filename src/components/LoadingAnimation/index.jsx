@@ -6,41 +6,58 @@ export default function LoadingAnimation() {
 
   const loadingQuotesList = [
 
-    <>
-      Good UI can raise your website's conversion rate by <strong>200%</strong> <span>📈</span>
+    {
+      quoteItem: <>Good UI can raise your website's conversion rate by <strong>200%</strong> <span>📈</span></>,
+      quoteRef: "",
+    },
+    {
+      quoteItem: <>
+        <strong>88%</strong> of online consumers are less likely to return to a site after a bad experience.
+      </>,
+      quoteRef: <><strong >[Sweor]</strong></>,
+    },
+    {
+      quoteItem: <>
+        A well-designed user interface could raise your website’s conversion rate by up to <strong>200%</strong>, and better UX design could yield conversion rates up to <strong>400%</strong>.
+      </>,
+      quoteRef: <><strong >[Forrester]</strong></>,
+    },
+    {
+      quoteItem: <>
+        <strong>74%</strong> of people are likely to return to a website if it is optimized for mobile.
+      </>,
+      quoteRef: <><strong >[Adobe]</strong></>,
+    },
+    {
+      quoteItem: <>
+        <strong>94%</strong> of first impressions relate to your site’s web design.
+      </>,
+      quoteRef: <><strong >[Sweor]</strong></>
+    },
+    {
+      quoteItem: <>
+      <strong>75%</strong> of consumers admit to making judgments on a company’s credibility based on the company’s website design. 
     </>,
-    <>
-      <strong>88%</strong> of online consumers are less likely to return to a site after a bad experience.
-      <strong className='d-block mt-4'>[Sweor]</strong>
+      quoteRef: <><strong >[Stanford Web Credibility Research]</strong></>,
+    },
+    {
+      quoteItem: <>
+      Companies that invest in UX see a lower customer acquisition cost (by up to <strong>50%</strong>) and see increased revenues (up to <strong>15%</strong>). 
     </>,
-    <>
-      A well-designed user interface could raise your website’s conversion rate by up to <strong>200%</strong>, and better UX design could yield conversion rates up to <strong>400%</strong>.
-      <strong className='d-block mt-4'>[Forrester]</strong>
+      quoteRef: <><strong >[Forrester]</strong></>,
+    },
+    {
+      quoteItem: <>
+      <strong>52%</strong> of users are less likely to engage with a company due to a bad mobile experience. 
     </>,
-    <>
-      <strong>74%</strong> of people are likely to return to a website if it is optimized for mobile.
-      <strong className='d-block mt-4'>[Adobe]</strong>
+      quoteRef: <><strong >[Think with Google]</strong></>,
+    },
+    {
+      quoteItem: <>
+      <strong>48%</strong> of people cited a website’s design as the number one factor in deciding the credibility of a business. 
     </>,
-    <>
-      <strong>94%</strong> of first impressions relate to your site’s web design.
-      <strong className='d-block mt-4'>[Sweor]</strong>
-    </>,
-    <>
-      <strong>75%</strong> of consumers admit to making judgments on a company’s credibility based on the company’s website design.
-      <strong className='d-block mt-4'>[Stanford Web Credibility Research]</strong>
-    </>,
-    <>
-      Companies that invest in UX see a lower customer acquisition cost (by up to <strong>50%</strong>) and see increased revenues (up to <strong>15%</strong>).
-      <strong className='d-block mt-4'>[Forrester]</strong>
-    </>,
-    <>
-      <strong>52%</strong> of users are less likely to engage with a company due to a bad mobile experience.
-      <strong className='d-block mt-4'>[Think with Google]</strong>
-    </>,
-    <>
-      <strong>48%</strong> of people cited a website’s design as the number one factor in deciding the credibility of a business.
-      <strong className='d-block mt-4'>[Blue Corona]</strong>
-    </>,
+      quoteRef: <><strong >[Blue Corona]</strong></>,
+    },
 
   ];
   // const loadingQuotesList = [ 
@@ -75,32 +92,33 @@ export default function LoadingAnimation() {
 
   // ];
 
-
+let getQuotesL = Math.floor(Math.random() * loadingQuotesList.length)
 
   return (
     <>
       <LoadingAnimationStyle />
       <section className="loading-anim">
-      <div className="hero-imgs">
-            {
-              loaderSlider.map((slide, i) => (
+        <div className="hero-imgs">
+          {
+            loaderSlider.map((slide, i) => (
 
-                <img
-                  src={require("../../assets/images/loader-images/" + slide.itemImg)} alt="slides"
-                  key={i}
-                />
-              ))
-            }
-          </div>
+              <img
+                src={require("../../assets/images/loader-images/" + slide.itemImg)} alt="slides"
+                key={i}
+              />
+            ))
+          }
+        </div>
         <div className="pre-loader">
 
           <div className="container col-lg-9 mx-auto">
 
 
             <h5 className="load-min-head mb-3"><em>Did you know?</em></h5>
-            <h4 className="h3"> {loadingQuotesList[Math.floor(Math.random() * loadingQuotesList.length)]} {""}
-
+            <h4 className="h3"> {loadingQuotesList[getQuotesL].quoteItem}  
             </h4>
+            <h5 className=" text-end mt-4"> {loadingQuotesList[getQuotesL].quoteRef}  
+            </h5>
           </div>
 
           <div className="loader-counter">

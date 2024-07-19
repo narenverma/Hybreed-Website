@@ -53,3 +53,16 @@
 2. Responsive the loader
 3. Fixing the Issues
 4. Create the Desktop UI of the Case Study Page 
+
+19-07-2024 : Many Changes
+1. Fix Arg sir changes and issues
+2. Fixing the issues
+3. Adding Scroll Aniamtions
+4. Update Testimonials content
+5. Update Case study page Images
+6. Responsive the Case study page
+7. Create 404 page
+8. Fix footer marquee big screen overlap issue
+9. Mayuresh Case Study Sheet Changes 
+10. Case Study URL redirection
+11. Fixing the Images issue with mayuresh

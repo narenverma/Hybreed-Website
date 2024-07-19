@@ -12,16 +12,19 @@ export default function OnScrollContentAnimation() {
     Splitting({ target: target, by: 'words', whitespace: true });
 
   })
-  // document.querySelectorAll(".pre-loader h4 ").forEach((textItem) => {
+  document.querySelectorAll(".para-reveal-wrap p ").forEach((textItem) => {
 
-  //   const target = textItem 
-  //   const results = Splitting({ target: target, by: "chars" });
-  // })
+    const target = textItem 
+    const results = Splitting({ target: target, by: "chars" });
+  })
 
 
   // scrollAnimate(".hero-head", "show-head", '0% 0%  0% 0%')
   scrollAnimate(".section-head", "show-head")
   scrollAnimate(".scroll-anim-card", "active-card", '0% 0%  -40% 0%')
+  scrollAnimate(".anim-right-box", "active-anim", '0% 0%  -20% 0%')
+  scrollAnimate(".anim-left-box", "active-anim", '0% 0%  -20% 0%')
+  scrollAnimate(".anim-bottom-box", "active-anim", '0% 0%  -20% 0%')
 
 
 }

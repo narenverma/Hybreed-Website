@@ -357,7 +357,7 @@ header{
 
 
 .para-reveal-wrap p span{
-opacity:.1;
+opacity:.3;
 }
 
 
@@ -620,6 +620,29 @@ html.has-scroll-dragging {
     }
 }
 
+
+.anim-bottom-box,.anim-left-box, .anim-right-box{
+  opacity: 0;
+  transition: 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.anim-bottom-box {
+  translate: 0 100px;
+}
+.anim-left-box {
+  translate: -100px 0 ;
+  
+}
+.anim-right-box {
+  translate: 100px 0 ;
+}
+
+:is(.anim-bottom-box,.anim-left-box, .anim-right-box).active-anim{
+  translate: 0 0;
+  opacity: 1;
+}
+
+
+
 @media screen and (max-width:  768px) {
 
 :root{
@@ -694,7 +717,7 @@ export const PillMinHead = styled.div`
   margin-bottom: 1rem;
   padding: .25rem 1rem;
   border-radius: 1.5625rem;
-  border: 0.5px solid var(--theme-black);
+  border: 1px solid var(--theme-black);
   color: #161616;
   display: inline-block;
   font-size: 0.875rem;
@@ -992,11 +1015,11 @@ overflow: hidden;
 
 
 export const ScrollAnimParaWrap = styled.div`
- position: sticky;
- top: ${window.innerHeight / 5 + 'px'};
+ /* position: sticky; */
+ /* top: ${"window.innerHeight" / 5 + 'px'}; */
 
 & p{
-	color:var(--theme-black-secondary);
+	/* color:var(--theme-black-secondary); */
 	text-align: center;
 	font-family:"Inter-Medium";
 	font-size: 2rem;
@@ -1005,6 +1028,10 @@ export const ScrollAnimParaWrap = styled.div`
 	&:not(:last-child){
 		margin-bottom:4rem;
 	}
+
+  & span{
+    color: currentColor;
+  }
 
 }
 @media screen and (max-width: 768px) {

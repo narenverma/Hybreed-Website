@@ -1,12 +1,13 @@
 import { GlobalStyle, FloatingBtn } from "./assets/css/globalStyle";
 import { GlobalColorsStyle } from "./assets/css/colorsLib";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import HeaderNavigation from "./components/HeaderNavigation";
 import Footer from "./components/FooterWrapper";
 import React, { useEffect } from "react";
 import Lenis from 'lenis'
 import { gsap, ScrollTrigger } from "gsap/all";
-import { headerScrollHide, scrollHeader } from "./utils/contants";
+import { headerScrollHide, scrollHeader, TextRevealScroll } from "./utils/contants";
+import { HoverLeave } from "./components/HoverInteract";
 
 
 
@@ -15,7 +16,12 @@ function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+  const location = useLocation();
 
+  useEffect(() => {
+     
+    HoverLeave(); 
+  }, [location]);
 
   useEffect(() => {
     document.title = 'Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai';

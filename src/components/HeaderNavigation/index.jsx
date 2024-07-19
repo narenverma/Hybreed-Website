@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { HeaderNavigationHeader, IconWrap, NavigationWrap, HeaderLogo, MobileMenuWrap, BackdropBg } from './styled.js';
 
 import { CustomBorderBtn, IconBtn, LinkBtn, UpperCaseHeader } from '../../assets/css/globalStyle.js'
@@ -9,7 +9,21 @@ import { FooterLinkWrap, SocialWrap } from '../FooterWrapper/styled.js';
 
 export default function HeaderNavigation() {
 
+useEffect(() => {
 
+  document.querySelectorAll("a").forEach((link)=>{
+              
+    link.addEventListener("click", (el)=>{ 
+      // console.log(link.href)
+setTimeout(()=>{
+  window.scrollTo(0,0)
+}, 1000);
+  })
+      // link.target.classList.remove("active")
+      
+  })
+
+},[]) 
 
   return (
     <>
@@ -76,7 +90,7 @@ document.body.classList.remove("overflow-hidden");
 
             <div className='col-lg-4 col-6 d-flex justify-content-lg-center justify-content-start order-lg-0 order-first '>
               <HeaderLogo className='text-center'>
-              <Link to={'https://web.hybreed.co'}>
+              <Link to={'/'}>
                 <img src={require("../../assets/images/hybreed-header.svg").default} alt={'hybreed'} />
               </Link>
               </HeaderLogo>

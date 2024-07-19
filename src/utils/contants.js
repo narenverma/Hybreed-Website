@@ -1,4 +1,4 @@
-import gsap from "gsap/all";
+import gsap, { ScrollTrigger } from "gsap/all";
 
 
 export const marqueeHybreedList = [
@@ -21,13 +21,46 @@ export const TextSplitSpans = ({ text }) => {
 };
 
 
+export const TextRevealScroll = (parentEl, childEl)=>{
+    gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+    document.querySelectorAll(parentEl).forEach((paraElWrap) => {
+
+        let paraSpans = [...paraElWrap.querySelectorAll(childEl)];
+
+        // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
+
+        //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
+        // })
+
+        gsap.to(paraSpans, {
+
+            opacity: 1,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: paraElWrap,
+                start: "top " + window.innerHeight / 2,
+                end: () => "+=" + paraElWrap.offsetHeight,
+                // pin: true,
+                scrub: 0.75,
+                // markers: true,
+            }
+
+        }, 0.4);
+
+    })
+}
+TextRevealScroll(".para-reveal-wrap" , " p span")
 
 export function SectionTopSpace() {
 
     let headerH = document.querySelector("header").offsetHeight;
 
     document.querySelector("main .hero-section").style.height = "auto";
-    document.querySelector("main .hero-section").style.paddingTop = headerH + "px";
+    document.querySelector("main .hero-section").style.paddingTop = (headerH - 24) + "px";
 
 }
 
@@ -244,7 +277,7 @@ export const LoaderAnimation = () => {
 
 
     gsap.to(".hero-para, .hero-pill-text", { opacity: 0 });
-    gsap.to(" .hero-cta ", {
+    gsap.to(" .hero-cta , .lets-talk-cta", {
         scale: 0,
     });
     gsap.to(".hero-head > span", {
@@ -282,6 +315,21 @@ export const LoaderAnimation = () => {
         height: "100vh"
     })
 
+      gsap.to(" .pre-loader h4, .pre-loader h5, .loader-counter ", {
+        opacity: 0,
+        y:50,
+      })
+
+
+      if (document.readyState !== "loading") {
+        
+      gsap.to(" .pre-loader h4, .pre-loader h5, .loader-counter", {
+        opacity: 1,
+        y:0,
+        delay:1,
+      })
+
+
         const digit1 = document.querySelector(".digit-1");
       const digit2 = document.querySelector(".digit-2");
       const digit3 = document.querySelector(".digit-3");
@@ -318,6 +366,8 @@ export const LoaderAnimation = () => {
       animation(digit2, 6);
       animation(digit1, 2, 5);
 
+
+
       gsap.to(".progress-bar", {
         width: "30%",
         duration: 2,
@@ -331,15 +381,15 @@ export const LoaderAnimation = () => {
         duration: 2,
         delay: 8.5,
         ease: "power3.inOut",
-        onComplete: () => {
-          gsap.set(".pre-loader", {
-            display: "none",
-          });
-        },
+        // onComplete: () => {
+        //   gsap.set(".pre-loader", {
+        //     display: "none",
+        //   });
+        // },
       });
 
 
-    gsap.to(".pre-loader .load-min-head , .pre-loader h4 ", {
+    gsap.to(".pre-loader h5, .pre-loader h4 ", {
         xPercent: -100,
         opacity: 0,
         duration: 1,
@@ -460,4 +510,7 @@ setTimeout(()=>{
         delay: 11.5,
     })
 
+}else{
+    console.log("loading...")
+}
 }

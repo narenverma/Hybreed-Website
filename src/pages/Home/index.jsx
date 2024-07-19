@@ -3,7 +3,7 @@ import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, 
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
 import { gsap, ScrollTrigger } from "gsap/all";
-import { LoaderAnimation,   LoaderFunction, SectionTopSpace, TextSplitSpans } from "../../utils/contants.js";
+import { LoaderAnimation, LoaderFunction, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
 import { HoverEnter, HoverLeave, CustomCursorAnim, } from "../../components/HoverInteract";
 
 import MarqueeSlide from "../../components/MarqueeSlide";
@@ -33,6 +33,17 @@ export default function Home() {
         SectionTopSpace();
         OnScrollContentAnimation();
 
+        CustomCursorAnim();
+
+        TextRevealScroll(".para-reveal-wrap" , " p span");
+
+        LoaderFunction();
+
+        LoaderAnimation();
+
+
+
+
         // let getParas = [...document.querySelectorAll(".para-reveal-wrap p")];
         // let paraSpans = [];
 
@@ -49,39 +60,6 @@ export default function Home() {
 
 
         // ScrollTriggerConf();
-        CustomCursorAnim();
-
-        gsap.registerPlugin(ScrollTrigger);
-
-
-
-
-        document.querySelectorAll(".para-reveal-wrap").forEach((paraElWrap) => {
-
-            let paraSpans = [...paraElWrap.querySelectorAll(".para-reveal-wrap p span")];
-
-            // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
-
-            //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
-            // })
-
-            gsap.to(paraSpans, {
-
-                opacity: 1,
-                stagger: 0.1,
-                scrollTrigger: {
-                    trigger: paraElWrap,
-                    start: "top " + window.innerHeight / 2,
-                    end: () => "+=" + paraElWrap.offsetHeight,
-                    // pin: true,
-                    scrub: 0.75,
-                    // markers: true,
-                }
-
-            }, 0.4);
-
-        })
-
 
 
 
@@ -92,12 +70,8 @@ export default function Home() {
 
 
 
-        LoaderFunction();
- 
-        LoaderAnimation();
 
 
- 
 
     }, []);
 
@@ -161,7 +135,7 @@ export default function Home() {
                             </PillMinHead>
                             <h1 className='hero-head text-lg-center mb-4'>
                                 Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
-                                <span  className="pill-thumbs-anim" ></span>
+                                <span className="pill-thumbs-anim" ></span>
 
                                 {" "}
                                 <span className="d-lg-inline d-none"> team</span>
@@ -266,15 +240,11 @@ export default function Home() {
                                 <div className="para-reveal-wrapper"  >
 
                                     <ScrollAnimParaWrap className='para-reveal-wrap'>
-                                        <p>
-                                            <TextSplitSpans text={
-                                                "We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed."
-                                            } />
+                                        <p className="theme-text-black-secondary">
+                                            We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed.
                                         </p>
-                                        <p>
-                                            <TextSplitSpans text={
-                                                "This is what we call the HYBREED PARTNERSHIP."
-                                            } />
+                                        <p className="theme-text-black-secondary">
+                                            This is what we call the <strong>HYBREED PARTNERSHIP</strong>.
                                         </p>
 
 
@@ -365,15 +335,20 @@ export default function Home() {
                                 {worksList.map((item, index) => (
                                     <CardItems key={index}
                                         onMouseEnter={() =>
-                                            HoverEnter("Coming <br> Soon!")
+                                            item.itemLink === "" ?
+                                                HoverEnter("Coming <br> Soon!")
+                                                :
+                                                HoverEnter("Know <br> More")
                                         }
                                         onMouseLeave={() => HoverLeave()}
                                     >
-                                        <CardTop className="scroll-anim-card"> 
-                                            <CategoryBullets>
-                                                <span>{item.itemCategory}</span>
-                                            </CategoryBullets>
-                                            {/* <video 
+                                        <Link to={item.itemLink === "" ? "/" : item.itemLink}  >
+
+                                            <CardTop className="scroll-anim-card">
+                                                <CategoryBullets>
+                                                    <span>{item.itemCategory}</span>
+                                                </CategoryBullets>
+                                                {/* <video 
                                                 loop={true}
                                                 autoPlay={true}
                                                 preload='true' 
@@ -383,8 +358,9 @@ export default function Home() {
                                                     src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}
                                                     type='video/mp4'></source>
                                             </video> */}
-                                            <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
-                                        </CardTop>
+                                                <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
+                                            </CardTop>
+                                        </Link>
                                         <CardBottom>
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
@@ -402,7 +378,7 @@ export default function Home() {
 
                             <CustomBtn className='text-center mt-5 '>
                                 <Link to='https://hybreed.co/contact' className='light-btn ' >
-                                    See more work
+                                Request Portfolio
                                 </Link>{" "}
                             </CustomBtn>
                             <p className='text-center mt-4 theme-text-gray'>
@@ -439,7 +415,7 @@ export default function Home() {
                     <div className='  equal-padding-B'>
                         <MiddleContentWrap>
                             <div className='row g-lg-5 g-4 '>
-                                <div className='col-lg-8'>
+                                <div className='col-lg-7'>
                                     {/* <div className="para-reveal-wrapper"  >
 
                                         <ScrollAnimParaWrap className='para-reveal-wrap'>
@@ -460,7 +436,7 @@ export default function Home() {
                                         We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
                                     <p> Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col-lg-5'>
                                     <MiddleContentImage>
                                         <img src={require("../../assets/images/hybreed-working.svg").default} alt='Hybreed' />
                                     </MiddleContentImage>

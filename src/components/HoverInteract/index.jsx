@@ -65,7 +65,7 @@ export const CustomCursorAnim=()=>{
 // Cursor hover code
 
 export  const HoverEnter = (cursorVal)=>{
-    document.querySelector('.cursor-move-inner .cursor-inner').innerHTML= `<p>${cursorVal}</p>`;
+    document.querySelector('.cursor-move-inner .cursor-inner').innerHTML= `<p class="text-center">${cursorVal}</p>`;
     setTimeout(()=>{
 
         document.querySelector('.cursor  ').classList.add("active")

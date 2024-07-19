@@ -19,11 +19,13 @@ export const CaseStudyHeroWrap = styled.div`
 `;
 export const CategoriesList = styled.div`
 display: flex;
-align-items: center;
+gap: 1.37rem;
+/* align-items: center; */
 
 & h6{
     font-family: 'Inter-Tight-SemiBold';
     font-size: 1.375rem;
+    padding: .38rem 0;
 }
 
 & ul{
@@ -31,6 +33,8 @@ align-items: center;
     display: flex;
     align-items: center;
     gap: .94rem;
+    flex-wrap: wrap;
+    padding-left: 0;
 
     & li {
         margin-bottom: 0!important;
@@ -40,26 +44,48 @@ align-items: center;
         background-color: var(--focusu-cs-secondary);
         font-size: 1.125rem;
         color: var(--theme-black);
+        font-family: "Inter-Tight-Regular";
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    flex-direction: column;
+    gap: 1rem;
+
+    & h6{
+        font-size: 1rem;
+        padding: 0;
+    }
+    & ul{
+        gap: .5rem;
+        & li {
+            padding: 0rem .8rem;
+            font-size: .9rem;
+        }
     }
 }
 
 `;
 export const BannerAnimationWrap = styled.div`
 width: 100%;
-height: 40.5rem;
+/* height: 40.5rem; */
 margin-top: 4rem;
 
 & img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
-
+@media screen and (max-width: 768px) {
+    margin-top: 3rem;
+}
 `;
 
 export const CaseStudyContentSection = styled.section`
 & .sub-head{
-    font-family: 'Inter-Medium';
+    font-family: 'Inter-Regular';
+    line-height: 154.545% ;
 }
 `;
 export const CaseStudyContentWrap = styled.div``;
@@ -70,38 +96,85 @@ margin-top: 2.5rem;
 padding-right: 1.25rem;
 padding-left: 1.25rem;
 }
+
+@media screen and (max-width: 768px) {
+    & .row>*{
+        margin-top: 1.5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
 `;
 export const AnimCardItem = styled.div`
 width:100%;
-height: 40.5rem;
+/* height: 40.5rem; */
 
 & img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 1rem;
 }
 
 `;
 
 export const CaseStudyTestimonialSection = styled.section``;
-export const CaseStudyTestimonialWrap = styled.div``;
-export const TestimonialImg = styled.div``;
+export const CaseStudyTestimonialWrap = styled.div`
+& .row> *{
+    --gap-space: 3.37rem;
+    margin-top: var(--gap-space);
+    padding-right: calc(var(--gap-space) / 2);
+    padding-left: calc(var(--gap-space) / 2);
+}
+
+`;
+export const TestimonialImg = styled.div`
+width:100%;
+
+& img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    /* height: 30rem; */
+    & img{
+        object-fit: cover;
+    }
+}
+
+`;
 export const TestimonialContent = styled.div`
 
 & *{
 color: var(--theme-white);
 }
 
-& h6{
+
+
+& .para-reveal-wrap p{
     font-size: 2rem; 
     line-height: 156.25%;
     letter-spacing: -0.0375rem;
     margin-bottom: 5.62rem;
 }
 
-& p{
+& > p{
     font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    & .para-reveal-wrap p{
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+    & p{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
 }
 
 `;

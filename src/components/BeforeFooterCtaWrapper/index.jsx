@@ -66,7 +66,7 @@ export default function BeforeFooterCtaWrapper() {
 
                                 <CustomBtn className='text-lg-center mt-5  d-lg-none'>
                                     <Link to='https://hybreed.co/contact'   >
-                                        <span  >Let’s connect!!!</span>
+                                        <span className='text-white' >Let’s connect!!!</span>
                                     </Link>
                                 </CustomBtn>
 
