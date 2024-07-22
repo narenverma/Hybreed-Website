@@ -22,6 +22,9 @@ export const GlobalColorsStyle = createGlobalStyle`
 --focusu-cs-primary: #FEF7F3;
 --focusu-cs-secondary: #FEB185;
 
+--equizen-cs-primary: #EBF9F9;
+--equizen-cs-secondary: #97D1D3;
+
 }
 
 

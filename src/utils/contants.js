@@ -1,4 +1,17 @@
 import gsap, { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
+export const ScrollToTop = () => {
+    // Extracts pathname property(key) from an object
+    const { pathname } = useLocation();
+  
+    // Automatically scrolls to top whenever pathname changes
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  }
 
 
 export const marqueeHybreedList = [
@@ -24,36 +37,44 @@ export const TextSplitSpans = ({ text }) => {
 export const TextRevealScroll = (parentEl, childEl)=>{
     gsap.registerPlugin(ScrollTrigger);
 
+    setTimeout(()=>{
+
+        ScrollTrigger.refresh();
+        
+        document.querySelectorAll(parentEl).forEach((paraElWrap) => {
+            
+            let paraSpans = [...paraElWrap.querySelectorAll(childEl)];
+            
+            // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
+                
+                //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
+                // })
+                
+                gsap.to(paraSpans, {
+                    
+                    opacity: 1,
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: paraElWrap,
+                        start: "top " + window.innerHeight / 2,
+                        end: () => "+=" + paraElWrap.offsetHeight,
+                        // pin: true,
+                        scrub: 0.75,
+                        // markers: true,
+                    }
+                    
+                }, 0.4);
+                
+            })
 
 
-
-    document.querySelectorAll(parentEl).forEach((paraElWrap) => {
-
-        let paraSpans = [...paraElWrap.querySelectorAll(childEl)];
-
-        // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
-
-        //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
-        // })
-
-        gsap.to(paraSpans, {
-
-            opacity: 1,
-            stagger: 0.1,
-            scrollTrigger: {
-                trigger: paraElWrap,
-                start: "top " + window.innerHeight / 2,
-                end: () => "+=" + paraElWrap.offsetHeight,
-                // pin: true,
-                scrub: 0.75,
-                // markers: true,
-            }
-
-        }, 0.4);
-
-    })
+    }, 500);
+// setTimeout(()=>{
+//     ScrollTrigger.refresh();
+//     // console.log("MOla")
+// }, 300)
 }
-TextRevealScroll(".para-reveal-wrap" , " p span")
+// TextRevealScroll(".para-reveal-wrap" , " p span")
 
 export function SectionTopSpace() {
 
@@ -315,7 +336,7 @@ export const LoaderAnimation = () => {
         height: "100vh"
     })
 
-      gsap.to(" .pre-loader h4, .pre-loader h5, .loader-counter ", {
+      gsap.to(" .pre-loader h4, .pre-loader h5 ", {
         opacity: 0,
         y:50,
       })
@@ -323,7 +344,13 @@ export const LoaderAnimation = () => {
 
       if (document.readyState !== "loading") {
         
-      gsap.to(" .pre-loader h4, .pre-loader h5, .loader-counter", {
+      gsap.to(" .pre-loader h5 ", {
+        opacity: 1,
+        y:0,
+        delay:.5,
+        stagger: .5,
+      })
+      gsap.to(" .pre-loader h4 ", {
         opacity: 1,
         y:0,
         delay:1,

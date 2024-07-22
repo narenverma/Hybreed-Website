@@ -6,7 +6,7 @@ import Footer from "./components/FooterWrapper";
 import React, { useEffect } from "react";
 import Lenis from 'lenis'
 import { gsap, ScrollTrigger } from "gsap/all";
-import { headerScrollHide, scrollHeader, TextRevealScroll } from "./utils/contants";
+import { headerScrollHide, scrollHeader, ScrollToTop, TextRevealScroll } from "./utils/contants";
 import { HoverLeave } from "./components/HoverInteract";
 
 
@@ -63,7 +63,7 @@ function App() {
    
     headerScrollHide();
 
-
+    
 
 
   }, []);
@@ -73,7 +73,7 @@ function App() {
     <>
       <GlobalStyle />
       <GlobalColorsStyle />
-
+      <ScrollToTop/>
       <div className="cursor">
         <div className="cursor-move-inner"  >
           <div className="cursor-inner"></div>

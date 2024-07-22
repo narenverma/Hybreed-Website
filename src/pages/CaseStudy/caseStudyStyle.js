@@ -8,6 +8,12 @@ background-color: var(--focusu-cs-primary);
 .theme-bg-focusu-secondary{
 background-color: var(--focusu-cs-secondary);
 }
+.theme-bg-equizen-primary{
+background-color: var(--equizen-cs-primary);
+}
+.theme-bg-equizen-secondary{
+background-color: var(--equizen-cs-secondary);
+}
 
 `;
 
@@ -41,7 +47,7 @@ gap: 1.37rem;
         line-height: 177.778%;
         padding: .38rem 2rem;
         border-radius: 2.25rem;
-        background-color: var(--focusu-cs-secondary);
+        background-color: var(--list-color);
         font-size: 1.125rem;
         color: var(--theme-black);
         font-family: "Inter-Tight-Regular";

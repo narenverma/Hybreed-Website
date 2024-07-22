@@ -3,7 +3,7 @@ import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, 
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
 import { gsap, ScrollTrigger } from "gsap/all";
-import { LoaderAnimation, LoaderFunction, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
+import { LoaderAnimation, LoaderFunction, ScrollToTop, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
 import { HoverEnter, HoverLeave, CustomCursorAnim, } from "../../components/HoverInteract";
 
 import MarqueeSlide from "../../components/MarqueeSlide";
@@ -30,7 +30,8 @@ export default function Home() {
 
 
     useEffect(() => {
-        SectionTopSpace();
+        SectionTopSpace(); 
+
         OnScrollContentAnimation();
 
         CustomCursorAnim();
@@ -40,6 +41,7 @@ export default function Home() {
         LoaderFunction();
 
         LoaderAnimation();
+        
 
 
 

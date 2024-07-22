@@ -66,3 +66,6 @@
 9. Mayuresh Case Study Sheet Changes 
 10. Case Study URL redirection
 11. Fixing the Images issue with mayuresh
+
+
+22-07-2024 : Create the Equizen Case study page 

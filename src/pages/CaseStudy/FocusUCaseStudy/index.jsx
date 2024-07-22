@@ -32,7 +32,7 @@ window.scrollTo(0, 0);
                 FocusU's New Digital Presence</h1>
               <CategoriesList className="anim-bottom-box">
                 <h6>How did we help: </h6>
-                <ul>
+                <ul style={{"--list-color": "var(--focusu-cs-secondary)" }}>
                   <li>Website Design</li>
                   <li>Illustrations</li>
                   <li>Website Development</li>
@@ -205,7 +205,7 @@ window.scrollTo(0, 0);
                   </div>
                   <div className="col-lg-12 anim-bottom-box">
                     <AnimCardItem>
-                      <img src={require("../../../assets/images/case-study-images/demo-focusu-card-img-8.png")} alt="images" />
+                      <img src={require("../../../assets/images/case-study-images/demo-focusu-card-img-8-v2.svg").default} alt="images" />
                     </AnimCardItem>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ window.scrollTo(0, 0);
               <div className="row gy-4">
                 <div className="col-lg-4 anim-left-box">
                   <TestimonialImg>
-                    <img src={require("../../../assets/images/case-study-images/team-focus-u-image.png")} alt="profile-img" />
+                    <img src={require("../../../assets/images/case-study-images/focusu-case-study-testimonial-img.svg").default} alt="profile-img" />
                   </TestimonialImg>
                 </div>
                 <div className="col-lg-8  ">

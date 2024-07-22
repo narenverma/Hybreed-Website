@@ -9,21 +9,21 @@ import { FooterLinkWrap, SocialWrap } from '../FooterWrapper/styled.js';
 
 export default function HeaderNavigation() {
 
-useEffect(() => {
+// useEffect(() => {
 
-  document.querySelectorAll("a").forEach((link)=>{
+// //   document.querySelectorAll("a").forEach((link)=>{
               
-    link.addEventListener("click", (el)=>{ 
-      // console.log(link.href)
-setTimeout(()=>{
-  window.scrollTo(0,0)
-}, 1000);
-  })
-      // link.target.classList.remove("active")
+// //     link.addEventListener("click", (el)=>{ 
+// //       // console.log(link.href)
+// // setTimeout(()=>{
+// //   window.scrollTo(0,0)
+// // }, 1000);
+// //   })
+// //       // link.target.classList.remove("active")
       
-  })
+// //   })
 
-},[]) 
+// },[]) 
 
   return (
     <>

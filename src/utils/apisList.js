@@ -442,7 +442,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
-        itemLink:"",
+        itemLink:"/case-studies/equizen-engage",
         itemImg: "equizen-featured-banner.png",
         itemVideo: "",
         itemTitle: "Equizen (2024 - Present)",

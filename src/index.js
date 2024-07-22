@@ -7,6 +7,7 @@ import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import FocusUCaseStudy from './pages/CaseStudy/FocusUCaseStudy';
 import Home from './pages/Home';
 import NotFoundPage from './pages/NotFoundPage';
+import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
 
 const router = createBrowserRouter([
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/case-studies/focusu-engage",
         element: <FocusUCaseStudy />,  
+      },
+      {
+        path: "/case-studies/equizen-engage",
+        element: <EquizenCaseStudy />,  
       },
       {
         path: "*",
