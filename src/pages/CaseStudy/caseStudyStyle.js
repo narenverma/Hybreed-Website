@@ -14,6 +14,12 @@ background-color: var(--equizen-cs-primary);
 .theme-bg-equizen-secondary{
 background-color: var(--equizen-cs-secondary);
 }
+.theme-bg-lifecrafting-primary{
+background-color: var(--lifecrafting-cs-primary);
+}
+.theme-bg-lifecrafting-secondary{
+background-color: var(--lifecrafting-cs-secondary);
+}
 
 `;
 
@@ -28,10 +34,15 @@ display: flex;
 gap: 1.37rem;
 /* align-items: center; */
 
+
 & h6{
     font-family: 'Inter-Tight-SemiBold';
     font-size: 1.375rem;
     padding: .38rem 0;
+}
+
+&.dark-list ul li{
+    color:var(--theme-white);
 }
 
 & ul{
@@ -116,11 +127,12 @@ export const AnimCardItem = styled.div`
 width:100%;
 /* height: 40.5rem; */
 
-& img{
+& *{
     width: 100%;
     height: 100%;
     /* object-fit: cover; */
     border-radius: 1rem;
+    /* overflow: hidden; */
 }
 
 `;

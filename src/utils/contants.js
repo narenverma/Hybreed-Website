@@ -3,13 +3,31 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
-export const ScrollToTop = () => {
+export const ScrollToTopPage = () => {
     // Extracts pathname property(key) from an object
     const { pathname } = useLocation();
   
     // Automatically scrolls to top whenever pathname changes
     useEffect(() => {
-      window.scrollTo(0, 0);
+
+        const scrollToTop = () => {
+            const c = document.documentElement.scrollTop || document.body.scrollTop;
+            if (c > 0) {
+              window.requestAnimationFrame(scrollToTop);
+              window.scrollTo(0, c - c / 8);
+            }
+            console.log(c);
+          };
+      
+          document.querySelectorAll("a").forEach((link) => {
+      
+            link.addEventListener("click", (el) => {
+              scrollToTop();
+              console.log("run");
+      
+            })
+          })
+
     }, [pathname]);
   }
 

@@ -8,6 +8,7 @@ import FocusUCaseStudy from './pages/CaseStudy/FocusUCaseStudy';
 import Home from './pages/Home';
 import NotFoundPage from './pages/NotFoundPage';
 import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
+import LifeCraftingCaseStudy from './pages/CaseStudy/LifeCraftingCaseStudy';
 
 const router = createBrowserRouter([
 
@@ -28,8 +29,12 @@ const router = createBrowserRouter([
         element: <FocusUCaseStudy />,  
       },
       {
-        path: "/case-studies/equizen-engage",
+        path: "/case-studies/equizen",
         element: <EquizenCaseStudy />,  
+      },
+      {
+        path: "/case-studies/lifecrafting",
+        element: <LifeCraftingCaseStudy />,  
       },
       {
         path: "*",

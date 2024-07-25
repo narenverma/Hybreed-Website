@@ -225,6 +225,22 @@ export const clientLogosList = [
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
             },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
         ]
     },
     {
@@ -264,6 +280,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -306,6 +338,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -346,6 +394,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -384,6 +448,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -442,7 +522,7 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
-        itemLink:"/case-studies/equizen-engage",
+        itemLink:"/case-studies/equizen",
         itemImg: "equizen-featured-banner.png",
         itemVideo: "",
         itemTitle: "Equizen (2024 - Present)",

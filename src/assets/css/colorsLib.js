@@ -25,6 +25,9 @@ export const GlobalColorsStyle = createGlobalStyle`
 --equizen-cs-primary: #EBF9F9;
 --equizen-cs-secondary: #97D1D3;
 
+--lifecrafting-cs-primary: #F3FDFD;
+--lifecrafting-cs-secondary: #00798E;
+
 }
 
 

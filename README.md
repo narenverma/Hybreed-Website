@@ -68,4 +68,8 @@
 11. Fixing the Images issue with mayuresh
 
 
-22-07-2024 : Create the Equizen Case study page 
+22-07-2024 : Create the Equizen Case study page and fix some issues
+
+25-07-2024 : Create the LifeCrafting Case study page 
+1. Create Lifecrafting case study page 
+2. Fixing the Some issues

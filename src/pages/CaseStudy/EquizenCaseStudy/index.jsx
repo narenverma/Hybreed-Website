@@ -11,11 +11,9 @@ export default function EquizenCaseStudy() {
 
   useEffect(() => {
     SectionTopSpace();
-    TextRevealScroll(".para-reveal-wrap.testimonial-reveal-wrap" , " p span");
+    TextRevealScroll(".para-reveal-wrap.testimonial-reveal-wrap", " p span");
     CustomCursorAnim();
-    OnScrollContentAnimation();
-
-// window.scrollTo(0, 0);
+    OnScrollContentAnimation(); 
 
   }, [])
 
@@ -31,7 +29,7 @@ export default function EquizenCaseStudy() {
               <h1 className="h2 section-head">EquiZen’s Journey to a <br /> Modern Digital Identity</h1>
               <CategoriesList className="anim-bottom-box">
                 <h6>How did we help: </h6>
-                <ul style={{"--list-color": "var(--equizen-cs-secondary)" }}>
+                <ul style={{ "--list-color": "var(--equizen-cs-secondary)" }}>
                   <li>Branding</li>
                   <li>Website Design</li>
                   <li>Illustrations</li>
@@ -46,7 +44,7 @@ export default function EquizenCaseStudy() {
         </BannerAnimationWrap>
       </CaseStudyHeroSection>
 
-      <CaseStudyContentSection className="next-section-curve curve-bg-black-secondary ">
+      <CaseStudyContentSection className="next-section-curve curve-bg-primary ">
         <div className="container">
           <div className="equal-padding-T equal-padding-B">
             <CaseStudyContentWrap>
@@ -117,7 +115,7 @@ export default function EquizenCaseStudy() {
                 <div className="row g-5">
                   <div className="col-lg-12 anim-bottom-box">
                     <AnimCardItem>
-                      <img src={require("../../../assets/images/case-study-images/equizen-case-study-banner-img-2.png")} alt="images" />
+                      <img src={require("../../../assets/images/case-study-images/equizen-case-study-banner-img-2.svg").default} alt="images" />
                     </AnimCardItem>
                   </div>
                   <div className="col-lg-6 anim-left-box">
@@ -177,7 +175,7 @@ export default function EquizenCaseStudy() {
               </div>
 
               <AnimationCards>
-                <div className="row g-5"> 
+                <div className="row g-5">
                   <div className="col-lg-12 anim-bottom-box">
                     <AnimCardItem>
                       <img src={require("../../../assets/images/case-study-images/equizen-case-study-banner-img-4.svg").default} alt="images" />
@@ -201,9 +199,16 @@ export default function EquizenCaseStudy() {
                 <div className="row g-5">
                   <div className="col-lg-12 anim-bottom-box">
                     <AnimCardItem>
-                      <img src={require("../../../assets/images/case-study-images/equizen-case-study-banner-img-5.png")} alt="images" />
+                      {/* <img src={require("../../../assets/images/case-study-images/equizen-case-study-banner-img-5.png")} alt="images" /> */}
+                      <video 
+                      loop muted  webkit-playsinline={"true"} playsInline autoPlay
+                      preload={'auto'}
+                      src={require("../../../assets/videos/equizen-video-1.webm")}   className="w-100">
+                        <source src={require("../../../assets/videos/equizen-video-1.webm")} type="video/webm" />
+
+                      </video>
                     </AnimCardItem>
-                  </div> 
+                  </div>
                 </div>
               </AnimationCards>
 
@@ -213,7 +218,7 @@ export default function EquizenCaseStudy() {
         </div>
       </CaseStudyContentSection>
 
-      <CaseStudyTestimonialSection className="theme-bg-black-secondary next-section-curve curve-bg-primary ">
+      {/* <CaseStudyTestimonialSection className="theme-bg-black-secondary next-section-curve curve-bg-primary ">
         <div className="container">
           <div className="  equal-padding-B">
             <CaseStudyTestimonialWrap>
@@ -234,9 +239,7 @@ export default function EquizenCaseStudy() {
 
 
                     </ScrollAnimParaWrap>
-
-
-                    {/* <h6>“Hybreed is without doubt one of the best website development teams I have ever worked with. Their commitment and perseverance brilliantly compliments the technical expertise they brought in on each of the projects we have collaborated on“</h6> */}
+ 
 
                     <p className="text-end"> &mdash; Team FocusU </p>
 
@@ -248,7 +251,7 @@ export default function EquizenCaseStudy() {
             </CaseStudyTestimonialWrap>
           </div>
         </div>
-      </CaseStudyTestimonialSection>
+      </CaseStudyTestimonialSection> */}
 
       <BeforeFooterCtaWrapper />
 
