@@ -20,6 +20,12 @@ background-color: var(--lifecrafting-cs-primary);
 .theme-bg-lifecrafting-secondary{
 background-color: var(--lifecrafting-cs-secondary);
 }
+.theme-bg-4pcapital-primary{
+background-color: var(--4pcapital-cs-primary);
+}
+.theme-bg-4pcapital-secondary{
+background-color: var(--4pcapital-cs-secondary);
+}
 
 `;
 

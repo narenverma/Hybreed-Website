@@ -73,3 +73,9 @@
 25-07-2024 : Create the LifeCrafting Case study page 
 1. Create Lifecrafting case study page 
 2. Fixing the Some issues
+
+25-07-2024 : Create the 4p CapitalCase study page and changes
+1. Create the Case study of the 4p Capital 
+2. Live the Life crafting case study 
+3. Fixing the some issues 
+4. Update the Home page Features cards positions

@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import NotFoundPage from './pages/NotFoundPage';
 import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
 import LifeCraftingCaseStudy from './pages/CaseStudy/LifeCraftingCaseStudy';
+import FourPCapitalCaseStudy from './pages/CaseStudy/FourPCapitalCaseStudy';
 
 const router = createBrowserRouter([
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/case-studies/lifecrafting",
         element: <LifeCraftingCaseStudy />,  
+      },
+      {
+        path: "/case-studies/4pcapital",
+        element: <FourPCapitalCaseStudy />,  
       },
       {
         path: "*",

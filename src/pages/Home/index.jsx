@@ -344,7 +344,7 @@ export default function Home() {
                                         }
                                         onMouseLeave={() => HoverLeave()}
                                     >
-                                        <Link to={item.itemLink === "" ? "/" : item.itemLink}  >
+                                        <Link to={item.itemLink === "" ? "" : item.itemLink}  >
 
                                             <CardTop className="scroll-anim-card">
                                                 <CategoryBullets>

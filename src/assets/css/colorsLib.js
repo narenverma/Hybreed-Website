@@ -28,6 +28,9 @@ export const GlobalColorsStyle = createGlobalStyle`
 --lifecrafting-cs-primary: #F3FDFD;
 --lifecrafting-cs-secondary: #00798E;
 
+--4pcapital-cs-primary: #FFF0F0;
+--4pcapital-cs-secondary: #FA6E68;
+
 }
 
 
