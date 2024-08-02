@@ -46,3 +46,39 @@
 25-06-2024 : Some Changes 
 1. Update menu Hover Effect
 2. Content spacing and cosmetic changes
+
+
+12-07-2024 : Add New Loading Screen
+1. Add new loading screen 
+2. Responsive the loader
+3. Fixing the Issues
+4. Create the Desktop UI of the Case Study Page 
+
+19-07-2024 : Many Changes
+1. Fix Arg sir changes and issues
+2. Fixing the issues
+3. Adding Scroll Aniamtions
+4. Update Testimonials content
+5. Update Case study page Images
+6. Responsive the Case study page
+7. Create 404 page
+8. Fix footer marquee big screen overlap issue
+9. Mayuresh Case Study Sheet Changes 
+10. Case Study URL redirection
+11. Fixing the Images issue with mayuresh
+
+
+22-07-2024 : Create the Equizen Case study page and fix some issues
+
+25-07-2024 : Create the LifeCrafting Case study page 
+1. Create Lifecrafting case study page 
+2. Fixing the Some issues
+
+25-07-2024 : Create the 4p CapitalCase study page and changes
+1. Create the Case study of the 4p Capital 
+2. Live the Life crafting case study 
+3. Fixing the some issues 
+4. Update the Home page Features cards positions
+
+
+01-08-2024 : Working on the Meta tag SSR and SEO

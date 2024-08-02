@@ -108,7 +108,7 @@ export default function FAQsWrapper() {
         {
             faqHeading: "How can I contact you?",
             faqContent: <>
-                <p>You can fill up the form <a href="https://hybreed.co/contact">here</a> or schedule a call with Ajit RG <a href="tel:+919833572299">here</a>.</p>
+                <p>You can fill up the form <a href="https://hybreed.co/contact">here</a> or  message with Ajit RG <a href="tel:+919833572299">here</a>.</p>
             </>
         },
     ]
