@@ -10,6 +10,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
 import LifeCraftingCaseStudy from './pages/CaseStudy/LifeCraftingCaseStudy';
 import FourPCapitalCaseStudy from './pages/CaseStudy/FourPCapitalCaseStudy';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
 
@@ -50,12 +51,15 @@ const router = createBrowserRouter([
 
 ])
 
+const helmetContext = {};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <HelmetProvider context={helmetContext}>
     <RouterProvider router={router} />
     {/* <App /> */}
+  </HelmetProvider>
   </React.StrictMode>
 );
 

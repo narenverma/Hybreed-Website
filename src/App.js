@@ -8,7 +8,7 @@ import Lenis from 'lenis'
 import { gsap, ScrollTrigger } from "gsap/all";
 import { headerScrollHide, scrollHeader, ScrollToTopPage, TextRevealScroll } from "./utils/contants";
 import { HoverLeave } from "./components/HoverInteract";
-
+ 
 
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
   }, [location]);
 
   useEffect(() => {
-    document.title = 'Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai';
     // const link = document.querySelector("link[rel='icon']");
     // link.href = "/hybreed-header.svg";
 

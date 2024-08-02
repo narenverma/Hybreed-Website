@@ -3,6 +3,15 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 
+
+
+// export const MetaContent = (pageTitle, pageDesc)=>{
+//     document.querySelector("title").innerText = pageTitle; 
+//     document.querySelectorAll( "meta[name='twitter:title'], meta[property='og:title']").forEach((metaTitle)=>{metaTitle.setAttribute("content", pageTitle);});
+//  document.querySelectorAll("meta[name='description'], meta[name='twitter:description'], meta[property='og:description']").forEach((metaDesc)=>{metaDesc.setAttribute("content", pageDesc);});
+// }
+
+
 export const ScrollToTopPage = () => {
     // Extracts pathname property(key) from an object
     const { pathname } = useLocation();
@@ -16,7 +25,7 @@ export const ScrollToTopPage = () => {
               window.requestAnimationFrame(scrollToTop);
               window.scrollTo(0, c - c / 8);
             }
-            console.log(c);
+            // console.log(c);
           };
       
           document.querySelectorAll("a").forEach((link) => {
@@ -164,97 +173,17 @@ export const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
 export const LoaderFunction = () => {
 
 
-    function onReady() {
-        let getPillThumbs = document.querySelector(".pill-thumbs-anim"),
-            getThumbsLoader = document.querySelector(".hero-imgs"); 
-
-        const setPageLoader = () => {
-            // document.body.classList.remove("overflow-hidden")
-            // window.scrollTo(0, 0);
-
-            getThumbsLoader.style.position = "absolute";
-            getThumbsLoader.style.top = getPillThumbs.getBoundingClientRect().top + window.scrollY + "px";
-            getThumbsLoader.style.left = getPillThumbs.getBoundingClientRect().left + "px";
-            getThumbsLoader.style.height = getPillThumbs.offsetHeight + "px";
-            getThumbsLoader.style.width = getPillThumbs.offsetWidth + "px";
-            getThumbsLoader.style.borderRadius = "4rem";
-            getThumbsLoader.style.zIndex = 10; 
-
-
-        } 
-
-
-
-        let prevWidth = window.innerWidth;
-        window.addEventListener('resize', function () {
-            if (window.innerWidth !== prevWidth) {
-                setPageLoader()
-            }
-        });
-
-
-    }
-
-
-
-
-    // const loaderTimer = () => {
-
-    //     const LoaderWrap = document.querySelector("#loader");
-    //     const loadingBar = document.querySelector("#bar");
-    //     const percentText = document.querySelector("#percent");
-
-    //     let load = 0;
-    //     let timeOut = 90;
-
-    //     let loadingVal = setInterval(() => {
-    //         load = load + Math.floor(Math.random() * 5 + 1);
-    //         if (load < 100) {
-    //             percentText.textContent = load + "%";
-    //             loadingBar.style.width = `${load}%`;
-
-    //         } else {
-    //             loadingBar.style.width = `100%`;
-    //             percentText.textContent = "100%";
-
-    //         }
-
-
-    //         if (load > 100) {
-
-    //             // console.log("Tombola")
-
-    //             onReady();
-
-    //             clearInterval(loadingVal);
-
-    //         }
-    //     }, timeOut);
-    // }
-
     if (document.readyState !== "loading") {
 
         setTimeout(() => {
-            // loaderTimer();
-
-            
-            onReady()
+            // onReady()
 
                 MarqueeDuplicateAndTime('.carousel-wrap ', " div", 0)
                 MarqueeDuplicateAndTime('.marquee-strip-list', " div", 0)
                 MarqueeDuplicateAndTime('footer .slide-track', " div", 0)
-
-            
-
         }, 1000)
         
-
-    } else {
-        setTimeout(() => {
-            // document.addEventListener("DOMContentLoaded", loaderTimer);
-        }, 1000)
-         
-    }
+    } 
 
 }
 

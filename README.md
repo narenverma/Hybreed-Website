@@ -79,3 +79,6 @@
 2. Live the Life crafting case study 
 3. Fixing the some issues 
 4. Update the Home page Features cards positions
+
+
+01-08-2024 : Working on the Meta tag SSR and SEO

@@ -23,6 +23,7 @@ import 'swiper/css/effect-fade';
 import { Autoplay, EffectFade } from "swiper/modules";
 import LoadingAnimation from "../../components/LoadingAnimation/index.jsx";
 import BeforeFooterCtaWrapper from "../../components/BeforeFooterCtaWrapper/index.jsx";
+import MetaUpdate from "../../components/MetaUpdate/index.jsx";
 
 
 
@@ -30,18 +31,18 @@ export default function Home() {
 
 
     useEffect(() => {
-        SectionTopSpace(); 
+        SectionTopSpace();
 
         OnScrollContentAnimation();
 
         CustomCursorAnim();
 
-        TextRevealScroll(".para-reveal-wrap" , " p span");
+        TextRevealScroll(".para-reveal-wrap", " p span");
 
         LoaderFunction();
 
         LoaderAnimation();
-        
+
 
 
 
@@ -103,23 +104,11 @@ export default function Home() {
 
     return (
         <>
-            {/* <div className="page-loader">
-                <video
-                    loop muted  webkit-playsinline={"true"} playsInline autoPlay
-                    preload={'auto'}
-                type={'video/webm'}
-                    src={require("../../assets/videos/banner-animation-v2.4.webm")}>
-                    <source
-                        src={require("../../assets/videos/banner-animation-v2.4.webm")}
-                        type='video/webm'></source>
-                </video>
-
-
-                <div id="loader">
-                    <div id="bar"><span id="percent"></span></div>
-                </div>
-
-            </div> */}
+            {/* <MetaUpdate
+                pageTitle="Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai"
+                pageDesc="Hybreed is design & development Agency specialized in web- and mobile-friendly platforms. We work as your extended team and bring in a mix of strategy, design & technology."
+                pageUrl={window.window.location.href}
+            /> */}
 
             <LoadingAnimation />
 
@@ -380,7 +369,7 @@ export default function Home() {
 
                             <CustomBtn className='text-center mt-5 '>
                                 <Link to='https://hybreed.co/contact' className='light-btn ' >
-                                Request Portfolio
+                                    Request Portfolio
                                 </Link>{" "}
                             </CustomBtn>
                             <p className='text-center mt-4 theme-text-gray'>

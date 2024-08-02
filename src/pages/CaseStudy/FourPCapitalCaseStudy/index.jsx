@@ -5,6 +5,7 @@ import { CustomCursorAnim } from '../../../components/HoverInteract/index.jsx';
 import BeforeFooterCtaWrapper from '../../../components/BeforeFooterCtaWrapper/index.jsx';
 import { ScrollAnimParaWrap } from '../../../assets/css/globalStyle.js';
 import OnScrollContentAnimation from '../../../components/OnScrollContentAnimation/index.jsx';
+import MetaUpdate from '../../../components/MetaUpdate/index.jsx';
 
 
 export default function FourPCapitalCaseStudy() {
@@ -20,6 +21,11 @@ export default function FourPCapitalCaseStudy() {
 
   return (
     <>
+    <MetaUpdate
+      pageTitle="Hybreed.co | 4P Capital Case Study" 
+      pageDesc="4P Capital Partners is India based investment platform that partners with visionary entrepreneurs to build legendary businesses for India and for the world." 
+      pageUrl={window.window.location.href}
+       />
       <CaseStudyGlobalStyle />
 
       <CaseStudyHeroSection className="hero-section theme-bg-4pcapital-primary" >

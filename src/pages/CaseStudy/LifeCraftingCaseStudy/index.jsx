@@ -5,6 +5,7 @@ import { CustomCursorAnim } from '../../../components/HoverInteract/index.jsx';
 import BeforeFooterCtaWrapper from '../../../components/BeforeFooterCtaWrapper/index.jsx';
 import { ScrollAnimParaWrap } from '../../../assets/css/globalStyle.js';
 import OnScrollContentAnimation from '../../../components/OnScrollContentAnimation/index.jsx';
+import MetaUpdate from '../../../components/MetaUpdate/index.jsx';
 
 
 export default function LifeCraftingCaseStudy() {
@@ -20,6 +21,11 @@ export default function LifeCraftingCaseStudy() {
 
   return (
     <>
+    <MetaUpdate
+      pageTitle="Hybreed.co | LifeCrafting Case Study" 
+      pageDesc="The Lifecrafting Project, is an ambitious initiative aiming to create the world's largest and most diverse intergenerational canvas of pods." 
+      pageUrl={window.window.location.href}
+       />
       <CaseStudyGlobalStyle />
 
       <CaseStudyHeroSection className="hero-section theme-bg-lifecrafting-primary" >
