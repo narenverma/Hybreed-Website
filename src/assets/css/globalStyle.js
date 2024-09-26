@@ -317,6 +317,9 @@ header{
   z-index: 999;
   transition: 300ms ease-in-out;
 
+  filter: invert(1);
+  mix-blend-mode: difference;
+
   &.headerActive {
     ${'' /* background-color: var(--theme-white);  */}
     ${'' /* box-shadow: 0px 1px 28px 0 #00000017; */}

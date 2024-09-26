@@ -506,7 +506,7 @@ export const worksList = [
     },
     {
         itemCategory: "Platform",
-        itemLink:"",
+        itemLink:"/case-studies/turbohire",
         itemImg: "turbohire-featured-banner.png",
         itemVideo: "",
         itemTitle: "TurboHire (2022-Present)",
@@ -546,7 +546,7 @@ export const worksList = [
     },
     {
         itemCategory: "Platform",
-        itemLink:"",
+        itemLink:"/case-studies/mercer",
         itemImg: "mercer-featured-banner.png",
         itemVideo: "",
         itemTitle: "Mercer (2020)",

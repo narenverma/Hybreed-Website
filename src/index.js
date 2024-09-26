@@ -10,6 +10,9 @@ import NotFoundPage from './pages/NotFoundPage';
 import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
 import LifeCraftingCaseStudy from './pages/CaseStudy/LifeCraftingCaseStudy';
 import FourPCapitalCaseStudy from './pages/CaseStudy/FourPCapitalCaseStudy';
+import TurboHireCaseStudy from './pages/CaseStudy/TurboHireCaseStudy';
+import TurboHirePlatformCaseStudy from './pages/CaseStudy/TurboHirePlatformCaseStudy';
+import MercerCaseStudy from './pages/CaseStudy/MercerCaseStudy';
 import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
@@ -41,6 +44,18 @@ const router = createBrowserRouter([
       {
         path: "/case-studies/4pcapital",
         element: <FourPCapitalCaseStudy />,  
+      },
+      {
+        path: "/case-studies/mercer",
+        element: <MercerCaseStudy />,
+      },
+{
+        path: "/case-studies/turbohire",
+        element: <TurboHireCaseStudy />,  
+      },
+      {
+        path: "/case-studies/turbohire-platform",
+        element: <TurboHirePlatformCaseStudy />,  
       },
       {
         path: "*",

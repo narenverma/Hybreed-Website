@@ -82,3 +82,7 @@
 
 
 01-08-2024 : Working on the Meta tag SSR and SEO
+
+26-09-2024 : Update some case study pagse and menu changes 
+1. Turbohire, Turbohire platform and Mercer case study page
+2. Update menu overlay invert effect 

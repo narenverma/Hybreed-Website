@@ -14,6 +14,12 @@ background-color: var(--equizen-cs-primary);
 .theme-bg-equizen-secondary{
 background-color: var(--equizen-cs-secondary);
 }
+.theme-bg-mercer-primary{
+background-color: var(--mercer-cs-primary);
+}
+.theme-bg-mercer-secondary{
+background-color: var(--mercer-cs-secondary);
+}
 .theme-bg-lifecrafting-primary{
 background-color: var(--lifecrafting-cs-primary);
 }
@@ -25,6 +31,13 @@ background-color: var(--4pcapital-cs-primary);
 }
 .theme-bg-4pcapital-secondary{
 background-color: var(--4pcapital-cs-secondary);
+}
+
+.theme-bg-turbohire-primary{
+background-color: var(--turbohire-cs-primary);
+}
+.theme-bg-turbohire-secondary{
+background-color: var(--turbohire-cs-secondary);
 }
 
 `;

@@ -31,6 +31,12 @@ export const GlobalColorsStyle = createGlobalStyle`
 --4pcapital-cs-primary: #FFF0F0;
 --4pcapital-cs-secondary: #FA6E68;
 
+--mercer-cs-primary: #F7FAFD;
+--mercer-cs-secondary: #BCD2E1;
+
+--turbohire-cs-primary: #FAFAFA;
+--turbohire-cs-secondary: #0085FE;
+
 }
 
 
