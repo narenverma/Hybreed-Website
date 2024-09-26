@@ -862,25 +862,37 @@ export const LinkBtn = styled.div`
 	font-family: 'Inter-Tight-Medium';
   font-size: 1.75rem;
   text-decoration: underline !important; 
-     
+  position: relative; 
   
   &.light-btn{
     background-color: var(--theme-white);
     color:var(--theme-black-primary);
   }
-
-	&:after{
+ 
+    &:after{
 		content:'';
     margin-left: 0.75rem;
-		background: url(${require("../images/arrow-black-icon.svg").default}) no-repeat center/auto;
-		display: inline-flex;
-		--btn-after-size: 2rem;
+		background-image: url(${require("../images/arrow-black-icon.svg").default}) ,
+    url(${require("../images/arrow-black-icon.svg").default}) ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 50%, 50% 230%;
+    background-size: auto, auto;
+		display: inline-block;
+		--btn-after-size:2rem;
 		width: var(--btn-after-size);
 		height: var(--btn-after-size);
 		border-radius: 100%;
 		background-color: var(--theme-primary);
 		rotate: 45deg;
+    /* transition: background-position 200ms ease-in   ; */
+    transition: background-position 0ms ease-in   ;
+    clip-path: circle(50% at 50% 50%);
 	}
+  &:hover:after{
+    transition: background-position 250ms ease-in 70ms  ;
+    background-position: 50% -130%, 50% 50%;
+    animation: clipDown 500ms ease-in ;
+  } 
 
   &.download-icon:after{
     rotate: 180deg;
@@ -906,6 +918,7 @@ export const IconBtn = styled.div`
 	font-size: 1rem;
 	color:var(--theme-white);
   gap: 0.55819rem;
+  position: relative;
 
 	&:before{
 		content:'';
@@ -921,6 +934,24 @@ export const IconBtn = styled.div`
 		aspect-ratio: 1;
     filter: invert();
 	}
+  &:after{
+    content:'';
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, #ffffff, #ffffff);
+    background-size: 0% 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: background-size 0.2s linear;
+  }
+  &:hover:after{ 
+    background-position: left center;
+    background-size: 100% 100%;
+  }
 }
 `
 

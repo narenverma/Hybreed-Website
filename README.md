@@ -86,3 +86,4 @@
 26-09-2024 : Update some case study pagse and menu changes 
 1. Turbohire, Turbohire platform and Mercer case study page
 2. Update menu overlay invert effect 
+3. Add hover effect on the footer CTAs
