@@ -87,3 +87,8 @@
 1. Turbohire, Turbohire platform and Mercer case study page
 2. Update menu overlay invert effect 
 3. Add hover effect on the footer CTAs
+
+01-10-2024 : Add The cache on the loader and working on the GMI page
+1. Add Loader window cache 
+2. Set the loader animation when the cache is active 
+3. Working on the GMI page and rename the images 

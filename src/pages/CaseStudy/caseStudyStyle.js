@@ -39,6 +39,12 @@ background-color: var(--turbohire-cs-primary);
 .theme-bg-turbohire-secondary{
 background-color: var(--turbohire-cs-secondary);
 }
+.theme-bg-gmi-primary{
+background-color: var(--gmi-cs-primary);
+}
+.theme-bg-gmi-secondary{
+background-color: var(--gmi-cs-secondary);
+}
 
 `;
 

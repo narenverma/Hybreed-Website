@@ -14,6 +14,7 @@ import TurboHireCaseStudy from './pages/CaseStudy/TurboHireCaseStudy';
 import TurboHirePlatformCaseStudy from './pages/CaseStudy/TurboHirePlatformCaseStudy';
 import MercerCaseStudy from './pages/CaseStudy/MercerCaseStudy';
 import { HelmetProvider } from 'react-helmet-async';
+import GMICaseStudy from './pages/CaseStudy/GMICaseStudy';
 
 const router = createBrowserRouter([
 
@@ -49,13 +50,17 @@ const router = createBrowserRouter([
         path: "/case-studies/mercer",
         element: <MercerCaseStudy />,
       },
-{
+      {
         path: "/case-studies/turbohire",
         element: <TurboHireCaseStudy />,  
       },
       {
         path: "/case-studies/turbohire-platform",
         element: <TurboHirePlatformCaseStudy />,  
+      },
+      {
+        path: "/case-studies/gmi",
+        element: <GMICaseStudy />,  
       },
       {
         path: "*",

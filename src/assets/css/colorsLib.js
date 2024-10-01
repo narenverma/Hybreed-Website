@@ -37,6 +37,9 @@ export const GlobalColorsStyle = createGlobalStyle`
 --turbohire-cs-primary: #FAFAFA;
 --turbohire-cs-secondary: #0085FE;
 
+--gmi-cs-primary: #FFFDF8;
+--gmi-cs-secondary: #FFCC01;
+
 }
 
 
