@@ -337,6 +337,9 @@ header{
   }
 
   @media screen and (max-width: 768px) {
+    filter: invert(0);
+    mix-blend-mode: unset;
+
     &.headerActive .social-links-circle-wrap{
       display: none!important;
     }

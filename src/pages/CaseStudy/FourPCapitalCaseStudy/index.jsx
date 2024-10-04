@@ -6,6 +6,7 @@ import BeforeFooterCtaWrapper from '../../../components/BeforeFooterCtaWrapper/i
 import { ScrollAnimParaWrap } from '../../../assets/css/globalStyle.js';
 import OnScrollContentAnimation from '../../../components/OnScrollContentAnimation/index.jsx';
 import MetaUpdate from '../../../components/MetaUpdate/index.jsx';
+import ThreeDMobileScroll from '../../../components/ThreeDMobileScroll/index.js';
 
 
 export default function FourPCapitalCaseStudy() {
@@ -45,6 +46,7 @@ export default function FourPCapitalCaseStudy() {
             </CaseStudyHeroWrap>
           </div>
         </div>
+        {/* <ThreeDMobileScroll/> */}
         <BannerAnimationWrap className="anim-bottom-box">
           <img src={require("../../../assets/images/case-study-images/4pcapital-case-study-hero-banner-img.png")} alt="Case Study Banner" />
         </BannerAnimationWrap>
