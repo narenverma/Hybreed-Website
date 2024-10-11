@@ -92,3 +92,11 @@
 1. Add Loader window cache 
 2. Set the loader animation when the cache is active 
 3. Working on the GMI page and rename the images 
+
+
+11-10-2024 : Add 3D Model on the Some Case Studies and Many move changes
+1. Add 3D Model scroll animation on the Some Case Studies
+2. Update Content
+3. Fix Favicon issue
+4. Fix Page Change Scroll and Position issue
+5. Add loader Window Cache

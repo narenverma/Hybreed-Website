@@ -45,9 +45,9 @@ export default function FourPCapitalCaseStudy() {
               </CategoriesList>
             </CaseStudyHeroWrap>
           </div>
-        </div>
-        {/* <ThreeDMobileScroll/> */}
-        <BannerAnimationWrap className="anim-bottom-box">
+        </div> 
+        {/* <ThreeDMobileScroll textureImage ="4p-capital-mobiel-screen-ui-image.png"/>  */}
+        <BannerAnimationWrap className="anim-bottom-box  ">
           <img src={require("../../../assets/images/case-study-images/4pcapital-case-study-hero-banner-img.png")} alt="Case Study Banner" />
         </BannerAnimationWrap>
       </CaseStudyHeroSection>

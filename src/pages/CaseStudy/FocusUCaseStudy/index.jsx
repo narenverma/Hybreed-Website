@@ -16,18 +16,16 @@ export default function FocusUCaseStudy() {
     CustomCursorAnim();
     OnScrollContentAnimation();
 
-window.scrollTo(0, 0);
-
   }, [])
 
 
   return (
     <>
-          <MetaUpdate
+          {/* <MetaUpdate
       pageTitle="Hybreed.co | FocusU Engage Case Study" 
       pageDesc="FocusU is one of India's leading names in the field of corporate learning and engagement." 
       pageUrl={window.window.location.href}
-       />
+       /> */}
       <CaseStudyGlobalStyle />
 
       <CaseStudyHeroSection className="hero-section theme-bg-focusu-primary" >

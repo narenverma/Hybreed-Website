@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import iPhoneModel from '../../assets/models/iphone_12_pro.glb';
 import {
   MeshTransmissionMaterial,
   PerspectiveCamera,
@@ -16,17 +15,16 @@ export default function MobileModel(props) {
   const { viewport, pointer } = useThree();
 
 //   const { nodes, materials } = useGLTF("/assets/models/iphone_12_pro.glb");
-  const { nodes, materials } = useGLTF(iPhoneModel);
+  const { nodes, materials } = useGLTF("/three-d-assets/models/iphone_12_pro.glb");
 
   const meshRef = useRef();
   const videoTextureRef = useRef();
+  const imageTextureRef = useRef();
   const mainMobile = useRef();
   const cameraRef = useRef();
   const { camera } = useThree();
   const mainMobileWrap = useRef();
   const heroHeading2 = useRef();
-  // const heroHeading2Wrap = useRef();
-  // const heroHeading1 = useRef();
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -64,154 +62,123 @@ export default function MobileModel(props) {
   });
 
   useEffect(() => {
-    // Create video element
-    const video = document.createElement("video");
-    video.src = require("../../assets/textures/video-texture.mp4");
-    video.crossOrigin = "Anonymous";
-    video.loop = true;
-    video.muted = true;
-    video.play(); // Make sure to start the video
 
-    // Create texture from video
-    const videoTexture = new THREE.VideoTexture(video);
-    videoTexture.wrapS = THREE.ClampToEdgeWrapping;
-    videoTexture.wrapT = THREE.ClampToEdgeWrapping;
-    videoTexture.center.set(0.5, 0.5);
+// Create image element
+const imageTexture = new THREE.TextureLoader().load("/three-d-assets/textures/" + props.screenTexture);
 
-    videoTexture.repeat.set(0.99, 1.1);
-    videoTexture.minFilter = THREE.LinearFilter;
-    videoTexture.magFilter = THREE.LinearFilter;
+// Set texture properties
+imageTexture.wrapS = THREE.ClampToEdgeWrapping;
+imageTexture.wrapT = THREE.ClampToEdgeWrapping;
+imageTexture.center.set(0.5, 0.5);
+imageTexture.repeat.set(0.99, 1.1);
+imageTexture.minFilter = THREE.LinearFilter;
+imageTexture.magFilter = THREE.LinearFilter;
 
-    videoTextureRef.current = videoTexture;
+imageTextureRef.current = imageTexture;
 
-    // Apply the texture to the mesh material
-    videoTexture.generateMipmaps = false;
-    meshRef.current.material.map = videoTexture;
-    meshRef.current.material.needsUpdate = true;
+// Apply the image texture using MeshBasicMaterial
+meshRef.current.material = new THREE.MeshBasicMaterial({
+    map: imageTexture,         // Assign the texture to the material
+    color: 0xffffff,           // White base color to keep the texture unaltered
+    toneMapped: false          // Disable tone mapping for consistent brightness
+});
+meshRef.current.material.needsUpdate = true;
+// meshRef.current.material.metalness = 1;         // Making the material more metallic
+// meshRef.current.material.roughness = 0; 
+
+    // // Create video element
+    // const video = document.createElement("video");
+    // video.src = require("../../assets/textures/video-texture.mp4");
+    // video.crossOrigin = "Anonymous";
+    // video.loop = true;
+    // video.muted = true;
+    // video.play(); // Make sure to start the video
+
+    // // Create texture from video
+    // const videoTexture = new THREE.VideoTexture(video);
+    // videoTexture.wrapS = THREE.ClampToEdgeWrapping;
+    // videoTexture.wrapT = THREE.ClampToEdgeWrapping;
+    // videoTexture.center.set(0.5, 0.5);
+
+    // videoTexture.repeat.set(0.99, 1.1);
+    // videoTexture.minFilter = THREE.LinearFilter;
+    // videoTexture.magFilter = THREE.LinearFilter;
+
+    // videoTextureRef.current = videoTexture;
+
+    // // Apply the texture to the mesh material
+    // videoTexture.generateMipmaps = false;
+    // meshRef.current.material.map = videoTexture;
+    // meshRef.current.material.needsUpdate = true;
 
     if (mainMobile.current) {
       mainMobile.current.rotation.y = 3.1; // Set initial rotation to 3.1 on Y-axis
     }
+    if (document.readyState !== "loading"){ 
 
-    // const handleScroll = () => {
-    //   setScrollY(window.scrollY);
-    // };
+  document.querySelector(".hero-section").style.height = document.querySelector(".hero-section").offsetHeight * 4 +"px";
+  gsap.registerPlugin(ScrollTrigger)
+  let tlMob =  gsap;
 
-    // window.addEventListener("scroll", handleScroll);
-
-    // Clean up on unmount
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.set(cameraRef.current.rotation, { x: -0.3, y: -2.3, z: -0.3 });
-    gsap.to(cameraRef.current.rotation, {
+    tlMob.set(cameraRef.current.rotation, { x: -0.3, y: -2.3, z: -0.3 });
+    tlMob.to(cameraRef.current.rotation, {
       x: 0,
       y: -3.1,
-      z: 0,
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // Smoothly update the animation as you scroll
-      },
+      z: 0, 
+      scrollTrigger:{
+      
+    trigger: ".hero-section",
+      start: "top top", 
+      end: "bottom bottom", 
+      scrub: 1, // Smoothly update the animation as you scroll
+      
+    }
     });
 
-    gsap.set(cameraRef.current.position, { x: 0, y: -2.8, z: 2.3 });
-    gsap.to(cameraRef.current.position, {
+    tlMob.set(cameraRef.current.position, { x: 0, y: -2.8, z: 2.3 });
+    tlMob.to(cameraRef.current.position, {
       x: 0,
       y: 0,
-      z: 0,
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // Smoothly update the animation as you scroll
-      },
+      z: 0, 
+      scrollTrigger:{
+      
+    trigger: ".hero-section",
+      start: "top top", 
+      end: "bottom bottom", 
+      scrub: 1, // Smoothly update the animation as you scroll
+      
+    }
     });
 
-    // gsap.to(heroHeading1.current.material, {
-    //   opacity: 0,
-    //   delay: 0.8,
-    // });
-    // gsap.to(heroHeading1.current.position, {
-    //   y: 1,
-    //   delay: 0.8,
-    // });
-
-    // gsap.set(heroHeading2Wrap.current.material, {
-    //   opacity: 0,
-    // });
-    // gsap.to(heroHeading2Wrap.current.material, {
-    //   opacity: 1,
-    //   delay: 1,
-    // });
-    // gsap.set(heroHeading2Wrap.current.position, {
-    //   y: -1,
-    // });
-    // gsap.to(heroHeading2Wrap.current.position, {
-    //   y: 0,
-    //   delay: 1,
-    // });
-
-    // gsap.set(heroHeading2.current.position, { x: 0, y: 0, z: -0.5 });
-    gsap.to(heroHeading2.current.position, {
-      x: 0,
-      y: 1,
-      z: -0.5,
-      scrollTrigger: {
-        trigger: "main",
+    gsap.to(".hero-section",{
+      scrollTrigger:{
+        trigger:".hero-section",
         start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // Smoothly update the animation as you scroll
-      },
-    });
-
-    // gsap.set(heroHeading2.current.material, { opacity: 1 });
-    gsap.to(heroHeading2.current.material, {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // Smoothly update the animation as you scroll
-      },
-    });
+        end: "bottom bottom"  ,
+        pin:".scene-main", 
+      // markers:true, 
+      scrub: 1,
+      }
+    })
+ 
+  }
+     
 
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      video.pause();
-      video.removeAttribute("src");
-      video.load();
+      // video.pause();
+      // video.removeAttribute("src");
+      // video.load();
 
-      window.addEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  // const controlsCamera = useControls("camera", {
-  //   posX: { value: 0, min: -10, max: 10, step: 0.1 },
-  //   posY: { value: -2.8, min: -10, max: 10, step: 0.1 },
-  //   posZ: { value: 2.3, min: -10, max: 10, step: 0.1 },
-
-  //   rotX: { value: -0.3, min: -Math.PI, max: Math.PI, step: 0.1 },
-  //   rotY: { value: -2.3, min: -Math.PI, max: Math.PI, step: 0.1 },
-  //   rotZ: { value: -0.3, min: -Math.PI, max: Math.PI, step: 0.1 },
-  // });
 
   return (
     <>
       {/* <group scale={viewport.width / 20} position={[0, 2, -0.5]}>
-        <Text
-          ref={heroHeading1}
-          fontSize={1}
-          color={"#212121"}
-          maxWidth={viewport.width / 1.5}
-          textAlign={"center"}
-        >
-          Assalam WaAlaikum Habibi!
-        </Text>
-      </group> */}
-      <group scale={viewport.width / 20} position={[0, 2, -0.5]}>
         <group>
           <Text
             ref={heroHeading2}
@@ -223,12 +190,9 @@ export default function MobileModel(props) {
             Hayee Mashallah!
           </Text>
         </group>
-      </group>
+      </group> */}
       <PerspectiveCamera
         ref={cameraRef}
-        // makeDefault
-        // position={[controlsCamera.posX, controlsCamera.posY, controlsCamera.posZ]}
-        // rotation={[controlsCamera.rotX, controlsCamera.rotY, controlsCamera.rotZ]}
         fov={40}
       >
         <group

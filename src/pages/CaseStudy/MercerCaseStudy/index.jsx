@@ -235,9 +235,9 @@ export default function MercerCaseStudy() {
         </div>
       </CaseStudyContentSection>
 
-{/*       <CaseStudyTestimonialSection className="theme-bg-black-secondary next-section-curve curve-bg-primary ">
+      <CaseStudyTestimonialSection className="theme-bg-black-secondary next-section-curve curve-bg-primary ">
         <div className="container">
-          <div className="  equal-padding-B">
+          <div className="equal-padding-B">
             <CaseStudyTestimonialWrap>
               <div className="row gy-4">
                 <div className="col-lg-4 anim-left-box">
@@ -250,12 +250,13 @@ export default function MercerCaseStudy() {
 
                     <ScrollAnimParaWrap className='para-reveal-wrap testimonial-reveal-wrap'>
                       <p className="text-start theme-text-white">
-                      “Hybreed is without doubt one of the best website development teams I have ever worked with. Their commitment and perseverance brilliantly compliments the technical expertise they brought in on each of the projects we have collaborated on“
+                      “It has been a pleasure to work with the Hybreed team! They have been agile and flexible to deliver beyond expectations and within timelines. They have been quick to incorporate feedback and add value to the final deliverable.“
                       </p>
                     </ScrollAnimParaWrap>
 
 
-                    <p className="text-end"> &mdash; Bhavna Goyal, CEO, FocusU</p>
+                    <p className="text-end"> &mdash; Rupali Gupta, ASEAN Talent Solutions Consulting Leader,
+                    Mercer Singapore</p>
 
                   </TestimonialContent>
                 </div>
@@ -265,7 +266,7 @@ export default function MercerCaseStudy() {
             </CaseStudyTestimonialWrap>
           </div>
         </div>
-      </CaseStudyTestimonialSection> */}
+      </CaseStudyTestimonialSection>
 
       <BeforeFooterCtaWrapper />
 

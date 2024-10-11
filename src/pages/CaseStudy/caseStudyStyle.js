@@ -48,7 +48,9 @@ background-color: var(--gmi-cs-secondary);
 
 `;
 
-export const CaseStudyHeroSection = styled.section``;
+export const CaseStudyHeroSection = styled.section`
+height: 100vh;
+`;
 export const CaseStudyHeroWrap = styled.div`
 & h1{
     margin-bottom: 2.5rem;

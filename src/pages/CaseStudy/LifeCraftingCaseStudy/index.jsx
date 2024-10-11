@@ -6,6 +6,7 @@ import BeforeFooterCtaWrapper from '../../../components/BeforeFooterCtaWrapper/i
 import { ScrollAnimParaWrap } from '../../../assets/css/globalStyle.js';
 import OnScrollContentAnimation from '../../../components/OnScrollContentAnimation/index.jsx';
 import MetaUpdate from '../../../components/MetaUpdate/index.jsx';
+import ThreeDMobileScroll from '../../../components/ThreeDMobileScroll/index.js';
 
 
 export default function LifeCraftingCaseStudy() {
@@ -45,7 +46,8 @@ export default function LifeCraftingCaseStudy() {
             </CaseStudyHeroWrap>
           </div>
         </div>
-        <BannerAnimationWrap className="anim-bottom-box">
+        {/* <ThreeDMobileScroll textureImage ="lifecrafting-mobiel-screen-ui-image.png"/>  */}
+        <BannerAnimationWrap className="anim-bottom-box  ">
           <img src={require("../../../assets/images/case-study-images/lifecrafting-case-study-hero-banner-img.svg").default} alt="Case Study Banner" />
         </BannerAnimationWrap>
       </CaseStudyHeroSection>
@@ -201,7 +203,7 @@ export default function LifeCraftingCaseStudy() {
                     <h4>UI, Visual Output</h4>
                   </div>
                   <div className="col-xl-7 col-lg-6 anim-right-box">
-                    <p className="sub-head mb-0">The UI design focused on clean lines, intuitive navigation, and engaging visuals. We incorporated interactive elements to enhance user engagement and utilized responsive design techniques to ensure the site looked and performed well on all devices. The visual output was a modern, professional website that effectively showcased FocusU’s expertise and offerings.</p>
+                    <p className="sub-head mb-0">A clean and intuitive design focusing on user engagement and personalization. LifeCrafting’s UI combines soft, calming color palettes with modern typography to create a welcoming atmosphere. The design promotes easy navigation with strategically placed CTAs and clear pathways to guide users through different sections. Interactive elements enhance the user experience.</p>
                   </div>
                 </div>
               </div>

@@ -23,19 +23,19 @@ export const ScrollToTopPage = () => {
             const c = document.documentElement.scrollTop || document.body.scrollTop;
             if (c > 0) {
                 window.requestAnimationFrame(scrollToTop);
-                window.scrollTo(0, c - c / 8);
+                window.scrollTo(0, c - c / 2);
             }
             // console.log(c);
         };
 
-        document.querySelectorAll("a").forEach((link) => {
+        // document.querySelectorAll("a").forEach((link) => {
 
-            link.addEventListener("click", (el) => {
-                scrollToTop();
-                console.log("run");
+            // link.addEventListener("click", (el) => {
+                scrollToTop(); 
+                // console.log("run");
 
-            })
-        })
+            // })
+        // })
 
     }, [pathname]);
 }
