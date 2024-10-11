@@ -19,6 +19,27 @@ export const GlobalColorsStyle = createGlobalStyle`
 
 --theme-yellow-cream: #FFFEF5;
 
+--focusu-cs-primary: #FEF7F3;
+--focusu-cs-secondary: #FEB185;
+
+--equizen-cs-primary: #EBF9F9;
+--equizen-cs-secondary: #97D1D3;
+
+--lifecrafting-cs-primary: #F3FDFD;
+--lifecrafting-cs-secondary: #00798E;
+
+--4pcapital-cs-primary: #FFF0F0;
+--4pcapital-cs-secondary: #FA6E68;
+
+--mercer-cs-primary: #F7FAFD;
+--mercer-cs-secondary: #BCD2E1;
+
+--turbohire-cs-primary: #FAFAFA;
+--turbohire-cs-secondary: #0085FE;
+
+--gmi-cs-primary: #FFFDF8;
+--gmi-cs-secondary: #FFCC01;
+
 }
 
 

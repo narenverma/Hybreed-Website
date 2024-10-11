@@ -11,7 +11,7 @@ const MarqueeWrap = styled.div`
   rotate: -4.679deg;
     transform-origin: 0% 100%;
   scale: 1.05;
-  /* margin-top: 8rem; */
+  padding-top: 3rem;
   
   &::before,
   &::after {
@@ -55,6 +55,12 @@ const MarqueeWrap = styled.div`
       width:100%;
     }
   }
+
+  @media screen and (max-width: 768px){
+    padding-top: 2rem;
+  }
+
+
 `
 
 export const MarqueeSlideV2 = ({ children, marqueeWidth }) => {

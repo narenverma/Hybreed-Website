@@ -226,7 +226,7 @@ hyphens: auto; */
 }
 
 li, p, span, b, strong {
-color: var(--theme-neutral-700);
+color: var(--theme-black-secondary);
 }
 
  
@@ -271,12 +271,13 @@ padding-bottom: var(--equal-paddings);
 
 
 
-.hero-head .word,
+${'' /* .hero-head .word, */}
 .section-head .word {
     transform: translateY(16px);
     transform-origin: 0% 100%;
     opacity: 0;
     transition: 700ms ease-out calc(var(--word-index) / 3 * 0.1s);
+    color: currentColor;
 }
 
 .hero-head.show-head .word,
@@ -316,6 +317,9 @@ header{
   z-index: 999;
   transition: 300ms ease-in-out;
 
+  filter: invert(1);
+  mix-blend-mode: difference;
+
   &.headerActive {
     ${'' /* background-color: var(--theme-white);  */}
     ${'' /* box-shadow: 0px 1px 28px 0 #00000017; */}
@@ -333,6 +337,9 @@ header{
   }
 
   @media screen and (max-width: 768px) {
+    filter: invert(0);
+    mix-blend-mode: unset;
+
     &.headerActive .social-links-circle-wrap{
       display: none!important;
     }
@@ -343,10 +350,20 @@ header{
   }
 }
 
+.pill-thumbs-anim{
+  display: inline-block;
+    height: auto !important;
+    width: 231px;
+    margin-bottom: -1rem;
+    aspect-ratio: 22 / 9;
+    ${'' /* background-color: #fff; */}
+    border-radius: 10rem;
+ 
+}
 
 
 .para-reveal-wrap p span{
-opacity:.1;
+opacity:.3;
 }
 
 
@@ -609,6 +626,29 @@ html.has-scroll-dragging {
     }
 }
 
+
+.anim-bottom-box,.anim-left-box, .anim-right-box{
+  opacity: 0;
+  transition: 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.anim-bottom-box {
+  translate: 0 100px;
+}
+.anim-left-box {
+  translate: -100px 0 ;
+  
+}
+.anim-right-box {
+  translate: 100px 0 ;
+}
+
+:is(.anim-bottom-box,.anim-left-box, .anim-right-box).active-anim{
+  translate: 0 0;
+  opacity: 1;
+}
+
+
+
 @media screen and (max-width:  768px) {
 
 :root{
@@ -660,6 +700,7 @@ padding-bottom: var(--equal-paddings);
 }
 
 .pill-thumbs-anim{
+  display: inline-block;
   height: auto !important;
     width: 100%;
     margin: 1rem 0;
@@ -682,7 +723,7 @@ export const PillMinHead = styled.div`
   margin-bottom: 1rem;
   padding: .25rem 1rem;
   border-radius: 1.5625rem;
-  border: 0.5px solid var(--theme-black);
+  border: 1px solid var(--theme-black);
   color: #161616;
   display: inline-block;
   font-size: 0.875rem;
@@ -776,7 +817,8 @@ export const CustomBtn = styled.div`
 		border-radius: 100%;
 		background-color: var(--theme-primary);
 		rotate: 45deg;
-    transition: background-position 200ms ease-in   ;
+    /* transition: background-position 200ms ease-in   ; */
+    transition: background-position 0ms ease-in   ;
     clip-path: circle(50% at 50% 50%);
 	}
   &:hover:after{
@@ -823,25 +865,37 @@ export const LinkBtn = styled.div`
 	font-family: 'Inter-Tight-Medium';
   font-size: 1.75rem;
   text-decoration: underline !important; 
-     
+  position: relative; 
   
   &.light-btn{
     background-color: var(--theme-white);
     color:var(--theme-black-primary);
   }
-
-	&:after{
+ 
+    &:after{
 		content:'';
     margin-left: 0.75rem;
-		background: url(${require("../images/arrow-black-icon.svg").default}) no-repeat center/auto;
-		display: inline-flex;
-		--btn-after-size: 2rem;
+		background-image: url(${require("../images/arrow-black-icon.svg").default}) ,
+    url(${require("../images/arrow-black-icon.svg").default}) ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 50%, 50% 230%;
+    background-size: auto, auto;
+		display: inline-block;
+		--btn-after-size:2rem;
 		width: var(--btn-after-size);
 		height: var(--btn-after-size);
 		border-radius: 100%;
 		background-color: var(--theme-primary);
 		rotate: 45deg;
+    /* transition: background-position 200ms ease-in   ; */
+    transition: background-position 0ms ease-in   ;
+    clip-path: circle(50% at 50% 50%);
 	}
+  &:hover:after{
+    transition: background-position 250ms ease-in 70ms  ;
+    background-position: 50% -130%, 50% 50%;
+    animation: clipDown 500ms ease-in ;
+  } 
 
   &.download-icon:after{
     rotate: 180deg;
@@ -867,6 +921,7 @@ export const IconBtn = styled.div`
 	font-size: 1rem;
 	color:var(--theme-white);
   gap: 0.55819rem;
+  position: relative;
 
 	&:before{
 		content:'';
@@ -882,6 +937,24 @@ export const IconBtn = styled.div`
 		aspect-ratio: 1;
     filter: invert();
 	}
+  &:after{
+    content:'';
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, #ffffff, #ffffff);
+    background-size: 0% 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: background-size 0.2s linear;
+  }
+  &:hover:after{ 
+    background-position: left center;
+    background-size: 100% 100%;
+  }
 }
 `
 
@@ -979,11 +1052,11 @@ overflow: hidden;
 
 
 export const ScrollAnimParaWrap = styled.div`
- position: sticky;
- top: ${window.innerHeight / 5 + 'px'};
+ /* position: sticky; */
+ /* top: ${"window.innerHeight" / 5 + 'px'}; */
 
 & p{
-	color:var(--theme-black-secondary);
+	/* color:var(--theme-black-secondary); */
 	text-align: center;
 	font-family:"Inter-Medium";
 	font-size: 2rem;
@@ -992,6 +1065,10 @@ export const ScrollAnimParaWrap = styled.div`
 	&:not(:last-child){
 		margin-bottom:4rem;
 	}
+
+  & span{
+    color: currentColor;
+  }
 
 }
 @media screen and (max-width: 768px) {
@@ -1027,12 +1104,17 @@ export const CardTop = styled.div`
 width:100%;
 margin-bottom: 2rem;
 position: relative;
-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0 50%, 100% 0%, 100% 50%, 0% 100%);
 transition: 200ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+filter: blur(20px) grayscale(1);
+opacity: 0;
 
 
-
-& video{
+&.scroll-anim-card.active-card{
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  filter: blur(0px) grayscale(0);
+opacity: 1;
+transition: 800ms linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
 
 }
 
@@ -1046,7 +1128,7 @@ transition: 200ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
   border-radius: 0.5rem;
   z-index: 0;
  scale: 1;
-  transition: 400ms ease-in-out;
+ transition: 400ms ease-in-out;
 }
 & video{
   opacity: 0;
@@ -1229,6 +1311,7 @@ bottom: 3rem;
   justify-content: center;
   width: 7.39988rem;
 height: 7.39988rem;
+scale:0;
 
   & img{
     position: absolute;

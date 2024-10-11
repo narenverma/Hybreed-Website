@@ -46,3 +46,57 @@
 25-06-2024 : Some Changes 
 1. Update menu Hover Effect
 2. Content spacing and cosmetic changes
+
+
+12-07-2024 : Add New Loading Screen
+1. Add new loading screen 
+2. Responsive the loader
+3. Fixing the Issues
+4. Create the Desktop UI of the Case Study Page 
+
+19-07-2024 : Many Changes
+1. Fix Arg sir changes and issues
+2. Fixing the issues
+3. Adding Scroll Aniamtions
+4. Update Testimonials content
+5. Update Case study page Images
+6. Responsive the Case study page
+7. Create 404 page
+8. Fix footer marquee big screen overlap issue
+9. Mayuresh Case Study Sheet Changes 
+10. Case Study URL redirection
+11. Fixing the Images issue with mayuresh
+
+
+22-07-2024 : Create the Equizen Case study page and fix some issues
+
+25-07-2024 : Create the LifeCrafting Case study page 
+1. Create Lifecrafting case study page 
+2. Fixing the Some issues
+
+25-07-2024 : Create the 4p CapitalCase study page and changes
+1. Create the Case study of the 4p Capital 
+2. Live the Life crafting case study 
+3. Fixing the some issues 
+4. Update the Home page Features cards positions
+
+
+01-08-2024 : Working on the Meta tag SSR and SEO
+
+26-09-2024 : Update some case study pagse and menu changes 
+1. Turbohire, Turbohire platform and Mercer case study page
+2. Update menu overlay invert effect 
+3. Add hover effect on the footer CTAs
+
+01-10-2024 : Add The cache on the loader and working on the GMI page
+1. Add Loader window cache 
+2. Set the loader animation when the cache is active 
+3. Working on the GMI page and rename the images 
+
+
+11-10-2024 : Add 3D Model on the Some Case Studies and Many move changes
+1. Add 3D Model scroll animation on the Some Case Studies
+2. Update Content
+3. Fix Favicon issue
+4. Fix Page Change Scroll and Position issue
+5. Add loader Window Cache

@@ -1,41 +1,87 @@
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'; 
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import FocusUCaseStudy from './pages/CaseStudy/FocusUCaseStudy';
 import Home from './pages/Home';
+import NotFoundPage from './pages/NotFoundPage';
+import EquizenCaseStudy from './pages/CaseStudy/EquizenCaseStudy';
+import LifeCraftingCaseStudy from './pages/CaseStudy/LifeCraftingCaseStudy';
+import FourPCapitalCaseStudy from './pages/CaseStudy/FourPCapitalCaseStudy';
+import TurboHireCaseStudy from './pages/CaseStudy/TurboHireCaseStudy';
+import TurboHirePlatformCaseStudy from './pages/CaseStudy/TurboHirePlatformCaseStudy';
+import MercerCaseStudy from './pages/CaseStudy/MercerCaseStudy';
+import { HelmetProvider } from 'react-helmet-async';
+import GMICaseStudy from './pages/CaseStudy/GMICaseStudy';
 
 const router = createBrowserRouter([
- 
+
   {
-    path:"/",
+    path: "/",
     element: <App />,
-    children:[
+    children: [
       {
-        path:"",
+        path: "",
         element: <Home />
       },
-      // {
-      //   path: '/thank-you',
-      //   element: <ThankYou />,
-      //   noindex: false,
-      // },
-      // {
-      //   path: '/launch-collaborators',
-      //   element: <LaunchCollaborators />
-      // }
+      {
+        path: "/case-studies",
+        element: <Navigate to="/"  />,  
+      },
+      {
+        path: "/case-studies/focusu-engage",
+        element: <FocusUCaseStudy />,  
+      },
+      {
+        path: "/case-studies/equizen",
+        element: <EquizenCaseStudy />,  
+      },
+      {
+        path: "/case-studies/lifecrafting",
+        element: <LifeCraftingCaseStudy />,  
+      },
+      {
+        path: "/case-studies/4pcapital",
+        element: <FourPCapitalCaseStudy />,  
+      },
+      {
+        path: "/case-studies/mercer",
+        element: <MercerCaseStudy />,
+      },
+      {
+        path: "/case-studies/turbohire",
+        element: <TurboHireCaseStudy />,  
+      },
+      {
+        path: "/case-studies/turbohire-platform",
+        element: <TurboHirePlatformCaseStudy />,  
+      },
+      {
+        path: "/case-studies/gmi",
+        element: <GMICaseStudy />,  
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,  
+      },
     ]
   },
-  
+
 ])
 
+const helmetContext = {};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <RouterProvider router={router}/>
+  <HelmetProvider context={helmetContext}>
+    <RouterProvider router={router} />
     {/* <App /> */}
+  </HelmetProvider>
   </React.StrictMode>
 );
 

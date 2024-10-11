@@ -3,7 +3,7 @@ import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, 
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
 import { gsap, ScrollTrigger } from "gsap/all";
-import { LoaderFunction, SectionTopSpace, TextSplitSpans } from "../../utils/contants.js";
+import { LoaderAnimation, LoaderFunction, ScrollToTop, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
 import { HoverEnter, HoverLeave, CustomCursorAnim, } from "../../components/HoverInteract";
 
 import MarqueeSlide from "../../components/MarqueeSlide";
@@ -12,15 +12,18 @@ import TestimonialsWrapper from "../../components/TestimonialsWrapper";
 import { TestimonialsSection } from "../../components/TestimonialsWrapper/styled.js";
 import FAQsWrapper from "../../components/FAQsWrapper";
 import { FAQsSection } from "../../components/FAQsWrapper/styled.js";
-import { marqueeList, carouselSlideList, clientLogosList, worksList } from "../../utils/apisList.js";
+import { marqueeList, carouselSlideList, clientLogosList, worksList, loaderSlider } from "../../utils/apisList.js";
 
-import { HomeHeroSection, HomeHeroWrap, GridFreeAnimCarousel, CarouselWrap, SlideItems, ClientsLogoWrap, LogosWrap, LogoItem, FeaturedWorkSection, FeaturedWorkWrap, MarqueeStripSection, MiddleContentSection, MiddleContentWrap, MiddleContentImage, ServicesSection, BeforeFooterCtaSection, BeforeFooterCtaWrap, ProductsImgTile, BgElemOne, BgElemTwo, AboutSection } from "./styled.js";
+import { HomeHeroSection, HomeHeroWrap, GridFreeAnimCarousel, CarouselWrap, SlideItems, ClientsLogoWrap, LogosWrap, LogoItem, FeaturedWorkSection, FeaturedWorkWrap, MarqueeStripSection, MiddleContentSection, MiddleContentWrap, MiddleContentImage, ServicesSection, ProductsImgTile, BgElemOne, BgElemTwo, AboutSection } from "./styled.js";
 
 import OnScrollContentAnimation from "../../components/OnScrollContentAnimation/index.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { Autoplay, EffectFade } from "swiper/modules";
+import LoadingAnimation from "../../components/LoadingAnimation/index.jsx";
+import BeforeFooterCtaWrapper from "../../components/BeforeFooterCtaWrapper/index.jsx";
+import MetaUpdate from "../../components/MetaUpdate/index.jsx";
 
 
 
@@ -29,7 +32,20 @@ export default function Home() {
 
     useEffect(() => {
         SectionTopSpace();
+
         OnScrollContentAnimation();
+
+        CustomCursorAnim();
+
+        TextRevealScroll(".para-reveal-wrap", " p span");
+
+        LoaderFunction();
+
+        LoaderAnimation();
+
+
+
+
 
         // let getParas = [...document.querySelectorAll(".para-reveal-wrap p")];
         // let paraSpans = [];
@@ -47,76 +63,7 @@ export default function Home() {
 
 
         // ScrollTriggerConf();
-        CustomCursorAnim();
 
-        gsap.registerPlugin(ScrollTrigger);
-
-
-
-
-        document.querySelectorAll(".para-reveal-wrap").forEach((paraElWrap) => {
-
-            let paraSpans = [...paraElWrap.querySelectorAll(".para-reveal-wrap p span")];
-
-            // document.querySelectorAll(".para-reveal-wrapper").forEach((paraElWrapper) => {
-
-            //     paraElWrapper.style.height = paraElWrapper.querySelector(".para-reveal-wrap").offsetHeight * 3.5 + "px";
-            // })
-
-            gsap.to(paraSpans, {
-
-                opacity: 1,
-                stagger: 0.1,
-                scrollTrigger: {
-                    trigger: paraElWrap,
-                    start: "top " + window.innerHeight / 2,
-                    end: () => "+=" + paraElWrap.offsetHeight,
-                    // pin: true,
-                    scrub: 0.75,
-                    // markers: true,
-                }
-
-            }, 0.4);
-
-        })
-
-
-        // Magnet Cta
-
-        document.querySelectorAll('.magnet-btn ').forEach(btn => {
-
-            btn.addEventListener('mousemove', (e) => {
-
-                const rect = btn.getBoundingClientRect();
-                const h = rect.width / 2;
-
-                const x = e.clientX - rect.left - h;
-                const y = e.clientY - rect.top - h;
-
-                const r1 = Math.sqrt(x * x + y * y);
-                const r2 = (1 - (r1 / h)) * r1;
-
-                const angle = Math.atan2(y, x);
-                const tx = Math.round(Math.cos(angle) * r2 * 100) / 100;
-                const ty = Math.round(Math.sin(angle) * r2 * 100) / 100;
-
-                const op = (r2 / r1) + 0.25;
-
-                btn.style.setProperty('--tx', `${tx}px`);
-                btn.style.setProperty('--ty', `${ty}px`);
-                // btn.style.setProperty('--opacity', `${op}`);
-            });
-
-            btn.addEventListener('mouseleave', (e) => {
-
-                btn.style.setProperty('--tx', '0px');
-                btn.style.setProperty('--ty', '0px');
-                // btn.style.setProperty('--opacity', `${0.25}`);
-
-            });
-        })
-
-        // Magnet Cta end
 
 
         // setTimeout(() => {
@@ -124,9 +71,6 @@ export default function Home() {
 
         // }, 500)
 
-
-
-        LoaderFunction();
 
 
 
@@ -160,47 +104,46 @@ export default function Home() {
 
     return (
         <>
-            <div className="page-loader">
-                <video
-                    loop muted  webkit-playsinline={"true"} playsInline autoPlay
-                    preload={'auto'}
-                type={'video/webm'}
-                    src={require("../../assets/videos/banner-animation-v2.4.webm")}>
-                    <source
-                        src={require("../../assets/videos/banner-animation-v2.4.webm")}
-                        type='video/webm'></source>
-                </video>
+            {/* <MetaUpdate
+                pageTitle="Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai"
+                pageDesc="Hybreed is design & development Agency specialized in web- and mobile-friendly platforms. We work as your extended team and bring in a mix of strategy, design & technology."
+                pageUrl={window.window.location.href}
+            /> */}
+
+            <LoadingAnimation />
 
 
-                <div id="loader">
-                    <div id="bar"><span id="percent"></span></div>
-                </div>
-
-            </div>
             <HomeHeroSection className="  hero-section next-section-curve curve-bg-black-secondary"
                 data-scroll-section
             >
                 <div className='container'>
                     <div className='equal-padding-T equal-padding-B'>
                         <HomeHeroWrap>
-                            <PillMinHead className='text-lg-center'>
+                            <PillMinHead className='text-lg-center hero-pill-text'>
                                 <p>
                                     👋 WE ARE CREATIVE AGENCY BASED IN TWIN CITY OF MUMBAI
                                 </p>
                             </PillMinHead>
                             <h1 className='hero-head text-lg-center mb-4'>
                                 Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
-                                <img src={require("../../assets/images/pill-image-hero.png")} alt='Pill thumbs' className="pill-thumbs-anim" />
+                                <span className="pill-thumbs-anim" ></span>
+
                                 {" "}
                                 <span className="d-lg-inline d-none"> team</span>
                             </h1>
-                            <p className='text-lg-center mb-5 theme-fw-300'>
+                            {/* <h1 className='hero-head text-lg-center mb-4'>
+                                Your in-house design & engineering <span className=" d-lg-none">team</span> {" "}
+                                <img src={require("../../assets/images/pill-image-hero.png")} alt='Pill thumbs' className="pill-thumbs-anim" />
+                                {" "}
+                                <span className="d-lg-inline d-none"> team</span>
+                            </h1> */}
+                            <p className='text-lg-center mb-5 theme-fw-300 hero-para'>
                                 Together, we can transform forward-thinking
                                 ideas into futuristic <br /> solutions with our
                                 robust technology & our scalable design
                                 approach.
                             </p>
-                            <CustomBtn className='text-lg-center'>
+                            <CustomBtn className='text-lg-center hero-cta'>
                                 <Link to='https://hybreed.co/contact'>Let's Talk</Link>{" "}
                             </CustomBtn>
 
@@ -209,7 +152,7 @@ export default function Home() {
                         </HomeHeroWrap>
                     </div>
                 </div>
-                <div className='   '>
+                <div className=' grid-free-anim-carousel'>
                     <GridFreeAnimCarousel>
                         <CarouselWrap className="carousel-wrap">
                             {carouselSlideList.map((item, index) => (
@@ -259,7 +202,7 @@ export default function Home() {
                                                     delay: 2500,
                                                     disableOnInteraction: false,
                                                 }}
-                                                modules={[Autoplay, EffectFade]} 
+                                                modules={[Autoplay, EffectFade]}
                                             >
                                                 {
 
@@ -288,15 +231,11 @@ export default function Home() {
                                 <div className="para-reveal-wrapper"  >
 
                                     <ScrollAnimParaWrap className='para-reveal-wrap'>
-                                        <p>
-                                            <TextSplitSpans text={
-                                                "We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed."
-                                            } />
+                                        <p className="theme-text-black-secondary">
+                                            We work with people that challenge us creatively.  Who let us think without walls to arrive at the best possible creative solution. Partnerships are based on trust and this can only happen when both parties share the same vision and are driven to succeed.
                                         </p>
-                                        <p>
-                                            <TextSplitSpans text={
-                                                "This is what we call the HYBREED PARTNERSHIP."
-                                            } />
+                                        <p className="theme-text-black-secondary">
+                                            This is what we call the <strong>HYBREED PARTNERSHIP</strong>.
                                         </p>
 
 
@@ -386,16 +325,21 @@ export default function Home() {
                             <VideoCardsWrap>
                                 {worksList.map((item, index) => (
                                     <CardItems key={index}
-                                    onMouseEnter={() =>
+                                        onMouseEnter={() =>
+                                            item.itemLink === "" ?
                                                 HoverEnter("Coming <br> Soon!")
-                                            }
-                                            onMouseLeave={() => HoverLeave()}
+                                                :
+                                                HoverEnter("Know <br> More")
+                                        }
+                                        onMouseLeave={() => HoverLeave()}
                                     >
-                                        <CardTop >
-                                            <CategoryBullets>
-                                                <span>{item.itemCategory}</span>
-                                            </CategoryBullets>
-                                            {/* <video 
+                                        <Link to={item.itemLink === "" ? "" : item.itemLink}  >
+
+                                            <CardTop className="scroll-anim-card">
+                                                <CategoryBullets>
+                                                    <span>{item.itemCategory}</span>
+                                                </CategoryBullets>
+                                                {/* <video 
                                                 loop={true}
                                                 autoPlay={true}
                                                 preload='true' 
@@ -405,8 +349,9 @@ export default function Home() {
                                                     src={"http://hybclient.com/hybreed-cdn-assets/videos/design-system-demo.mp4"}
                                                     type='video/mp4'></source>
                                             </video> */}
-                                            <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
-                                        </CardTop>
+                                                <img src={require("../../assets/images/" + item.itemImg)} alt={item.itemTitle} />
+                                            </CardTop>
+                                        </Link>
                                         <CardBottom>
                                             <CategoryBullets>
                                                 <span>{item.itemCategory}</span>
@@ -424,7 +369,7 @@ export default function Home() {
 
                             <CustomBtn className='text-center mt-5 '>
                                 <Link to='https://hybreed.co/contact' className='light-btn ' >
-                                    See more work
+                                    Request Portfolio
                                 </Link>{" "}
                             </CustomBtn>
                             <p className='text-center mt-4 theme-text-gray'>
@@ -461,7 +406,7 @@ export default function Home() {
                     <div className='  equal-padding-B'>
                         <MiddleContentWrap>
                             <div className='row g-lg-5 g-4 '>
-                                <div className='col-lg-8'>
+                                <div className='col-lg-7'>
                                     {/* <div className="para-reveal-wrapper"  >
 
                                         <ScrollAnimParaWrap className='para-reveal-wrap'>
@@ -479,10 +424,10 @@ export default function Home() {
                                         </ScrollAnimParaWrap>
                                     </div> */}
                                     <p>
-                                    We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
+                                        We began as a group of passionate individuals with a dream to create something truly remarkable for others. Our journey has been driven by a desire to design user experiences that are not only beautiful but also deeply impactful.</p>
                                     <p> Today, we employ a holistic, process-based approach to ensure that every project we undertake brings genuine value to you, your customers, and your partners.</p>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col-lg-5'>
                                     <MiddleContentImage>
                                         <img src={require("../../assets/images/hybreed-working.svg").default} alt='Hybreed' />
                                     </MiddleContentImage>
@@ -550,35 +495,7 @@ export default function Home() {
                 </div>
             </FAQsSection>
 
-            <BeforeFooterCtaSection
-                data-scroll-section
-                className='theme-bg-primary next-section-curve curve-bg-black-secondary'>
-                <div className='container'>
-                    <div className=' equal-padding-B'>
-                        <BeforeFooterCtaWrap>
-                            <PillMinHead className='text-lg-center  '>
-                                <p>💬 Available for new projects</p>
-                            </PillMinHead>
-                            <h2 className='section-head   text-lg-center   '>
-                                Interested in <br />
-                                working <span className='d-lg-none'>together? </span> {" "}
-                                <MidHeadingCTA className="magnet-btn d-lg-inline-block d-none">
-                                    <Link to='https://hybreed.co/contact' > <strong className="magnet-btn-text">Let’s connect!!! </strong></Link>
-                                </MidHeadingCTA>
-
-                                <CustomBtn className='text-lg-center mt-5  d-lg-none'>
-                                    <Link to='https://hybreed.co/contact'   >
-                                        <span>Let’s connect!!!</span>
-                                    </Link>
-                                </CustomBtn>
-
-                                {" "}
-                                <span className="d-lg-inline d-none"> together?</span>
-                            </h2>
-                        </BeforeFooterCtaWrap>
-                    </div>
-                </div>
-            </BeforeFooterCtaSection>
+            <BeforeFooterCtaWrapper></BeforeFooterCtaWrapper>
 
             {/* <MarqueeSection  data-scroll-section className="theme-bg-black-secondary">
                 <MarqueeSlideV2 />
