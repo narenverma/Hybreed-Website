@@ -92,6 +92,7 @@ a, a> *{
     position: absolute;
     right:0rem;
     top:0rem;
+    left: auto;
     transition:  300ms ease-in-out;
     z-index: -1;
 	}

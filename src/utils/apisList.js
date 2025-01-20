@@ -225,6 +225,22 @@ export const clientLogosList = [
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
             },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
         ]
     },
     {
@@ -264,6 +280,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -306,6 +338,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -346,6 +394,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -384,6 +448,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -410,20 +490,23 @@ export const clientLogosList = [
 export const worksList = [
     {
         itemCategory: "Website",
+        itemLink:"",
         itemImg: "gmi-featured-banner.png",
         itemVideo: "",
         itemTitle: "Great Manager Institute (2023-Present)",
         itemDescription: "Elevating User Experience and Facilitating Meaningful Connections.",
     },
     {
-        itemCategory: "Website",
-        itemImg: "focusu-featured-banner.png",
+        itemCategory: "Web App",
+        itemLink:"/case-studies/lifecrafting",
+        itemImg: "lifecrafting-featured-banner.png",
         itemVideo: "",
-        itemTitle: "FocusU (2023-Present)",
-        itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
+        itemTitle: "Lifecrafting (2024)",
+        itemDescription: "Shaping Lifecrafting's Unique Idea with Aesthetic Visuals",
     },
     {
         itemCategory: "Platform",
+        itemLink:"/case-studies/turbohire",
         itemImg: "turbohire-featured-banner.png",
         itemVideo: "",
         itemTitle: "TurboHire (2022-Present)",
@@ -431,13 +514,15 @@ export const worksList = [
     },
     {
         itemCategory: "Website",
-        itemImg: "gptw-featured-banner.png",
+        itemLink:"",
+        itemImg: "impelsys-featured-banner.png",
         itemVideo: "",
-        itemTitle: "GPTW (2019-Present)",
-        itemDescription: "Propelling GPTW'S mission in India through Strategic Support.",
+        itemTitle: "Impelsys (2021)",
+        itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
     },
     {
         itemCategory: "Website",
+        itemLink:"/case-studies/equizen",
         itemImg: "equizen-featured-banner.png",
         itemVideo: "",
         itemTitle: "Equizen (2024 - Present)",
@@ -445,20 +530,23 @@ export const worksList = [
     },
     {
         itemCategory: "Web App",
-        itemImg: "makestories-featured-banner.png",
+        itemLink:"",
+        itemImg: "make-stories-banner-image-v2.png",
         itemVideo: "",
         itemTitle: "MakeStories (2020-Present)",
         itemDescription: "Reimagined the editor to create web stories seamlessly on web & mobile.",
     },
     {
         itemCategory: "Website",
-        itemImg: "impelsys-featured-banner.png",
+        itemLink:"/case-studies/focusu-engage",
+        itemImg: "focusu-featured-banner.png",
         itemVideo: "",
-        itemTitle: "Impelsys (2021)",
-        itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
+        itemTitle: "FocusU (2023-Present)",
+        itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
     },
     {
         itemCategory: "Platform",
+        itemLink:"/case-studies/mercer",
         itemImg: "mercer-featured-banner.png",
         itemVideo: "",
         itemTitle: "Mercer (2020)",
@@ -493,3 +581,66 @@ export const socialMediaList = [
         socialName: "Dribbble",
     },
 ];
+
+export const loaderSlider = [
+    {
+        itemImg: "loader-image-01.png", 
+    },
+    {
+        itemImg: "loader-image-02.png", 
+    },
+    {
+        itemImg: "loader-image-03.png", 
+    },
+    {
+        itemImg: "loader-image-04.png", 
+    },
+    {
+        itemImg: "loader-image-05.png", 
+    },
+    {
+        itemImg: "loader-image-06.png", 
+    },
+    {
+        itemImg: "loader-image-07.png", 
+    },
+    {
+        itemImg: "loader-image-08.png", 
+    },
+    {
+        itemImg: "loader-image-09.png", 
+    },
+    {
+        itemImg: "loader-image-10.png", 
+    },
+    {
+        itemImg: "loader-image-11.png", 
+    },
+    {
+        itemImg: "loader-image-12.png", 
+    },
+    {
+        itemImg: "loader-image-13.png", 
+    },
+    {
+        itemImg: "loader-image-14.png", 
+    },
+    {
+        itemImg: "loader-image-15.png", 
+    },
+    {
+        itemImg: "loader-image-16.png", 
+    },
+    {
+        itemImg: "loader-image-17.png", 
+    },
+    {
+        itemImg: "loader-image-18.png", 
+    },
+    {
+        itemImg: "loader-image-19.png", 
+    },
+    {
+        itemImg: "loader-image-20.png", 
+    }, 
+]
