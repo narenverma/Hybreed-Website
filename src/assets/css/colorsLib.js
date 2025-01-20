@@ -40,6 +40,8 @@ export const GlobalColorsStyle = createGlobalStyle`
 --gmi-cs-primary: #FFFDF8;
 --gmi-cs-secondary: #FFCC01;
 
+--makestories-cs-secondary: #1657CD;
+
 }
 
 

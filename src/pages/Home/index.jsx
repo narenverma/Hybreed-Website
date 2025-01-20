@@ -183,10 +183,13 @@ export default function Home() {
                     <div className=' equal-padding-T equal-padding-B'>
                         <ClientsLogoWrap>
                             <p className='sub-head text-center mb-5'>
+                            Our clients are <strong>entrepreneurs, change-makers & corporates</strong> doing good &mdash;
+                            </p>
+                            {/* <p className='sub-head text-center mb-5'>
                                 Driving Digital Experience for{" "}
                                 <strong>70+</strong> companies in{" "}
                                 <strong>India, Middle East & Singapore!</strong>
-                            </p>
+                            </p> */}
                             <LogosWrap className='row row-cols-lg-5 row-cols-2 align-items-center justify-content-center '>
                                 {clientLogosList.map((item, index) => (
                                     <div className='col ' key={index}>

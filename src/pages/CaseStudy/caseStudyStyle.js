@@ -46,6 +46,10 @@ background-color: var(--gmi-cs-primary);
 background-color: var(--gmi-cs-secondary);
 }
 
+.theme-bg-makestories-secondary{
+background-color: var(--makestories-cs-secondary);
+}
+
 `;
 
 export const CaseStudyHeroSection = styled.section`
@@ -66,6 +70,8 @@ gap: 1.37rem;
     font-family: 'Inter-Tight-SemiBold';
     font-size: 1.375rem;
     padding: .38rem 0;
+    max-width: max-content;
+    width: 100%;
 }
 
 &.dark-list ul li{
