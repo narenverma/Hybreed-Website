@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { TestimonialsWrap, CardTop, CardBottom, CardItems, TestimonialsCardSwiper } from './styled.js';
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';

@@ -1,13 +1,15 @@
 import { GlobalStyle, FloatingBtn } from "./assets/css/globalStyle";
 import { GlobalColorsStyle } from "./assets/css/colorsLib";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import HeaderNavigation from "./components/HeaderNavigation";
 import Footer from "./components/FooterWrapper";
 import React, { useEffect } from "react";
 import Lenis from 'lenis'
-import { gsap, ScrollTrigger } from "gsap/all";
-import { headerScrollHide, scrollHeader } from "./utils/contants";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { headerScrollHide, scrollHeader, ScrollToTopPage, TextRevealScroll } from "./utils/contants";
+import { HoverLeave } from "./components/HoverInteract";
+ 
 
 
 function App() {
@@ -15,10 +17,14 @@ function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
-
+  const location = useLocation();
 
   useEffect(() => {
-    document.title = 'Hybreed.co | Web & Mobile UX UI Product Design Agency in Navi Mumbai';
+     
+    HoverLeave(); 
+  }, [location]);
+
+  useEffect(() => {
     // const link = document.querySelector("link[rel='icon']");
     // link.href = "/hybreed-header.svg";
 
@@ -57,7 +63,7 @@ function App() {
    
     headerScrollHide();
 
-
+    
 
 
   }, []);
@@ -67,7 +73,7 @@ function App() {
     <>
       <GlobalStyle />
       <GlobalColorsStyle />
-
+      <ScrollToTopPage/>
       <div className="cursor">
         <div className="cursor-move-inner"  >
           <div className="cursor-inner"></div>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { HeaderNavigationHeader, IconWrap, NavigationWrap, HeaderLogo, MobileMenuWrap, BackdropBg } from './styled.js';
 
 import { CustomBorderBtn, IconBtn, LinkBtn, UpperCaseHeader } from '../../assets/css/globalStyle.js'
@@ -9,6 +9,26 @@ import { FooterLinkWrap, SocialWrap } from '../FooterWrapper/styled.js';
 
 export default function HeaderNavigation() {
 
+  useEffect(() => {
+    // const scrollToTop = () => {
+    //   const c = document.documentElement.scrollTop || document.body.scrollTop;
+    //   if (c > 0) {
+    //     window.requestAnimationFrame(scrollToTop);
+    //     window.scrollTo(0, c - c / 8);
+    //   }
+    //   console.log(c);
+    // };
+
+    // document.querySelectorAll("a").forEach((link) => {
+
+    //   link.addEventListener("click", (el) => {
+    //     scrollToTop();
+    //     console.log("run");
+
+    //   })
+    // })
+
+  }, [])
 
 
   return (
@@ -38,14 +58,14 @@ function HeaderNavigationWrapper() {
     updateAnim.current.style.opacity = 1;
     updateAnim.current.style.scale = 1;
     updateAnim.current.style.filter = "blur(0px)";
-document.body.classList.add("overflow-hidden");
+    document.body.classList.add("overflow-hidden");
   }
 
   const closeMenuAnim = () => {
     updateAnim.current.style.opacity = 0;
     updateAnim.current.style.scale = 1.5;
     updateAnim.current.style.filter = "blur(15px)";
-document.body.classList.remove("overflow-hidden");
+    document.body.classList.remove("overflow-hidden");
     setTimeout(() => {
       updateAnim.current.style.scale = .8;
     }, 400)
@@ -64,7 +84,7 @@ document.body.classList.remove("overflow-hidden");
                   socialMediaList.map((item, index) => (
 
                     <CustomBorderBtn btntype={'icon'} key={index}>
-                      <Link to={item.socialLink}>
+                      <Link to={item.socialLink} target="_blank">
                         <img src={require("../../assets/images/" + item.socialIcon)} alt={item.socialAlt} />
                       </Link>
                     </CustomBorderBtn>
@@ -76,14 +96,14 @@ document.body.classList.remove("overflow-hidden");
 
             <div className='col-lg-4 col-6 d-flex justify-content-lg-center justify-content-start order-lg-0 order-first '>
               <HeaderLogo className='text-center'>
-              <Link to={'https://web.hybreed.co'}>
-                <img src={require("../../assets/images/hybreed-header.svg").default} alt={'hybreed'} />
-              </Link>
+                <Link to={'/'}>
+                  <img src={require("../../assets/images/hybreed-header.svg").default} alt={'hybreed'} />
+                </Link>
               </HeaderLogo>
             </div>
 
             <div className='col-lg-4 col-6   d-lg-flex justify-content-end d-none'>
-              <CustomBorderBtn className="text-end" btntype={'btn'}><Link className='light-btn' to='https://hybreed.co/contact'>Contact us</Link></CustomBorderBtn>
+              <CustomBorderBtn className="text-end" btntype={'btn'}><Link className='light-btn invert-btn' to='https://hybreed.co/contact'>Contact us</Link></CustomBorderBtn>
             </div>
             <div className="col-6 d-lg-none text-end">
               <button type="button" className=" menu-open-btn" onClick={() => {
@@ -117,7 +137,7 @@ document.body.classList.remove("overflow-hidden");
                 socialMediaList.map((item, index) => (
                   <div key={index}>
                     <IconBtn icon={require(`../../assets/images/${item.socialIcon}`)} >
-                      <Link to={item.socialLink}>{item.socialName}</Link>
+                      <Link to={item.socialLink} target="_blank" >{item.socialName}</Link>
                     </IconBtn>
                   </div>
                 ))

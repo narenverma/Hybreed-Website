@@ -15,14 +15,14 @@ export const carouselSlideList = [
         itemImg: "equizen-work-banner.png",
         itemTitle: "Equizen",
     },
-    {
-        itemImg: "gmi-work-banner.png",
-        itemTitle: "GMI",
-    },
-    {
-        itemImg: "makestories-work-banner.png",
-        itemTitle: "Make Stories",
-    },
+    // {
+    //     itemImg: "gmi-work-banner.png",
+    //     itemTitle: "GMI",
+    // },
+    // {
+    //     itemImg: "makestories-work-banner.png",
+    //     itemTitle: "Make Stories",
+    // },
     {
         itemImg: "impelsys-blog-work-banner.png",
         itemTitle: "Impelsys",
@@ -59,10 +59,10 @@ export const carouselSlideList = [
         itemImg: "ktv-work-banner.png",
         itemTitle: "KTV",
     },
-    {
-        itemImg: "tutor-work-banner.png",
-        itemTitle: "Tutor",
-    },
+    // {
+    //     itemImg: "tutor-work-banner.png",
+    //     itemTitle: "Tutor",
+    // },
     {
         itemImg: "skincare-concept-app-work-banner.png",
         itemTitle: "Skincare Concept App",
@@ -71,10 +71,10 @@ export const carouselSlideList = [
         itemImg: "makemail-work-banner.png",
         itemTitle: "Make Mail",
     },
-    {
-        itemImg: "lissen-io-work-banner.png",
-        itemTitle: "Lissen.io",
-    },
+    // {
+    //     itemImg: "lissen-io-work-banner.png",
+    //     itemTitle: "Lissen.io",
+    // },
     {
         itemImg: "bento-lifecrafting-work-banner.png",
         itemTitle: "LifeCrafting",
@@ -83,22 +83,22 @@ export const carouselSlideList = [
         itemImg: "alme-mater-work-banner.png",
         itemTitle: "Alme Mater",
     },
-    {
-        itemImg: "tbdc-work-banner.png",
-        itemTitle: "TBDC",
-    },
+    // {
+    //     itemImg: "tbdc-work-banner.png",
+    //     itemTitle: "TBDC",
+    // },
     {
         itemImg: "wkc-dribble-work-banner.png",
         itemTitle: "WKC",
     },
-    {
-        itemImg: "login-concept-page-work-banner.png",
-        itemTitle: "Our Work",
-    },
-    {
-        itemImg: "sidebar-navigation-work-banner.png",
-        itemTitle: "Our Work",
-    },
+    // {
+    //     itemImg: "login-concept-page-work-banner.png",
+    //     itemTitle: "Our Work",
+    // },
+    // {
+    //     itemImg: "sidebar-navigation-work-banner.png",
+    //     itemTitle: "Our Work",
+    // },
     {
         itemImg: "nft-app-concept-work-banner.png",
         itemTitle: "Our Work",
@@ -225,6 +225,22 @@ export const clientLogosList = [
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
             },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
         ]
     },
     {
@@ -264,6 +280,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -306,6 +338,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -346,6 +394,22 @@ export const clientLogosList = [
                 logoTitle: "GMI",
             },
             {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
+            },
+            {
                 logoImg: "focusu-logo.svg",
                 logoTitle: "FocusU",
             },
@@ -384,6 +448,22 @@ export const clientLogosList = [
             {
                 logoImg: "gmi-logo.svg",
                 logoTitle: "GMI",
+            },
+            {
+                logoImg: "ziip-logo.svg",
+                logoTitle: "ZIIP",
+            },
+            {
+                logoImg: "equizen-logo.svg",
+                logoTitle: "Equizen",
+            },
+            {
+                logoImg: "multiply-ventures-logo.svg",
+                logoTitle: "Multiply Ventures",
+            },
+            {
+                logoImg: "4pcapital-logo.svg",
+                logoTitle: "4PCapital",
             },
             {
                 logoImg: "focusu-logo.svg",
@@ -410,61 +490,137 @@ export const clientLogosList = [
 export const worksList = [
     {
         itemCategory: "Website",
-        itemImg: "gmi-featured-banner.png",
+        itemLink: "",
+        itemImg: "Potrait-GPTW.png",
         itemVideo: "",
-        itemTitle: "Great Manager Institute (2023-Present)",
-        itemDescription: "Elevating User Experience and Facilitating Meaningful Connections.",
+        itemTitle: "Great Place To Work (2026–27)",
+        itemDescription: "Bringing a Global Identity to the Digital World",
+    },
+    {
+        itemCategory: "Web App",
+        itemLink: "",
+        itemImg: "Landscape-Ceraa-banner.png",
+        itemVideo: "",
+        itemTitle: "Ceraaa (2026–27)",
+        itemDescription: "Bringing Simplicity to Coaching Management",
     },
     {
         itemCategory: "Website",
-        itemImg: "focusu-featured-banner.png",
+        itemLink: "",
+        itemImg: "Potrait-DS-banner.png",
         itemVideo: "",
-        itemTitle: "FocusU (2023-Present)",
-        itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
+        itemTitle: "Deepak Shinde (2026–27)",
+        itemDescription: "A Studio Beyond Four Walls",
     },
+    
     {
-        itemCategory: "Platform",
-        itemImg: "turbohire-featured-banner.png",
+        itemCategory: "Website",
+        itemLink: "",
+        itemImg: "Hotel-Spider-Landscape-banner.png",
         itemVideo: "",
-        itemTitle: "TurboHire (2022-Present)",
-        itemDescription: "Present Enhanced the Usability of AI-powered Recruitment Platform.",
+        itemTitle: "Hotel-Spider (2025–26)",
+        itemDescription: "Giving Hospitality a New Digital Address",
     },
     {
         itemCategory: "Website",
-        itemImg: "gptw-featured-banner.png",
+        itemLink: "",
+        itemImg: "Landscape-TH-banner.png",
         itemVideo: "",
-        itemTitle: "GPTW (2019-Present)",
-        itemDescription: "Propelling GPTW'S mission in India through Strategic Support.",
+        itemTitle: "TurboHire (2026–27)",
+        itemDescription: "A Brand Refresh, Brought to Life",
     },
     {
         itemCategory: "Website",
+        itemLink: "",
+        itemImg: "Potrait-Vencura-banner.png",
+        itemVideo: "",
+        itemTitle: "Vencura Business (2026–27)",
+        itemDescription: "Giving Financial Expertise a Digital Voice",
+    },
+    {
+        itemCategory: "Website",
+        itemLink: "",
+        itemImg: "Landscape-Infinit-edu-banner.png",
+        itemVideo: "",
+        itemTitle: "Infiniti Edu (2025–26)",
+        itemDescription: "16 Years of Learning, Told Anew",
+    },
+    
+    {
+        itemCategory: "Website",
+        itemLink: "",
         itemImg: "equizen-featured-banner.png",
         itemVideo: "",
         itemTitle: "Equizen (2024 - Present)",
         itemDescription: "Elevating User Experience and Facilitating Meaningful Connections.",
     },
-    {
-        itemCategory: "Web App",
-        itemImg: "makestories-featured-banner.png",
-        itemVideo: "",
-        itemTitle: "MakeStories (2020-Present)",
-        itemDescription: "Reimagined the editor to create web stories seamlessly on web & mobile.",
-    },
-    {
-        itemCategory: "Website",
-        itemImg: "impelsys-featured-banner.png",
-        itemVideo: "",
-        itemTitle: "Impelsys (2021)",
-        itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
-    },
-    {
-        itemCategory: "Platform",
-        itemImg: "mercer-featured-banner.png",
-        itemVideo: "",
-        itemTitle: "Mercer (2020)",
-        itemDescription: "Knowledge Platform for Chartered Accountancy Job Redesign.",
-    },
 ];
+// export const worksList = [
+//     {
+//         itemCategory: "Website",
+//         itemLink:"",
+//         itemImg: "gmi-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "Great Manager Institute (2023-Present)",
+//         itemDescription: "Elevating User Experience and Facilitating Meaningful Connections.",
+//     },
+//     {
+//         itemCategory: "Web App",
+//         itemLink:"/case-studies/lifecrafting",
+//         itemImg: "lifecrafting-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "Lifecrafting (2024)",
+//         itemDescription: "Shaping Lifecrafting's Unique Idea with Aesthetic Visuals",
+//     },
+//     {
+//         itemCategory: "Platform",
+//         itemLink:"/case-studies/turbohire",
+//         itemImg: "turbohire-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "TurboHire (2022-Present)",
+//         itemDescription: "Present Enhanced the Usability of AI-powered Recruitment Platform.",
+//     },
+//     {
+//         itemCategory: "Website",
+//         itemLink:"",
+//         itemImg: "impelsys-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "Impelsys (2021)",
+//         itemDescription: "Effectively Communicate AI-driven B2B Solutions in Tech and Learning.",
+//     },
+//     {
+//         itemCategory: "Website",
+//         itemLink:"/case-studies/equizen",
+//         itemImg: "equizen-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "Equizen (2024 - Present)",
+//         itemDescription: "Elevating User Experience and Facilitating Meaningful Connections.",
+//     },
+//     {
+//         itemCategory: "Web App",
+//         itemLink:"",
+//         itemImg: "make-stories-banner-image-v2.png",
+//         itemVideo: "",
+//         itemTitle: "MakeStories (2020-Present)",
+//         itemDescription: "Reimagined the editor to create web stories seamlessly on web & mobile.",
+//     },
+//     {
+//         itemCategory: "Website",
+//         itemLink:"/case-studies/focusu-engage",
+//         itemImg: "focusu-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "FocusU (2023-Present)",
+//         itemDescription: "Seamless and Intuitive User Experience (UX) for L&D Company.",
+//     },
+//     {
+//         itemCategory: "Platform",
+//         itemLink:"/case-studies/mercer",
+//         itemImg: "mercer-featured-banner.png",
+//         itemVideo: "",
+//         itemTitle: "Mercer (2020)",
+//         itemDescription: "Knowledge Platform for Chartered Accountancy Job Redesign.",
+//     },
+// ];
 
 
 export const socialMediaList = [
@@ -493,3 +649,66 @@ export const socialMediaList = [
         socialName: "Dribbble",
     },
 ];
+
+export const loaderSlider = [
+    {
+        itemImg: "loader-image-01.png", 
+    },
+    {
+        itemImg: "loader-image-02.png", 
+    },
+    {
+        itemImg: "loader-image-03.png", 
+    },
+    {
+        itemImg: "loader-image-04.png", 
+    },
+    {
+        itemImg: "loader-image-05.png", 
+    },
+    {
+        itemImg: "loader-image-06.png", 
+    },
+    {
+        itemImg: "loader-image-07.png", 
+    },
+    {
+        itemImg: "loader-image-08.png", 
+    },
+    {
+        itemImg: "loader-image-09.png", 
+    },
+    {
+        itemImg: "loader-image-10.png", 
+    },
+    {
+        itemImg: "loader-image-11.png", 
+    },
+    {
+        itemImg: "loader-image-12.png", 
+    },
+    {
+        itemImg: "loader-image-13.png", 
+    },
+    {
+        itemImg: "loader-image-14.png", 
+    },
+    {
+        itemImg: "loader-image-15.png", 
+    },
+    {
+        itemImg: "loader-image-16.png", 
+    },
+    {
+        itemImg: "loader-image-17.png", 
+    },
+    {
+        itemImg: "loader-image-18.png", 
+    },
+    {
+        itemImg: "loader-image-19.png", 
+    },
+    {
+        itemImg: "loader-image-20.png", 
+    }, 
+]

@@ -1,0 +1,302 @@
+import React, { useEffect } from 'react'
+import { CaseStudyGlobalStyle, CaseStudyHeroSection, CaseStudyHeroWrap, CategoriesList, BannerAnimationWrap, CaseStudyContentSection, CaseStudyContentWrap, AnimationCards, AnimCardItem, CaseStudyTestimonialSection, CaseStudyTestimonialWrap, TestimonialImg, TestimonialContent } from '../caseStudyStyle.js'
+import { SectionTopSpace, TextRevealScroll, TextSplitSpans } from '../../../utils/contants.js';
+import { CustomCursorAnim } from '../../../components/HoverInteract/index.jsx';
+import BeforeFooterCtaWrapper from '../../../components/BeforeFooterCtaWrapper/index.jsx';
+import { ScrollAnimParaWrap } from '../../../assets/css/globalStyle.js';
+import OnScrollContentAnimation from '../../../components/OnScrollContentAnimation/index.jsx';
+import MetaUpdate from '../../../components/MetaUpdate/index.jsx';
+
+
+export default function TurboHirePlatformCaseStudy() {
+
+  useEffect(() => {
+    SectionTopSpace();
+    TextRevealScroll(".para-reveal-wrap.testimonial-reveal-wrap", " p span");
+    CustomCursorAnim();
+    OnScrollContentAnimation();
+
+  }, [])
+
+
+  return (
+    <>
+      {/* <MetaUpdate
+      pageTitle="Hybreed.co | 4P Capital Case Study" 
+      pageDesc="4P Capital Partners is India based investment platform that partners with visionary entrepreneurs to build legendary businesses for India and for the world." 
+      pageUrl={window.window.location.href}
+       /> */}
+      <CaseStudyGlobalStyle />
+
+      <CaseStudyHeroSection className="hero-section theme-bg-turbohire-primary" >
+        <div className="container">
+          <div className="equal-padding-T  ">
+            <CaseStudyHeroWrap>
+              <h1 className="h2 section-head">Hiring Transformation Platform <br /> Powered by AI</h1>
+              <CategoriesList className="anim-bottom-box dark-list ">
+                <h6>How did we help: </h6>
+                <ul style={{ "--list-color": "var(--turbohire-cs-secondary)" }}>
+                  <li>Platform Design</li>
+                  <li>Design System</li>
+                </ul>
+              </CategoriesList>
+            </CaseStudyHeroWrap>
+          </div>
+        </div>
+        <BannerAnimationWrap className="anim-bottom-box">
+          <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-hero-banner-img.png")} alt="Case Study Banner" />
+        </BannerAnimationWrap>
+      </CaseStudyHeroSection>
+
+      <CaseStudyContentSection className="next-section-curve next-section-curve curve-bg-black-secondary">
+        <div className="container">
+          <div className="equal-padding-T equal-padding-B">
+            <CaseStudyContentWrap>
+              <div className="equal-padding-B col-lg-11 mx-auto">
+
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>About the client</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">TurboHire is an advanced recruitment platform that leverages artificial intelligence to streamline and optimise the hiring process. It offers a range of features designed to make recruitment faster, smarter, and more efficient.</p>
+                  </div>
+                </div>
+              </div>
+
+              <AnimationCards>
+                <div className="row g-5">
+                  <div className="col-sm-6 anim-left-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-1.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-sm-6 anim-right-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-2.png")} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-3.png")} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                </div>
+              </AnimationCards>
+
+              <div className="equal-padding-T equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>Problem</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">TurboHire needed a redesign to their recruitment platform that leverages artificial intelligence to streamline and optimise the hiring process. It offers a range of features designed to make recruitment faster, smarter, and more efficient.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>Challenges</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">The primary challenge was to design a visually appealing platform with user-friendly features, prioritizing a great user experience.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>Our solutions</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">We collaborated with TurboHire to create their platform from the ground up, with a focus on a sleek and visually appealing design to enhance user experience. The main goal of the platform was to showcase Recruitment Process.</p>
+                  </div>
+                </div>
+              </div> 
+
+
+
+              <AnimationCards>
+                <div className="row g-5">
+                  <div className="col-lg-6 anim-left-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-4.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-right-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-5.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-6.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-left-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-7.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-right-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-8.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                </div>
+              </AnimationCards>
+
+              <div className="equal-padding-T equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>Design System</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">A moodboard was created to capture the visual direction, including color schemes, typography, and imagery. Subsequently, a comprehensive design system was established to provide guidelines for consistent branding across the site, ensuring a cohesive and professional look.</p>
+                  </div>
+                </div>
+              </div>
+
+              <AnimationCards>
+                <div className="row g-5">
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-9.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-left-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-10.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-right-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-11.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-12.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-left-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-13.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-6 anim-right-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-14.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-15.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                </div>
+              </AnimationCards>
+
+              <div className="equal-padding-T equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>UI, Visual Output</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">The UI design was created with clean, intuitive navigation, and engaging visuals in mind. We included interactive elements to increase user engagement and used responsive design techniques to ensure the site looked and worked well on all devices. The end result was a modern, professional website that effectively showcased TurboHire' expertise and offerings.</p>
+                  </div>
+                </div>
+              </div>
+
+              <AnimationCards>
+                <div className="row g-5">
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-16.svg").default} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                  <div className="row g-5">
+                    <div className="col-lg-6 anim-left-box">
+                      <AnimCardItem>
+                        <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-17.svg").default} alt="images" />
+                      </AnimCardItem>
+                    </div>
+                    <div className="col-lg-6 anim-right-box">
+                      <AnimCardItem>
+                        <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-18.svg").default} alt="images" />
+                      </AnimCardItem>
+                    </div>
+                    <div className="col-lg-12 anim-bottom-box">
+                      <AnimCardItem>
+                        <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-19.svg").default} alt="images" />
+                      </AnimCardItem>
+                    </div>
+                  </div>
+                </div>
+              </AnimationCards>
+
+              <div className="equal-padding-T equal-padding-B col-lg-11 mx-auto">
+                <div className="row gy-4">
+                  <div className="col-xl-5 col-lg-6 anim-left-box">
+                    <h4>Prototypes</h4>
+                  </div>
+                  <div className="col-xl-7 col-lg-6 anim-right-box">
+                    <p className="sub-head mb-0">The UI design was created with clean, intuitive navigation, and engaging visuals in mind. We included interactive elements to increase user engagement and used responsive design techniques to ensure the site looked and worked well on all devices. The end result was a modern, professional website that effectively showcased TurboHire' expertise and offerings.</p>
+                  </div>
+                </div>
+              </div>
+
+              <AnimationCards>
+                <div className="row g-5">
+                  <div className="col-lg-12 anim-bottom-box">
+                    <AnimCardItem>
+                      <img src={require("../../../assets/images/case-study-images/turbohire-platform-case-study-card-img-20.png")} alt="images" />
+                    </AnimCardItem>
+                  </div>
+                </div>
+              </AnimationCards>
+
+            </CaseStudyContentWrap>
+
+          </div>
+        </div>
+      </CaseStudyContentSection>
+
+      <CaseStudyTestimonialSection className="theme-bg-black-secondary next-section-curve curve-bg-primary ">
+        <div className="container">
+          <div className="  equal-padding-B">
+            <CaseStudyTestimonialWrap>
+              <div className="row gy-4">
+                <div className="col-lg-4 anim-left-box">
+                  <TestimonialImg>
+                    <img src={require("../../../assets/images/case-study-images/case-study-shoan-shinde-img.png")} alt="profile-img" />
+                  </TestimonialImg>
+                </div>
+                <div className="col-lg-8  ">
+                  <TestimonialContent>
+
+                    <ScrollAnimParaWrap className='para-reveal-wrap testimonial-reveal-wrap'>
+                      <p className="text-start theme-text-white">
+                        “Hybreed is without doubt one of the best website development teams I have ever worked with.  Ajit, who leads the team, will not only invest himself into the scope of the project but will think on part of his client’s as a business owner and entrepreneur.“
+                      </p>
+                    </ScrollAnimParaWrap>
+
+
+                    <p className="text-end"> &mdash; CMO, TurboHire</p>
+
+                  </TestimonialContent>
+                </div>
+              </div>
+
+
+            </CaseStudyTestimonialWrap>
+          </div>
+        </div>
+      </CaseStudyTestimonialSection>
+
+      <BeforeFooterCtaWrapper />
+
+    </>
+  )
+}
