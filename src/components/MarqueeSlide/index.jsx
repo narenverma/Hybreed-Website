@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { ScrollTriggerConf } from '../SmoothScroll';
 import { MarqueeStripList, MarqueeStripRow } from "./styled.js";
 

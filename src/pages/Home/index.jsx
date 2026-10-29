@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { PillMinHead, CustomBtn, ScrollAnimParaWrap, VideoCardsWrap, CardItems, CardTop, CategoryBullets, CardBottom, MidHeadingCTA, CTAWithContentBar, } from "../../assets/css/globalStyle.js";
 import { Link } from "react-router-dom";
 // import { ScrollTriggerConf, SmoothScroller, } from "../../components/SmoothScroll";
-import { gsap, ScrollTrigger } from "gsap/all";
-import { LoaderAnimation, LoaderFunction, ScrollToTop, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LoaderAnimation, LoaderFunction, ScrollToTopPage, SectionTopSpace, TextRevealScroll, TextSplitSpans } from "../../utils/contants.js";
 import { HoverEnter, HoverLeave, CustomCursorAnim, } from "../../components/HoverInteract";
 
 import MarqueeSlide from "../../components/MarqueeSlide";

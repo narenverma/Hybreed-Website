@@ -249,24 +249,24 @@ export const BeforeFooterCtaWrap = styled.div`
         }
     `;
 
-// export const ProductsImgTile = styled.div`
-//     position: fixed;
-//     width: 10.5rem;
-//     aspect-ratio: 3 / 4 ;
-//     left: 0;
-//     top: 0;
-//     transform: translate(-50%,-100%);
-//     z-index:111;
-//    pointer-events: none;
+export const ProductsImgTile = styled.div`
+    position: fixed;
+    width: 10.5rem;
+    aspect-ratio: 3 / 4 ;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-100%);
+    z-index:111;
+   pointer-events: none;
 
-//     & img{
-//         object-fit: cover;
-//         width:100%;
-//         height: 100%;
-//     }
-// `;
+    & img{
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+    }
+`;
 
 
-// export const AboutSection = styled.section``;
+export const AboutSection = styled.section``;
 
 

@@ -5,7 +5,8 @@ import HeaderNavigation from "./components/HeaderNavigation";
 import Footer from "./components/FooterWrapper";
 import React, { useEffect } from "react";
 import Lenis from 'lenis'
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { headerScrollHide, scrollHeader, ScrollToTopPage, TextRevealScroll } from "./utils/contants";
 import { HoverLeave } from "./components/HoverInteract";
  
